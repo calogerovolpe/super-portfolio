@@ -114,7 +114,7 @@
 - Validation : 418 références locales OK, balises équilibrées, `node --check`
   OK, Playwright 390/1440 sans débordement, onglets/accordéon au clavier,
   aucune image cassée. Seul 404 : `/favicon.ico` (favicon absent, Jalon 7).
-- Commit `Jalon 5` (hash à reporter après push).
+- Commit `e4304da`.
 
 ## Points ouverts
 

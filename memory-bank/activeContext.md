@@ -13,7 +13,7 @@
   carrés et rectangles exclusivement.
 - Tokens d'identité dans `assets/css/style.css`.
 - Page placeholder `index.html` publiée.
-- GitHub Pages activé (branche `main`, racine).
+- GitHub Pages activé (branche `main`, racine) et vérifié en ligne (HTTP 200).
 
 ## Prochaine étape
 

@@ -18,7 +18,8 @@
 - Création du dépôt public `super-portfolio`.
 - Documentation de structure : `README.md`, `.clinerules`, `memory-bank/`.
 - Identité posée : jaune/noir/blanc, carrés et rectangles exclusivement.
-- Page placeholder publiée, GitHub Pages activé et vérifié.
+- Page placeholder publiée, GitHub Pages activé et vérifié : `index.html` et
+  `assets/css/style.css` répondent en HTTP 200, build GitHub Pages `built`.
 - Décision : gros fichiers en liens externes ; flat design en page dédiée ;
   nom du dépôt `super-portfolio`.
 

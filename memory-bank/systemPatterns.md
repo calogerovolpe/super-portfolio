@@ -41,7 +41,7 @@ branche `main`, dossier racine, fichier `.nojekyll` présent.
 ### Barre latérale (`site-sidebar`)
 
 - Repliable en CSS pur via une case à cocher `#nav-reduit`.
-- Titre + sigle, navigation avec icônes SVG, bascule de thème (auto / clair / sombre).
+- Titre + sigle, navigation avec icônes SVG, bascule de thème (clair / sombre, mémorisée).
 - L'indication de page courante se fait en HTML (`aria-current="page"`).
 
 ### Retour en haut (`back-to-top`)
@@ -65,8 +65,20 @@ branche `main`, dossier racine, fichier `.nojekyll` présent.
 
 ### Footer et navigation de fin
 
-- Footer en groupes : « Sections », « En détail », « Informations ».
+- Footer en groupes : « Sections », « Projets », « Informations ».
 - `nav-fin` : navigation précédent / suivant en bas de chaque page.
+
+## Implémentation (jalon 2)
+
+- Barre latérale : `#nav-reduit` + `.site-sidebar`, repli à 4,75 rem, état
+  mémorisé dans `localStorage`.
+- Menu bas : `@media (max-width: 959px)`, `.site-nav` horizontal et bouton thème.
+- Lightbox : `.visionneuse`, déclencheurs `[data-lightbox]`, fermeture par bouton,
+  touche Échap ou clic sur le fond.
+- Apparitions : `.js [data-reveal]` + `.est-visible` via `IntersectionObserver`.
+- Thème : `[data-theme="clair"]`, préférence mémorisée, sans flash au chargement.
+- Parallaxe : `[data-parallax]` dans `.hero-visuel`, pointeur fin uniquement.
+- Débordement : `overflow-x: hidden` sur `html` et `body` (bandeau défilant).
 
 ## Conventions de code
 

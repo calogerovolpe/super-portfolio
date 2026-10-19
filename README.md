@@ -28,6 +28,7 @@ Site statique, publié sur GitHub Pages.
 ## Pages transverses
 
 - `index.html` — accueil mémorable
+- `portfolio.html` — grille des six projets
 - `html-css.html` — démonstrations HTML, CSS et Tailwind
 - `a-propos.html`, `contact.html`, `mentions-legales.html`, `404.html`
 
@@ -63,11 +64,15 @@ super-portfolio/
 | # | Jalon | État |
 | --- | --- | --- |
 | 1 | Fondations, conventions, dépôt, GitHub Pages | ✅ Terminé |
-| 2 | Coquille du site, identité visuelle, accueil mémorable | ⬜ À faire |
+| 2 | Coquille du site, identité visuelle, accueil mémorable | ✅ Terminé |
 | 3 | Pages projets : Bakery Bliss Café + Sosse | ⬜ À faire |
 | 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ⬜ À faire |
 | 5 | Page « HTML & CSS » + Tailwind | ⬜ À faire |
 | 6 | Finitions : responsive, accessibilité, SEO | ⬜ À faire |
+
+Les douze pages sont en ligne. Les fiches projets sont des structures complètes
+(hero, métadonnées, navigation) qui seront enrichies aux jalons 3 et 4 avec les
+textes et documents issus des PDF.
 
 ## Publication
 

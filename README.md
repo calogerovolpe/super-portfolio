@@ -24,11 +24,12 @@ Site statique, publié sur GitHub Pages.
 | Casa Urpi | Charte graphique (InDesign 2025) | `casa-urpi.html` |
 | L'îlot Câlins | Charte graphique et mascotte — projet réel, diffusion autorisée | `lilot-calins.html` |
 | Flat design | 2 illustrations SVG, mascotte likeandsee, dessins main levée | `flat-design.html` |
+| Photographie | Portraits (Lightroom + Photoshop) et photo de rue | `photographie.html` |
 
 ## Pages transverses
 
 - `index.html` — accueil mémorable
-- `portfolio.html` — grille des six projets
+- `portfolio.html` — grille des sept projets
 - `html-css.html` — démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web
 - `a-propos.html`, `contact.html`, `mentions-legales.html`, `404.html`
 
@@ -71,7 +72,7 @@ super-portfolio/
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ⬜ À faire |
 | 7 | Finitions | ⬜ À faire |
 
-Les douze pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
+Les treize pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
 L'îlot Câlins et Flat design sont complètes : textes issus des PDF, documents,
 galeries et lightbox.
 

@@ -47,6 +47,10 @@
   grille, amélioration progressive) ; CSS `.demo-*`, `.outil`, `.outil-logo`.
 - Tailwind Play CDN chargé uniquement sur cette page, **préfixe `tw-`** et
   `preflight` désactivé pour ne pas toucher au CSS maison.
+- **Photographie** (pré-Jalon 6) : page `photographie.html` — 62 photos
+  (20 portraits retouchés Lightroom + Photoshop ; 42 rue/voyage dont 9
+  Lightroom), galerie filtrable (`assets/js/photos.js`), lightbox, WebP
+  dans `assets/img/photo/`.
 
 ## Prochaine étape
 
@@ -105,7 +109,6 @@ interactives (filtres, accordéons). Les finitions passent au Jalon 7.
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).
-- Fournir un exemple pour Lightroom (aucun livrable actuel).
 - Construire `competences.html` (Jalon 6).
 - Favicon absent : la console signale un 404 `/favicon.ico` — à traiter aux
   finitions (Jalon 7).

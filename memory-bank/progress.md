@@ -133,10 +133,28 @@
   desktop/mobile, `node --check` OK, balises et accolades équilibrées,
   aucune erreur console.
 
+### 2026-10-20 — Photographie (pré-Jalon 6)
+
+- Nouvelle page projet `photographie.html` : 62 photos (20 portraits
+  retouchés Lightroom + Photoshop ; 42 rue/voyage dont 9 retouchées
+  Lightroom).
+- Conversion des JPG en WebP (1000 px, qualité 82, orientation EXIF
+  corrigée) dans `assets/img/photo/portraits/` et `assets/img/photo/voyage/`.
+- Galerie UI/UX : filtres accessibles (Tout / Portraits / Voyage / Lightroom /
+  Photoshop), compteur, grille responsive 4 → 3 → 2 → 1, badges de retouche,
+  lightbox (`viewer.js`).
+- `assets/js/photos.js` : filtres et compteur, amélioration progressive
+  (sans JS, toutes les photos restent visibles).
+- CSS : `.galerie-barre`, `.galerie-filtre`, `.galerie-compteur`,
+  `.galerie-photo`, `.photo-badge`, `.couverture--photo`.
+- Intégration : footer « Projets » (toutes les pages), carte 07 dans
+  `portfolio.html`, compteurs de l'accueil (6 projets / 7 cartes),
+  `nav-fin` flat-design → photographie → html-css.
+- Validation : `node --check` OK, 62 boutons, 0 placeholder, accents UTF-8.
+
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).
-- Fournir un exemple pour Lightroom (aucun livrable actuel).
 - Construire `competences.html` (Jalon 6).
 - Favicon absent : 404 `/favicon.ico` — à traiter au Jalon 7.
 - GitHub Pages : build `built` après l'incident du 2026-10-19.

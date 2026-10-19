@@ -6,10 +6,11 @@
 | --- | --- | --- |
 | 1 | Fondations et conventions | ✅ Terminé |
 | 2 | Coquille du site et accueil | ✅ Terminé |
-| 3 | Pages projets : Bakery Bliss Café + Sosse | ⬜ À faire |
+| 3 | Pages projets : Bakery Bliss Café + Sosse | ✅ Terminé |
 | 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ⬜ À faire |
-| 5 | Page « HTML & CSS » + Tailwind | ⬜ À faire |
-| 6 | Finitions | ⬜ À faire |
+| 5 | Page « HTML & CSS » + Tailwind (compétences web) | ⬜ À faire |
+| 6 | Page « Compétences » (logiciels + exemples interactifs) | ⬜ À faire |
+| 7 | Finitions | ⬜ À faire |
 
 ## Journal
 
@@ -41,8 +42,36 @@
 - Site en ligne : pages, CSS, JS et images en HTTP 200 ; accents vérifiés.
 - Commit `0846ac0`.
 
+### 2026-10-19 — Jalon 3
+
+- Lecture des PDF avec PyMuPDF (texte et métadonnées) : étude 33 p., charte
+  15 p., site 2 p., vidéo 3 p., dataviz 2 p., affiche 1 p., dépliant 2 p.,
+  business plan Sosse 10 p.
+- 15 aperçus WebP générés (largeur 1000 px, qualité 82) dans
+  `assets/img/bakery/` et `assets/img/sosse/`.
+- 7 PDF légers copiés dans `assets/fichiers/bakery/` et
+  `assets/fichiers/sosse/`.
+- 3 gros fichiers (`.fig` 125 Mo, `.mp4` 18 Mo, dataviz 30 Mo) publiés dans
+  la release GitHub `livrables-volumineux` ; liens de téléchargement intégrés.
+- Page Bakery : hero, « Le projet », grille des 9 livrables, extraits de la
+  charte, navigation précédent/suivant.
+- Page Sosse : hero, « Le projet », chiffres clés, document et galerie de
+  pages, navigation précédent/suivant.
+- CSS : `.carte-livrable`, `.badge`, `.doc-actions`, `.doc-vedette`,
+  `.galerie-doc`, `.note`, `.visionneuse-telecharger`.
+- `viewer.js` : lien de téléchargement de secours pour les PDF.
+- Validation : balises OK, 42 + 26 références locales OK, images avec `alt`
+  et dimensions, HTTP 200 (HTML, CSS, JS, PDF `application/pdf`, WebP).
+- Décisions : WebP ; étude 13,2 Mo conservée ; gros fichiers en release
+  GitHub ; Sosse affiché « Adobe Illustrator » car le PDF est signé
+  Illustrator 28.4, malgré la mention InDesign du plan.
+- Ajouts de périmètre : `html-css.html` recentrée sur les compétences web
+  (WordPress, Elementor, Divi, VS Code, Cline) ; nouvelle page
+  `competences.html` prévue au Jalon 6.
+
 ## Points ouverts
 
-- Hébergement des gros fichiers (GitHub Releases ou lien fourni).
-- Sélection du contenu des PDF à présenter (jalons 3 et 4).
-- Enrichissement des cinq fiches projets (textes, documents, galeries).
+- Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).
+- Fournir un exemple pour Lightroom (aucun livrable actuel).
+- Sélection du contenu des PDF du Jalon 4 (Casa Urpi, L'îlot Câlins, flat design).
+- Construire `competences.html` (Jalon 6) et enrichir `html-css.html` (Jalon 5).

@@ -17,6 +17,7 @@ branche `main`, dossier racine, fichier `.nojekyll` présent.
 ├── lilot-calins.html
 ├── flat-design.html
 ├── html-css.html
+├── competences.html
 ├── a-propos.html
 ├── contact.html
 ├── mentions-legales.html
@@ -27,6 +28,7 @@ branche `main`, dossier racine, fichier `.nojekyll` présent.
 │   ├── js/nav.js
 │   ├── js/viewer.js
 │   ├── js/home.js
+│   ├── js/competences.js   (à venir, jalon 6)
 │   ├── img/
 │   ├── fichiers/
 │   └── video/
@@ -79,6 +81,15 @@ branche `main`, dossier racine, fichier `.nojekyll` présent.
 - Thème : `[data-theme="clair"]`, préférence mémorisée, sans flash au chargement.
 - Parallaxe : `[data-parallax]` dans `.hero-visuel`, pointeur fin uniquement.
 - Débordement : `overflow-x: hidden` sur `html` et `body` (bandeau défilant).
+
+## Implémentation (jalon 3)
+
+- Pages projets : `.carte-livrable` (aperçu cliquable, numéro, méta, actions),
+  `.badge` (PDF / Externe), `.doc-actions`, `.doc-vedette`, `.galerie-doc`.
+- Aperçus WebP dans `assets/img/bakery/` et `assets/img/sosse/` ; documents
+  légers dans `assets/fichiers/`.
+- Gros fichiers : release GitHub `livrables-volumineux`, liens externes.
+- Lightbox : `.visionneuse-telecharger`, lien de secours pour les PDF.
 
 ## Conventions de code
 

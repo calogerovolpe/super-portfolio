@@ -35,4 +35,6 @@
 - Dossier local `docs/`, ignoré par Git.
 - Les visuels retenus sont copiés dans `assets/img/`, `assets/fichiers/` ou
   `assets/video/` au fil des jalons.
-- Les gros fichiers sont publiés hors dépôt (liens externes).
+- Aperçus : PyMuPDF + Pillow → WebP (largeur 1000 px, qualité 82).
+- Les gros fichiers sont publiés hors dépôt (liens externes), dans la release
+  GitHub `livrables-volumineux`.

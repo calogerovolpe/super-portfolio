@@ -1757,5 +1757,322 @@ body.visionneuse-ouverte {
   }
 }
 
+/* ---------- Fiches projets : livrables ---------- */
+
+.livrables {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--filet);
+  border: 1px solid var(--filet);
+}
+
+.carte-livrable {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(1rem, 2vw, 1.4rem);
+  background: var(--fond);
+  transition: background-color var(--transition);
+}
+
+.carte-livrable:hover {
+  background: var(--surface);
+}
+
+.carte-livrable-apercu {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin: 0 0 1rem;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--filet);
+  background: var(--surface);
+  cursor: zoom-in;
+  text-align: left;
+}
+
+.carte-livrable-apercu:hover {
+  border-color: var(--jaune);
+}
+
+.carte-livrable-apercu img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--blanc);
+  transition: transform 350ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.carte-livrable-apercu:hover img {
+  transform: scale(1.02);
+}
+
+.carte-livrable-apercu--concept {
+  display: grid;
+  place-content: center;
+  gap: 0.4rem;
+  overflow: hidden;
+  background: var(--jaune);
+  color: var(--noir);
+  cursor: default;
+  text-align: center;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.carte-livrable-apercu--concept::before,
+.carte-livrable-apercu--concept::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.carte-livrable-apercu--concept::before {
+  width: 36%;
+  aspect-ratio: 1;
+  top: -10%;
+  right: -6%;
+  background: var(--noir);
+}
+
+.carte-livrable-apercu--concept::after {
+  width: 20%;
+  aspect-ratio: 1;
+  bottom: 7%;
+  left: 7%;
+  border: 2px solid var(--noir);
+}
+
+.carte-livrable-apercu--video {
+  background: var(--noir);
+  color: var(--jaune);
+}
+
+.carte-livrable-apercu--video::before {
+  background: var(--jaune);
+}
+
+.carte-livrable-apercu--video::after {
+  border-color: var(--jaune);
+}
+
+.concept-num {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.concept-texte {
+  position: relative;
+  z-index: 1;
+  font-size: 0.62rem;
+  line-height: 1.5;
+}
+
+.carte-livrable-tete {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.55rem;
+}
+
+.carte-livrable-titre {
+  font-size: clamp(1.05rem, 2vw, 1.45rem);
+  text-transform: uppercase;
+}
+
+.carte-livrable-numero {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--jaune);
+  color: var(--noir);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+.carte-livrable-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.7rem;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--texte-doux);
+}
+
+.carte-livrable-texte {
+  margin-bottom: 1rem;
+  color: var(--texte-doux);
+  font-size: 0.9rem;
+}
+
+/* ---------- Badges et actions documentaires ---------- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.4rem;
+  background: var(--jaune);
+  color: var(--noir);
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.badge--contour {
+  background: transparent;
+  color: var(--texte);
+  border: 1px solid var(--filet-fort);
+}
+
+.badge--externe {
+  background: var(--noir);
+  color: var(--jaune);
+  border: 1px solid var(--jaune);
+}
+
+.doc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.9rem;
+}
+
+.doc-actions .btn {
+  padding: 0.55rem 0.75rem;
+  font-size: 0.6rem;
+}
+
+/* ---------- Fiche Sosse : document ---------- */
+
+.doc-vedette {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.doc-vedette-apercu {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--filet);
+  background: var(--blanc);
+  cursor: zoom-in;
+}
+
+.doc-vedette-apercu:hover {
+  border-color: var(--jaune);
+}
+
+.doc-vedette-apercu img {
+  width: 100%;
+  height: auto;
+}
+
+.doc-vedette-texte {
+  color: var(--texte-doux);
+}
+
+.doc-vedette-texte p + p {
+  margin-top: 0.9rem;
+}
+
+.doc-vedette-texte .doc-actions {
+  padding-top: 1.2rem;
+}
+
+.galerie-doc {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.galerie-doc .apercu {
+  aspect-ratio: 3 / 4;
+}
+
+.note {
+  margin-top: 1.2rem;
+  padding: 0.75rem 0.9rem;
+  border-left: 4px solid var(--jaune);
+  background: var(--surface);
+  color: var(--texte-doux);
+  font-size: 0.88rem;
+}
+
+.note a {
+  border-bottom: 2px solid var(--jaune);
+}
+
+/* ---------- Lightbox : secours PDF ---------- */
+
+.visionneuse-telecharger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.7rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--jaune);
+  color: var(--noir);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.visionneuse-telecharger:hover {
+  background: var(--blanc);
+}
+
+/* ---------- Responsive des livrables ---------- */
+
+@media (max-width: 820px) {
+  .livrables {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-vedette {
+    grid-template-columns: 1fr;
+  }
+
+  .galerie-doc {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .galerie-doc {
+    grid-template-columns: 1fr;
+  }
+
+  .visionneuse-contenu iframe {
+    height: 58vh;
+  }
+}
+
 /* Fin de la feuille de style */
 

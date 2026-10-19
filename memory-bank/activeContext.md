@@ -2,7 +2,7 @@
 
 ## Jalon en cours
 
-**Jalon 2 — Coquille du site et accueil mémorable.** Terminé.
+**Jalon 3 — Pages projets : Bakery Bliss Café + Sosse.** Terminé.
 
 ## Ce qui est en place
 
@@ -21,17 +21,32 @@
   L'îlot Câlins, outils, méthode, appel à l'action.
 - Cinq visuels de L'îlot Câlins dans `assets/img/lilot/`.
 - Site en ligne vérifié : pages, CSS, JS et images en HTTP 200.
+- Jalon 3 : pages **Bakery Bliss Café** (9 livrables) et **Business plan
+  Sosse** (10 pages) complètes, avec lightbox PDF/image.
+- 15 aperçus WebP dans `assets/img/bakery/` et `assets/img/sosse/` ;
+  7 PDF légers dans `assets/fichiers/bakery/` et `assets/fichiers/sosse/`.
+- Release GitHub `livrables-volumineux` : `.fig` (125 Mo), vidéo (18 Mo),
+  datavisualisation (30 Mo) — liens externes intégrés.
+- Nouveaux composants : `.carte-livrable`, `.badge`, `.doc-actions`,
+  `.doc-vedette`, `.galerie-doc`, `.note`, `.visionneuse-telecharger`.
 
 ## Prochaine étape
 
-**Jalon 3 — Pages projets : Bakery Bliss Café + Sosse.**
+**Jalon 4 — Pages projets : Casa Urpi + L'îlot Câlins + flat design.**
 
-1. Lire les PDF concernés avec PyMuPDF et sélectionner les contenus à présenter.
-2. Rédiger les textes descriptifs à partir des documents réels.
-3. Intégrer les images et documents légers dans `assets/`.
-4. Mettre en place la galerie et la lightbox sur les deux pages.
-5. Traiter les gros fichiers (`.fig`, datavisualisation, vidéo) par liens externes.
-6. Vérifier, commit et push.
+1. Lire `charge graphique Casa Urpi.pdf`, la charte L'îlot Câlins et le SVG flat design.
+2. Rédiger les textes et sélectionner les visuels.
+3. Intégrer les documents légers et les galeries.
+4. Vérifier, commit et push.
+
+## Ajouts de périmètre validés
+
+- **Jalon 5 — `html-css.html`** : la page montrera surtout les compétences web
+  (WordPress, Elementor, Divi, VS Code, Cline) en plus de HTML/CSS/JS/Tailwind/Git.
+- **Jalon 6 — `competences.html`** : page complète dédiée à tous les logiciels
+  maîtrisés (Photoshop, Illustrator, Lightroom, InDesign, Premiere Pro,
+  After Effects, Figma, etc.), avec des exemples tirés des projets et des
+  sections interactives (filtres, accordéons). Les finitions passent au Jalon 7.
 
 ## Décisions récentes
 
@@ -41,9 +56,16 @@
 - Nom du dépôt : `super-portfolio` (public).
 - Menu bas responsive à partir de 959 px ; thème clair/sombre mémorisé.
 - Le contenu de L'îlot Câlins peut être publié (autorisation).
+- Jalon 3 : aperçus WebP (1000 px, qualité 82) ; étude & conception (13,2 Mo)
+  conservée dans le dépôt ; gros fichiers dans la release GitHub
+  `livrables-volumineux`.
+- Sosse : le PDF est signé **Adobe Illustrator 28.4** (2024), pas InDesign ;
+  la page affiche donc « Adobe Illustrator » (à confirmer par Calogero).
+- Lightbox : lien « Télécharger le PDF » ajouté en secours de l'iframe.
 
 ## Points ouverts
 
-- Hébergement exact des gros fichiers : GitHub Releases ou lien fourni.
-- Sélection du contenu des PDF (jalons 3 et 4).
-- Enrichissement des cinq fiches projets.
+- Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).
+- Fournir un exemple pour Lightroom (aucun livrable actuel).
+- Sélection du contenu des PDF du Jalon 4 (Casa Urpi, L'îlot Câlins, flat design).
+- Construire `competences.html` (Jalon 6) et enrichir `html-css.html` (Jalon 5).

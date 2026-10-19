@@ -51,6 +51,15 @@
       cadre.src = source;
       cadre.title = texte || 'Document PDF';
       contenu.appendChild(cadre);
+
+      var secours = document.createElement('a');
+      secours.className = 'visionneuse-telecharger';
+      secours.href = source;
+      secours.setAttribute('download', '');
+      secours.setAttribute('target', '_blank');
+      secours.setAttribute('rel', 'noopener');
+      secours.textContent = 'Télécharger le PDF';
+      contenu.appendChild(secours);
     } else {
       var image = document.createElement('img');
       image.src = source;

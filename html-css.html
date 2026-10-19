@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>HTML & CSS — démonstrations | Super-portfolio Volpe Calogero</title>
-<meta name="description" content="Démonstrations HTML, CSS et Tailwind : composants, animations et bonnes pratiques.">
+<title>Démo — HTML, CSS &amp; outils web | Super-portfolio Volpe Calogero</title>
+<meta name="description" content="Démonstrations HTML, CSS, JavaScript, Tailwind et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="HTML & CSS — démonstrations | Super-portfolio Volpe Calogero">
-<meta property="og:description" content="Démonstrations HTML, CSS et Tailwind : composants, animations et bonnes pratiques.">
+<meta property="og:title" content="Démo — HTML, CSS & outils web | Super-portfolio Volpe Calogero">
+<meta property="og:description" content="Démonstrations HTML, CSS, JavaScript, Tailwind et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
 <meta property="og:url" content="https://calogerovolpe.github.io/super-portfolio/html-css.html">
 <script>try{var t=localStorage.getItem('theme');if(t==='clair'){document.documentElement.setAttribute('data-theme','clair')}document.documentElement.classList.add('js')}catch(e){document.documentElement.classList.add('js')}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +18,17 @@
 <link rel="stylesheet" href="assets/css/print.css" media="print">
 <script src="assets/js/nav.js" defer></script>
 <script src="assets/js/viewer.js" defer></script>
+<script src="assets/js/demo.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+if (window.tailwind) {
+  tailwind.config = {
+    prefix: 'tw-',
+    corePlugins: { preflight: false },
+    theme: { extend: { colors: { jaune: '#FFD500', noir: '#0B0B0B' } } }
+  };
+}
+</script>
 
 </head>
 <body>
@@ -46,39 +57,15 @@
 <div class="site-contenu">
 <main class="site-main" id="contenu">
 <header class="page-hero">
-  <p class="page-hero-label">Démonstrations — HTML · CSS · Tailwind</p>
-  <h1>La base,<br>en pratique.</h1>
-  <p class="page-hero-intro">Cette page rassemblera des démonstrations interactives : HTML sémantique, CSS moderne et composants Tailwind. Elle sera construite au jalon 5, avec des exemples à ouvrir, manipuler et comparer.</p>
+  <p class="page-hero-label">Savoir-faire — Démonstrations web</p>
+  <h1>HTML &amp;<br>CSS.</h1>
+  <p class="page-hero-intro">Des briques concrètes montrées avec leur code : structure sémantique, CSS moderne, JavaScript vanilla, Tailwind en comparaison — et l'environnement WordPress, Elementor, Divi, VS Code et Cline.</p>
 </header>
 
-<section class="section">
+<section class="section" aria-labelledby="principe-titre">
   <div class="section-tete">
-    <h2 class="section-titre">Au programme</h2>
-    <p class="section-numero">Jalon 5</p>
-  </div>
-  <div class="methode">
-    <div class="methode-etape">
-      <span class="methode-num">01</span>
-      <h3 class="methode-titre">HTML sémantique</h3>
-      <p class="methode-texte">Structure, landmarks, formulaires, tableaux et accessibilité. Des exemples commentés, pas des extraits abstraits.</p>
-    </div>
-    <div class="methode-etape">
-      <span class="methode-num">02</span>
-      <h3 class="methode-titre">CSS moderne</h3>
-      <p class="methode-texte">Variables, grid, flexbox, transitions et responsive. Des composants qui se manipulent directement dans la page.</p>
-    </div>
-    <div class="methode-etape">
-      <span class="methode-num">03</span>
-      <h3 class="methode-titre">Tailwind</h3>
-      <p class="methode-texte">Utilitaires, composants et comparaison avec le CSS maison. Les mêmes blocs, deux approches, un seul objectif.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-tete">
-    <h2 class="section-titre">Pourquoi cette page ?</h2>
-    <p class="section-numero">Transparence</p>
+    <h2 class="section-titre" id="principe-titre">Le principe</h2>
+    <p class="section-numero">01 — Transparence</p>
   </div>
   <div class="manifeste">
     <div>
@@ -86,16 +73,233 @@
       <h3 class="manifeste-titre">Montrer le code,<br>pas seulement le résultat.</h3>
     </div>
     <div class="manifeste-texte">
-      <p>Un portfolio de communication web doit prouver qu'il sait construire, pas seulement composer. Cette page montrera les briques de base : une structure HTML propre, un CSS lisible, et l'équivalent en Tailwind.</p>
-      <p>Les démonstrations seront interactives et accessibles : chaque exemple pourra être ouvert, testé au clavier et comparé à sa version Tailwind.</p>
+      <p>Un portfolio de communication web doit prouver qu'il sait construire, pas seulement composer. Cette page montre les briques de base : une structure HTML propre, un CSS lisible, du JavaScript vanilla et l'équivalent en Tailwind.</p>
+      <p>Chaque démonstration est interactive et accessible : elle s'ouvre au clavier, se teste et se compare. Le site reste statique, sans framework ni build ; le CSS maison reste la référence.</p>
     </div>
   </div>
 </section>
 
+<section class="section" aria-labelledby="briques-titre">
+  <div class="section-tete">
+    <h2 class="section-titre" id="briques-titre">Les briques</h2>
+    <p class="section-numero">02 — Démonstrations</p>
+  </div>
+  <p class="section-intro">Cinq démonstrations à ouvrir, tester et comparer. Les onglets « Résultat / Code » fonctionnent au clavier ; sans JavaScript, les deux restent visibles.</p>
+  <div class="galerie-demo">
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">HTML sémantique</h3>
+        <span class="carte-demo-numero">01</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="HTML sémantique : résultat ou code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-html-resultat" aria-controls="panneau-html-resultat" aria-selected="true">Résultat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-html-code" aria-controls="panneau-html-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-html-resultat" aria-labelledby="onglet-html-resultat">
+        <form class="demo-formulaire" action="#" method="post">
+          <div class="demo-champ">
+            <label for="demo-nom">Nom</label>
+            <input id="demo-nom" name="nom" type="text" autocomplete="name" required>
+          </div>
+          <div class="demo-champ">
+            <label for="demo-email">E-mail</label>
+            <input id="demo-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="demo-champ">
+            <label for="demo-message">Message</label>
+            <textarea id="demo-message" name="message" rows="3" required></textarea>
+          </div>
+          <button class="btn btn--contour" type="submit">Envoyer</button>
+        </form>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-html-code" aria-labelledby="onglet-html-code">
+        <pre class="demo-code"><code>&lt;form action="#" method="post"&gt;
+  &lt;label for="nom"&gt;Nom&lt;/label&gt;
+  &lt;input id="nom" name="nom" type="text"
+         autocomplete="name" required&gt;
+  &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">CSS moderne</h3>
+        <span class="carte-demo-numero">02</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="CSS moderne : résultat ou code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-css-resultat" aria-controls="panneau-css-resultat" aria-selected="true">Résultat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-css-code" aria-controls="panneau-css-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-css-resultat" aria-labelledby="onglet-css-resultat">
+        <div class="demo-produit">
+          <div class="demo-produit-visuel" aria-hidden="true"></div>
+          <div>
+            <h4 class="demo-produit-titre">Carte produit</h4>
+            <p class="demo-produit-texte">Grid, variables et transition : au survol, la bordure jaunit et la carte se soulève.</p>
+          </div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-css-code" aria-labelledby="onglet-css-code">
+        <pre class="demo-code"><code>.demo-produit {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
+  border: 1px solid var(--filet);
+  transition: transform 180ms ease;
+}
+
+.demo-produit:hover {
+  border-color: var(--jaune);
+  transform: translateY(-3px);
+}</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">JavaScript vanilla</h3>
+        <span class="carte-demo-numero">03</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="JavaScript vanilla : résultat ou code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-js-resultat" aria-controls="panneau-js-resultat" aria-selected="true">Résultat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-js-code" aria-controls="panneau-js-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-js-resultat" aria-labelledby="onglet-js-resultat">
+        <div class="demo-accordeon">
+          <button class="demo-accordeon-bouton" type="button" data-accordeon aria-controls="demo-reponse-1" aria-expanded="true">Pourquoi du JavaScript vanilla ?</button>
+          <div class="demo-accordeon-panneau" id="demo-reponse-1">Parce qu'un site statique n'a pas besoin de framework pour être interactif : quelques fonctions suffisent et le poids reste minimal.</div>
+          <button class="demo-accordeon-bouton" type="button" data-accordeon aria-controls="demo-reponse-2" aria-expanded="true">Comment fonctionne l'accordéon ?</button>
+          <div class="demo-accordeon-panneau" id="demo-reponse-2">Un clic change l'attribut aria-expanded et l'attribut hidden du panneau. Le focus reste visible et le contenu est lisible au clavier.</div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-js-code" aria-labelledby="onglet-js-code">
+        <pre class="demo-code"><code>bouton.addEventListener('click', function () {
+  var ouvert =
+    bouton.getAttribute('aria-expanded') === 'true';
+  bouton.setAttribute('aria-expanded',
+    ouvert ? 'false' : 'true');
+  panneau.hidden = ouvert;
+});</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Tailwind</h3>
+        <span class="carte-demo-numero">04</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Tailwind : résultat ou code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-tw-resultat" aria-controls="panneau-tw-resultat" aria-selected="true">Résultat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-tw-code" aria-controls="panneau-tw-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-tw-resultat" aria-labelledby="onglet-tw-resultat">
+        <div class="demo-comparaison">
+          <div class="demo-comparaison-colonne">
+            <span class="demo-comparaison-label">CSS maison</span>
+            <button class="demo-bouton-maison" type="button">Acheter</button>
+          </div>
+          <div class="demo-comparaison-colonne">
+            <span class="demo-comparaison-label">Tailwind</span>
+            <button type="button" class="tw-bg-jaune tw-text-noir tw-border-2 tw-border-noir tw-px-5 tw-py-3 tw-font-bold tw-uppercase tw-tracking-wider tw-text-xs hover:tw-bg-noir hover:tw-text-jaune">Acheter</button>
+          </div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-tw-code" aria-labelledby="onglet-tw-code">
+        <pre class="demo-code"><code>&lt;button class="tw-bg-jaune tw-text-noir
+  tw-border-2 tw-border-noir tw-px-5 tw-py-3
+  tw-font-bold tw-uppercase hover:tw-bg-noir"&gt;
+  Acheter
+&lt;/button&gt;</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo carte-demo--large">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Git</h3>
+        <span class="carte-demo-numero">05</span>
+      </div>
+      <div class="demo-panneau">
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-hash">0846ac0</span>
+            <span class="timeline-date">2026-10-19</span>
+            <span class="timeline-titre">Jalon 2 — coquille et accueil</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-hash">2f49ebd</span>
+            <span class="timeline-date">2026-10-19</span>
+            <span class="timeline-titre">Jalon 3 — Bakery et Sosse</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-hash">f60194f</span>
+            <span class="timeline-date">2026-10-19</span>
+            <span class="timeline-titre">Jalon 4 — Casa Urpi, L'îlot, flat design</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-hash">ca93966</span>
+            <span class="timeline-date">2026-10-19</span>
+            <span class="timeline-titre">Jalon 4 — mémoire du projet</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-hash">ed7a2de</span>
+            <span class="timeline-date">2026-10-19</span>
+            <span class="timeline-titre">Jalon 4 — cohérence du README</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="outils-titre">
+  <div class="section-tete">
+    <h2 class="section-titre" id="outils-titre">Environnement &amp; outils</h2>
+    <p class="section-numero">03 — Savoir-faire</p>
+  </div>
+  <p class="section-intro">Les outils qui accompagnent la conception, la mise en page et la publication du portfolio.</p>
+  <div class="outils">
+    <article class="outil">
+      <h3 class="outil-nom">WordPress</h3>
+      <p class="outil-role">CMS · site vitrine</p>
+      <p class="outil-texte">Installation, thème, contenus et réglages. Expérience sur un site vitrine (thème Hello Elementor, hébergement O2switch).</p>
+    </article>
+    <article class="outil">
+      <h3 class="outil-nom">Elementor</h3>
+      <p class="outil-role">Constructeur de pages</p>
+      <p class="outil-texte">Mise en page par blocs, responsive et réglages typographiques dans WordPress. Utilisé sur le site vitrine Bakery Bliss Café.</p>
+    </article>
+    <article class="outil">
+      <h3 class="outil-nom">Divi</h3>
+      <p class="outil-role">Thème &amp; page builder</p>
+      <p class="outil-texte">Construction de pages et de sections avec le builder Divi, pour des sites vitrines structurés.</p>
+    </article>
+    <article class="outil">
+      <h3 class="outil-nom">VS Code</h3>
+      <p class="outil-role">Éditeur de code</p>
+      <p class="outil-texte">Édition HTML, CSS et JavaScript de ce portfolio, avec Git intégré et aperçu local.</p>
+    </article>
+    <article class="outil">
+      <h3 class="outil-nom">Cline</h3>
+      <p class="outil-role">Assistant d'édition</p>
+      <p class="outil-texte">Assistance à l'écriture, à la vérification et à la documentation du code, dans VS Code.</p>
+    </article>
+    <article class="outil">
+      <h3 class="outil-nom">Git &amp; GitHub Pages</h3>
+      <p class="outil-role">Versionnage &amp; publication</p>
+      <p class="outil-texte">Commits, branches et publication statique. Le portfolio est en ligne sur <a href="https://calogerovolpe.github.io/super-portfolio/">GitHub Pages</a>.</p>
+    </article>
+  </div>
+</section>
+
 <div class="nav-fin">
-  <a class="nav-fin-lien" href="portfolio.html">
-    <span class="nav-fin-direction">← Retour</span>
-    <span class="nav-fin-titre">Voir les projets</span>
+  <a class="nav-fin-lien" href="flat-design.html">
+    <span class="nav-fin-direction">← Flat design</span>
+    <span class="nav-fin-titre">Projet précédent</span>
+  </a>
+  <a class="nav-fin-lien nav-fin-suivant" href="contact.html">
+    <span class="nav-fin-direction">Suivant →</span>
+    <span class="nav-fin-titre">Contact</span>
   </a>
 </div>
 </main>

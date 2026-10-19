@@ -2,7 +2,7 @@
 
 ## Jalon en cours
 
-**Jalon 4 — Pages projets : Casa Urpi + L'îlot Câlins + flat design.** Terminé.
+**Jalon 5 — Page Démo : HTML, CSS, Tailwind et outils web.** Terminé.
 
 ## Ce qui est en place
 
@@ -37,11 +37,22 @@
   datavisualisation (30 Mo) — liens externes intégrés.
 - Composants : `.carte-livrable`, `.badge`, `.doc-actions`, `.doc-vedette`,
   `.galerie-doc`, `.galerie-apercu`, `.note`, `.visionneuse-telecharger`.
+- Jalon 5 : page **Démo** (`html-css.html`) — 5 cartes interactives
+  (HTML sémantique, CSS moderne, JavaScript vanilla, Tailwind, Git),
+  onglets « Résultat / Code » et accordéon accessibles.
+- Environnement & outils : **WordPress, Elementor, Divi, VS Code, Cline,
+  Git & GitHub Pages** présentés en cartes.
+- `assets/js/demo.js` (onglets ARIA + accordéon, amélioration progressive) ;
+  CSS `.demo-*`, `.timeline`, `.outil`.
+- Tailwind Play CDN chargé uniquement sur cette page, **préfixe `tw-`** et
+  `preflight` désactivé pour ne pas toucher au CSS maison.
 
 ## Prochaine étape
 
-**Jalon 5 — `html-css.html`** recentrée sur les compétences web
-(WordPress, Elementor, Divi, VS Code, Cline) en plus de HTML/CSS/JS/Tailwind/Git.
+**Jalon 6 — `competences.html`** : page complète dédiée aux logiciels
+maîtrisés (Photoshop, Illustrator, Lightroom, InDesign, Premiere Pro,
+After Effects, Figma…), avec des exemples tirés des projets et des sections
+interactives (filtres, accordéons). Les finitions passent au Jalon 7.
 
 ## Ajouts de périmètre validés
 
@@ -78,10 +89,18 @@
   écartés (`calin triste voit enfant mourir`, `pluieurs calins triste`).
 - **Casa Urpi** : **charte graphique** (et non « charge graphique »),
   InDesign 2025.
+- **Jalon 5** : Tailwind Play CDN **scopé** (`prefix: 'tw-'`,
+  `preflight: false`) — aucun impact sur le CSS maison.
+- **Démo** : onglets ARIA et accordéon en JS vanilla (`demo.js`) ;
+  sans JavaScript, tous les contenus restent visibles.
+- La page Démo met en avant **WordPress, Elementor, Divi, VS Code et Cline**
+  en plus de HTML/CSS/JS/Tailwind/Git.
 
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).
 - Fournir un exemple pour Lightroom (aucun livrable actuel).
-- Construire `competences.html` (Jalon 6) et enrichir `html-css.html` (Jalon 5).
+- Construire `competences.html` (Jalon 6).
+- Favicon absent : la console signale un 404 `/favicon.ico` — à traiter aux
+  finitions (Jalon 7).
 - GitHub Pages : build `built` (vérifié le 2026-10-19 après l'incident).

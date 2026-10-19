@@ -8,7 +8,7 @@
 | 2 | Coquille du site et accueil | ✅ Terminé |
 | 3 | Pages projets : Bakery Bliss Café + Sosse | ✅ Terminé |
 | 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ✅ Terminé |
-| 5 | Page « HTML & CSS » + Tailwind (compétences web) | ⬜ À faire |
+| 5 | Page « HTML & CSS » + Tailwind (compétences web) | ✅ Terminé |
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ⬜ À faire |
 | 7 | Finitions | ⬜ À faire |
 
@@ -97,9 +97,29 @@
   + WebP ; visuels « triste » écartés.
 - Commit `f60194f`.
 
+### 2026-10-19 — Jalon 5
+
+- Page `html-css.html` réécrite : hero, « Le principe », « Les briques »
+  (5 démonstrations), « Environnement & outils », `nav-fin`.
+- Démonstrations : HTML sémantique (formulaire), CSS moderne (carte produit),
+  JavaScript vanilla (accordéon), Tailwind (comparaison CSS maison/Tailwind),
+  Git (timeline des commits).
+- `assets/js/demo.js` : onglets ARIA (flèches, Home/End) et accordéon,
+  amélioration progressive (sans JS, tous les contenus restent visibles).
+- CSS : `.galerie-demo`, `.carte-demo`, `.demo-onglets`, `.demo-code`,
+  `.demo-*`, `.timeline`, `.outil`.
+- Tailwind Play CDN scopé : `prefix: 'tw-'`, `preflight: false`, couleurs
+  `jaune`/`noir` ; vérifié en navigateur (`rgb(255, 213, 0)`).
+- Carte portfolio « Démo » et README mis à jour.
+- Validation : 418 références locales OK, balises équilibrées, `node --check`
+  OK, Playwright 390/1440 sans débordement, onglets/accordéon au clavier,
+  aucune image cassée. Seul 404 : `/favicon.ico` (favicon absent, Jalon 7).
+- Commit `Jalon 5` (hash à reporter après push).
+
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).
 - Fournir un exemple pour Lightroom (aucun livrable actuel).
-- Construire `competences.html` (Jalon 6) et enrichir `html-css.html` (Jalon 5).
+- Construire `competences.html` (Jalon 6).
+- Favicon absent : 404 `/favicon.ico` — à traiter au Jalon 7.
 - GitHub Pages : build `built` après l'incident du 2026-10-19.

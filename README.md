@@ -29,7 +29,7 @@ Site statique, publié sur GitHub Pages.
 
 - `index.html` — accueil mémorable
 - `portfolio.html` — grille des six projets
-- `html-css.html` — démonstrations HTML, CSS et Tailwind
+- `html-css.html` — démonstrations HTML, CSS, JavaScript, Tailwind et outils web
 - `a-propos.html`, `contact.html`, `mentions-legales.html`, `404.html`
 
 ## Structure du dépôt
@@ -67,7 +67,7 @@ super-portfolio/
 | 2 | Coquille du site, identité visuelle, accueil mémorable | ✅ Terminé |
 | 3 | Pages projets : Bakery Bliss Café + Sosse | ✅ Terminé |
 | 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ✅ Terminé |
-| 5 | Page « HTML & CSS » + Tailwind (compétences web) | ⬜ À faire |
+| 5 | Page « HTML & CSS » + Tailwind (compétences web) | ✅ Terminé |
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ⬜ À faire |
 | 7 | Finitions | ⬜ À faire |
 

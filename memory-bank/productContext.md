@@ -29,5 +29,5 @@ Les textes expliquent les choix de conception, pas seulement les outils.
 
 - Une identité forte, immédiatement reconnaissable.
 - Des documents réels présentés et expliqués, pas seulement des vignettes.
-- Des démonstrations techniques (HTML/CSS/Tailwind) intégrées au portfolio.
+- Des démonstrations techniques (HTML/CSS/JavaScript/Tailwind) intégrées au portfolio.
 - Un site léger, sans dépendance lourde, entièrement maîtrisé.

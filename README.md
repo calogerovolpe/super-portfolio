@@ -29,7 +29,7 @@ Site statique, publié sur GitHub Pages.
 
 - `index.html` — accueil mémorable
 - `portfolio.html` — grille des six projets
-- `html-css.html` — démonstrations HTML, CSS, JavaScript, Tailwind et outils web
+- `html-css.html` — démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web
 - `a-propos.html`, `contact.html`, `mentions-legales.html`, `404.html`
 
 ## Structure du dépôt

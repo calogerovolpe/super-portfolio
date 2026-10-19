@@ -2,7 +2,7 @@
 
 ## Jalon en cours
 
-**Jalon 5 — Page Démo : HTML, CSS, Tailwind et outils web.** Terminé.
+**Jalon 5 — Page Démo : HTML, CSS, Tailwind et outils web.** Terminé, puis enrichi de nouvelles démonstrations (pré-Jalon 6).
 
 ## Ce qui est en place
 
@@ -37,13 +37,14 @@
   datavisualisation (30 Mo) — liens externes intégrés.
 - Composants : `.carte-livrable`, `.badge`, `.doc-actions`, `.doc-vedette`,
   `.galerie-doc`, `.galerie-apercu`, `.note`, `.visionneuse-telecharger`.
-- Jalon 5 : page **Démo** (`html-css.html`) — 5 cartes interactives
-  (HTML sémantique, CSS moderne, JavaScript vanilla, Tailwind, Git),
+- Jalon 5 : page **Démo** (`html-css.html`) — **8 cartes interactives**
+  (HTML sémantique, CSS moderne, plus d'exemples CSS, JavaScript vanilla,
+  Tailwind, formulaire de don, menu responsive, grille redimensionnable),
   onglets « Résultat / Code » et accordéon accessibles.
 - Environnement & outils : **WordPress, Elementor, Divi, VS Code, Cline,
-  Git & GitHub Pages** présentés en cartes.
-- `assets/js/demo.js` (onglets ARIA + accordéon, amélioration progressive) ;
-  CSS `.demo-*`, `.timeline`, `.outil`.
+  Git & GitHub Pages** présentés en cartes avec **logos monochromes**.
+- `assets/js/demo.js` (onglets ARIA, accordéon, don, fenêtre redimensionnable,
+  grille, amélioration progressive) ; CSS `.demo-*`, `.outil`, `.outil-logo`.
 - Tailwind Play CDN chargé uniquement sur cette page, **préfixe `tw-`** et
   `preflight` désactivé pour ne pas toucher au CSS maison.
 
@@ -95,6 +96,11 @@ interactives (filtres, accordéons). Les finitions passent au Jalon 7.
   sans JavaScript, tous les contenus restent visibles.
 - La page Démo met en avant **WordPress, Elementor, Divi, VS Code et Cline**
   en plus de HTML/CSS/JS/Tailwind/Git.
+- **Démo — modifications pré-Jalon 6** : retrait de la carte Git (timeline) ;
+  ajout du formulaire de don (ponctuel/mensuel, montants fixes + libre),
+  du menu responsive dans une fenêtre redimensionnable (container query),
+  de six exemples CSS et d'une grille 4×3 redimensionnable ; logos d'outils
+  monochromes sur tuiles jaunes.
 
 ## Points ouverts
 

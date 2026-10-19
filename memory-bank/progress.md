@@ -116,6 +116,23 @@
   aucune image cassée. Seul 404 : `/favicon.ico` (favicon absent, Jalon 7).
 - Commit `e4304da`.
 
+### 2026-10-20 — Démo enrichie (pré-Jalon 6)
+
+- Retrait de la démo Git et de sa timeline (`timeline` supprimé du CSS).
+- Nouvelles cartes : formulaire de don (ponctuel/mensuel, 5/10/20/50/100 €
+  + montant libre), menu responsive dans une fenêtre redimensionnable
+  (container query au point de rupture), six exemples CSS, grille 4×3
+  redimensionnable (reflow 4 → 3 → 2 → 1 colonnes).
+- Logos monochromes des outils (WordPress, Elementor, Divi, VS Code, Cline,
+  Git, GitHub) sur tuiles jaunes ; Divi converti en noir/transparent.
+- JS : activation du champ « autre », récap du don, pilotage des largeurs
+  (fenêtre + grille), compteur de colonnes.
+- Textes : intro « Huit démonstrations », carte portfolio « 8 démonstrations »,
+  README, `productContext.md` et `activeContext.md` mis à jour.
+- Validation : 22 assertions Puppeteer OK (don, menu, grille), captures
+  desktop/mobile, `node --check` OK, balises et accolades équilibrées,
+  aucune erreur console.
+
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).

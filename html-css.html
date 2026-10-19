@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Démo — HTML, CSS &amp; outils web | Super-portfolio Volpe Calogero</title>
-<meta name="description" content="Démonstrations HTML, CSS, JavaScript, Tailwind et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
+<meta name="description" content="Démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Démo — HTML, CSS & outils web | Super-portfolio Volpe Calogero">
-<meta property="og:description" content="Démonstrations HTML, CSS, JavaScript, Tailwind et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
+<meta property="og:description" content="Démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
 <meta property="og:url" content="https://calogerovolpe.github.io/super-portfolio/html-css.html">
 <script>try{var t=localStorage.getItem('theme');if(t==='clair'){document.documentElement.setAttribute('data-theme','clair')}document.documentElement.classList.add('js')}catch(e){document.documentElement.classList.add('js')}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +59,7 @@ if (window.tailwind) {
 <header class="page-hero">
   <p class="page-hero-label">Savoir-faire — Démonstrations web</p>
   <h1>HTML &amp;<br>CSS.</h1>
-  <p class="page-hero-intro">Des briques concrètes montrées avec leur code : structure sémantique, CSS moderne, JavaScript vanilla, Tailwind en comparaison — et l'environnement WordPress, Elementor, Divi, VS Code et Cline.</p>
+  <p class="page-hero-intro">Des briques concrètes montrées avec leur code : structure sémantique, CSS moderne, JavaScript vanilla, Tailwind, formulaire de don, menu responsive et grille redimensionnable — et l'environnement WordPress, Elementor, Divi, VS Code, Cline et GitHub.</p>
 </header>
 
 <section class="section" aria-labelledby="principe-titre">
@@ -84,7 +84,7 @@ if (window.tailwind) {
     <h2 class="section-titre" id="briques-titre">Les briques</h2>
     <p class="section-numero">02 — Démonstrations</p>
   </div>
-  <p class="section-intro">Cinq démonstrations à ouvrir, tester et comparer. Les onglets « Résultat / Code » fonctionnent au clavier ; sans JavaScript, les deux restent visibles.</p>
+  <p class="section-intro">Huit démonstrations à ouvrir, tester et comparer. Les onglets « Résultat / Code » fonctionnent au clavier ; sans JavaScript, les deux restent visibles.</p>
   <div class="galerie-demo">
     <article class="carte-demo">
       <div class="carte-demo-tete">
@@ -156,10 +156,78 @@ if (window.tailwind) {
       </div>
     </article>
 
+    <article class="carte-demo carte-demo--large" id="demo-cssplus">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Plus d'exemples CSS</h3>
+        <span class="carte-demo-numero">03</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Plus d'exemples CSS : résultat ou code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-cssplus-resultat" aria-controls="panneau-cssplus-resultat" aria-selected="true">Résultat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-cssplus-code" aria-controls="panneau-cssplus-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-cssplus-resultat" aria-labelledby="onglet-cssplus-resultat">
+        <div class="demo-exemples">
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Flexbox</span>
+            <div class="demo-exemple-boite demo-exemple-flex"><span>Centre</span></div>
+            <p class="demo-exemple-note">display: flex; align-items: center; justify-content: center;</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Aspect-ratio</span>
+            <div class="demo-exemple-boite demo-exemple-ratio"><span>16 / 9</span></div>
+            <p class="demo-exemple-note">aspect-ratio: 16 / 9;</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Clamp</span>
+            <div class="demo-exemple-boite demo-exemple-clamp"><span>Aa</span></div>
+            <p class="demo-exemple-note">font-size: clamp(1.5rem, 6vw, 2.75rem);</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Pseudo-élément</span>
+            <div class="demo-exemple-boite demo-exemple-pseudo"></div>
+            <p class="demo-exemple-note">.boite::before { content: ""; }</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Transition</span>
+            <div class="demo-exemple-boite demo-exemple-hover"><span>Survole</span></div>
+            <p class="demo-exemple-note">transition + transform</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Position</span>
+            <div class="demo-exemple-boite demo-exemple-position"><span class="demo-exemple-pastille">01</span></div>
+            <p class="demo-exemple-note">position: absolute; inset: 0.4rem;</p>
+          </div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-cssplus-code" aria-labelledby="onglet-cssplus-code">
+        <pre class="demo-code"><code>/* Flexbox : centrer sans marge */
+.boite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Taille fluide */
+.titre {
+  font-size: clamp(1.5rem, 6vw, 2.75rem);
+}
+
+/* Carré qui garde ses proportions */
+.vignette {
+  aspect-ratio: 1;
+  transition: transform 180ms ease;
+}
+
+.vignette:hover {
+  transform: translateY(-3px);
+}</code></pre>
+      </div>
+    </article>
+
     <article class="carte-demo">
       <div class="carte-demo-tete">
         <h3 class="carte-demo-titre">JavaScript vanilla</h3>
-        <span class="carte-demo-numero">03</span>
+        <span class="carte-demo-numero">04</span>
       </div>
       <div class="demo-onglets" role="tablist" aria-label="JavaScript vanilla : résultat ou code">
         <button class="demo-onglet" type="button" role="tab" id="onglet-js-resultat" aria-controls="panneau-js-resultat" aria-selected="true">Résultat</button>
@@ -187,7 +255,7 @@ if (window.tailwind) {
     <article class="carte-demo">
       <div class="carte-demo-tete">
         <h3 class="carte-demo-titre">Tailwind</h3>
-        <span class="carte-demo-numero">04</span>
+        <span class="carte-demo-numero">05</span>
       </div>
       <div class="demo-onglets" role="tablist" aria-label="Tailwind : résultat ou code">
         <button class="demo-onglet" type="button" role="tab" id="onglet-tw-resultat" aria-controls="panneau-tw-resultat" aria-selected="true">Résultat</button>
@@ -214,39 +282,169 @@ if (window.tailwind) {
       </div>
     </article>
 
-    <article class="carte-demo carte-demo--large">
+    <article class="carte-demo carte-demo--large" id="demo-don">
       <div class="carte-demo-tete">
-        <h3 class="carte-demo-titre">Git</h3>
-        <span class="carte-demo-numero">05</span>
+        <h3 class="carte-demo-titre">Formulaire de don</h3>
+        <span class="carte-demo-numero">06</span>
       </div>
-      <div class="demo-panneau">
-        <div class="timeline">
-          <div class="timeline-item">
-            <span class="timeline-hash">0846ac0</span>
-            <span class="timeline-date">2026-10-19</span>
-            <span class="timeline-titre">Jalon 2 — coquille et accueil</span>
+      <div class="demo-onglets" role="tablist" aria-label="Formulaire de don : résultat ou code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-don-resultat" aria-controls="panneau-don-resultat" aria-selected="true">Résultat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-don-code" aria-controls="panneau-don-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-don-resultat" aria-labelledby="onglet-don-resultat">
+        <form class="demo-don" action="#" method="post">
+          <fieldset class="demo-don-groupe">
+            <legend class="demo-don-legende">Fréquence</legend>
+            <div class="demo-don-segments">
+              <label class="demo-don-segment">
+                <input type="radio" name="frequence" value="ponctuel" checked>
+                <span>Ponctuel</span>
+              </label>
+              <label class="demo-don-segment">
+                <input type="radio" name="frequence" value="mensuel">
+                <span>Mensuel</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="demo-don-groupe">
+            <legend class="demo-don-legende">Montant</legend>
+            <div class="demo-don-montants">
+              <label class="demo-don-montant"><input type="radio" name="montant" value="5" checked><span>5 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="10"><span>10 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="20"><span>20 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="50"><span>50 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="100"><span>100 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="autre"><span>Autre</span></label>
+            </div>
+            <div class="demo-champ demo-don-autre">
+              <label for="demo-don-montant-libre">Montant libre (€)</label>
+              <input id="demo-don-montant-libre" name="montant_libre" type="number" inputmode="decimal" min="1" step="1" placeholder="Ex. 35" disabled>
+            </div>
+          </fieldset>
+
+          <div class="demo-don-pied">
+            <p class="demo-don-recap" id="demo-don-recap" aria-live="polite">Don ponctuel de 5 €</p>
+            <button class="demo-bouton-maison" type="submit">Faire un don</button>
           </div>
-          <div class="timeline-item">
-            <span class="timeline-hash">2f49ebd</span>
-            <span class="timeline-date">2026-10-19</span>
-            <span class="timeline-titre">Jalon 3 — Bakery et Sosse</span>
+        </form>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-don-code" aria-labelledby="onglet-don-code">
+        <pre class="demo-code"><code>&lt;fieldset&gt;
+  &lt;legend&gt;Montant&lt;/legend&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="montant"
+           value="5" checked&gt; 5 €
+  &lt;/label&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="montant"
+           value="autre"&gt; Autre
+  &lt;/label&gt;
+  &lt;input type="number" name="montant_libre"
+         min="1" placeholder="Ex. 35"&gt;
+&lt;/fieldset&gt;</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo carte-demo--large" id="demo-menu">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Menu responsive</h3>
+        <span class="carte-demo-numero">07</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Menu responsive : résultat ou code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-menu-resultat" aria-controls="panneau-menu-resultat" aria-selected="true">Résultat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-menu-code" aria-controls="panneau-menu-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-menu-resultat" aria-labelledby="onglet-menu-resultat">
+        <div class="demo-fenetre-outils">
+          <label for="demo-menu-largeur">Largeur de la fenêtre</label>
+          <input id="demo-menu-largeur" type="range" min="260" max="640" step="10" value="640">
+          <output id="demo-menu-largeur-valeur" for="demo-menu-largeur">640 px</output>
+        </div>
+        <div class="demo-fenetre" id="demo-fenetre" style="--largeur-fenetre: 640px;">
+          <div class="demo-fenetre-barre" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <span class="demo-fenetre-url">portfolio.local</span>
           </div>
-          <div class="timeline-item">
-            <span class="timeline-hash">f60194f</span>
-            <span class="timeline-date">2026-10-19</span>
-            <span class="timeline-titre">Jalon 4 — Casa Urpi, L'îlot, flat design</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-hash">ca93966</span>
-            <span class="timeline-date">2026-10-19</span>
-            <span class="timeline-titre">Jalon 4 — mémoire du projet</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-hash">ed7a2de</span>
-            <span class="timeline-date">2026-10-19</span>
-            <span class="timeline-titre">Jalon 4 — cohérence du README</span>
+          <div class="demo-fenetre-corps">
+            <aside class="demo-menu" aria-label="Aperçu du menu du site">
+              <p class="demo-menu-marque"><span aria-hidden="true">VC</span> Volpe Calogero</p>
+              <nav class="demo-menu-nav" aria-label="Menu de démonstration">
+                <a href="#panneau-menu-resultat" aria-current="page"><svg class="demo-menu-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18"/><rect x="9" y="11" width="6" height="7"/></svg><span>Accueil</span></a>
+                <a href="#panneau-menu-resultat"><svg class="demo-menu-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Projets</span></a>
+                <a href="#panneau-menu-resultat"><svg class="demo-menu-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M3 14h18"/></svg><span>Démo</span></a>
+                <a href="#panneau-menu-resultat"><svg class="demo-menu-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18"/><rect x="9" y="7" width="6" height="6"/><rect x="7" y="15" width="10" height="3"/></svg><span>Contact</span></a>
+              </nav>
+            </aside>
+            <div class="demo-menu-contenu">
+              <p class="demo-menu-label">Aperçu</p>
+              <p>Réduis la largeur de la fenêtre : le menu passe du latéral desktop à la barre mobile, comme au point de rupture 959 px du site.</p>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-menu-code" aria-labelledby="onglet-menu-code">
+        <pre class="demo-code"><code>/* Le cadre est le conteneur */
+.demo-fenetre {
+  container-type: inline-size;
+}
+
+.demo-fenetre-corps {
+  display: flex;
+}
+
+/* Mobile : barre en bas */
+@container (max-width: 430px) {
+  .demo-fenetre-corps {
+    flex-direction: column;
+  }
+  .demo-menu {
+    order: 2;
+    flex-direction: row;
+  }
+}</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo carte-demo--large" id="demo-grille">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Grille redimensionnable</h3>
+        <span class="carte-demo-numero">08</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Grille redimensionnable : résultat ou code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-grille-resultat" aria-controls="panneau-grille-resultat" aria-selected="true">Résultat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-grille-code" aria-controls="panneau-grille-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-grille-resultat" aria-labelledby="onglet-grille-resultat">
+        <div class="demo-grille-outils">
+          <label for="demo-grille-largeur">Largeur de la carte</label>
+          <input id="demo-grille-largeur" type="range" min="170" max="480" step="5" value="480">
+          <output id="demo-grille-largeur-valeur" for="demo-grille-largeur">480 px</output>
+          <span class="demo-grille-colonnes" id="demo-grille-colonnes" aria-live="polite">4 colonnes</span>
+        </div>
+        <div class="demo-grille-cadre">
+          <div class="demo-grille" style="--largeur-grille: 480px;">
+            <span>01</span><span>02</span><span>03</span><span>04</span>
+            <span>05</span><span>06</span><span>07</span><span>08</span>
+            <span>09</span><span>10</span><span>11</span><span>12</span>
+          </div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-grille-code" aria-labelledby="onglet-grille-code">
+        <pre class="demo-code"><code>.grille {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(6.5rem, 1fr));
+  gap: 0.6rem;
+}
+
+.grille &gt; span {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: var(--jaune);
+  color: var(--noir);
+}</code></pre>
       </div>
     </article>
   </div>
@@ -257,35 +455,56 @@ if (window.tailwind) {
     <h2 class="section-titre" id="outils-titre">Environnement &amp; outils</h2>
     <p class="section-numero">03 — Savoir-faire</p>
   </div>
-  <p class="section-intro">Les outils qui accompagnent la conception, la mise en page et la publication du portfolio.</p>
+  <p class="section-intro">Les outils qui accompagnent la conception, la mise en page et la publication du portfolio. Logos des marques respectives, utilisés à titre indicatif.</p>
   <div class="outils">
     <article class="outil">
-      <h3 class="outil-nom">WordPress</h3>
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="assets/img/outils/wordpress.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">WordPress</h3>
+      </div>
       <p class="outil-role">CMS · site vitrine</p>
       <p class="outil-texte">Installation, thème, contenus et réglages. Expérience sur un site vitrine (thème Hello Elementor, hébergement O2switch).</p>
     </article>
     <article class="outil">
-      <h3 class="outil-nom">Elementor</h3>
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="assets/img/outils/elementor.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Elementor</h3>
+      </div>
       <p class="outil-role">Constructeur de pages</p>
       <p class="outil-texte">Mise en page par blocs, responsive et réglages typographiques dans WordPress. Utilisé sur le site vitrine Bakery Bliss Café.</p>
     </article>
     <article class="outil">
-      <h3 class="outil-nom">Divi</h3>
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="assets/img/outils/divi-mono.png" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Divi</h3>
+      </div>
       <p class="outil-role">Thème &amp; page builder</p>
       <p class="outil-texte">Construction de pages et de sections avec le builder Divi, pour des sites vitrines structurés.</p>
     </article>
     <article class="outil">
-      <h3 class="outil-nom">VS Code</h3>
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="assets/img/outils/visualstudiocode.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">VS Code</h3>
+      </div>
       <p class="outil-role">Éditeur de code</p>
       <p class="outil-texte">Édition HTML, CSS et JavaScript de ce portfolio, avec Git intégré et aperçu local.</p>
     </article>
     <article class="outil">
-      <h3 class="outil-nom">Cline</h3>
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="assets/img/outils/cline.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Cline</h3>
+      </div>
       <p class="outil-role">Assistant d'édition</p>
       <p class="outil-texte">Assistance à l'écriture, à la vérification et à la documentation du code, dans VS Code.</p>
     </article>
     <article class="outil">
-      <h3 class="outil-nom">Git &amp; GitHub Pages</h3>
+      <div class="outil-tete">
+        <span class="outil-logo outil-logo--double" aria-hidden="true">
+          <img src="assets/img/outils/git.svg" alt="" width="17" height="17" loading="lazy">
+          <img src="assets/img/outils/github.svg" alt="" width="17" height="17" loading="lazy">
+        </span>
+        <h3 class="outil-nom">Git &amp; GitHub Pages</h3>
+      </div>
       <p class="outil-role">Versionnage &amp; publication</p>
       <p class="outil-texte">Commits, branches et publication statique. Le portfolio est en ligne sur <a href="https://calogerovolpe.github.io/super-portfolio/">GitHub Pages</a>.</p>
     </article>

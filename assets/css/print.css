@@ -1,0 +1,59 @@
+/* ============================================================
+   Super-portfolio — Volpe Calogero
+   Feuille d'impression
+   ============================================================ */
+
+@media print {
+  .site-sidebar,
+  .back-to-top,
+  .visionneuse,
+  .skip-link,
+  .bandeau,
+  .hero-visuel,
+  .cta-actions,
+  .copy-email {
+    display: none !important;
+  }
+
+  .site-contenu {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .site-main {
+    max-width: none;
+    padding: 0;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .carte-projet,
+  .methode-etape,
+  .stat,
+  .apercu {
+    break-inside: avoid;
+  }
+
+  .grille-projets {
+    background: none;
+    border: 0;
+  }
+
+  .carte-projet {
+    border: 1px solid #000;
+    background: #fff;
+  }
+
+  .couverture {
+    border: 1px solid #000;
+  }
+}

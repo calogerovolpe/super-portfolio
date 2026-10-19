@@ -2,32 +2,243 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Super-portfolio — Volpe Calogero</title>
-<meta name="description" content="Portfolio de design graphique et communication web de Volpe Calogero : identités visuelles, chartes graphiques, sites web, datavisualisation et mascottes.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Super-portfolio — Volpe Calogero | Design graphique &amp; communication web</title>
+<meta name="description" content="Portfolio de design graphique et communication web de Volpe Calogero : identités visuelles, chartes graphiques, sites web, datavisualisation, mascottes et démonstrations HTML/CSS.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Super-portfolio — Volpe Calogero">
-<meta property="og:description" content="Design graphique et communication web.">
+<meta property="og:description" content="Design graphique et communication web : identités, chartes, sites, data et mascottes.">
 <meta property="og:url" content="https://calogerovolpe.github.io/super-portfolio/">
+<script>try{var t=localStorage.getItem('theme');if(t==='clair'){document.documentElement.setAttribute('data-theme','clair')}document.documentElement.classList.add('js')}catch(e){document.documentElement.classList.add('js')}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/print.css" media="print">
+<script src="assets/js/nav.js" defer></script>
+<script src="assets/js/viewer.js" defer></script>
+<script src="assets/js/home.js" defer></script>
 </head>
 <body>
-<main class="chantier">
-  <div class="chantier-contenu">
-    <p class="chantier-label">Volpe Calogero — design graphique &amp; communication web</p>
-    <h1 class="chantier-titre"><span>Super</span><span>portfolio</span></h1>
-    <p class="chantier-texte">Identités visuelles, chartes graphiques, sites web, datavisualisation et mascottes. Le portfolio complet arrive.</p>
-    <p class="chantier-statut">Jalon 1 — fondations</p>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<input type="checkbox" id="nav-reduit" class="nav-reduit" aria-label="Réduire ou déployer le menu">
+<aside class="site-sidebar">
+  <div class="sidebar-tete">
+    <a class="site-title" href="index.html" aria-label="Volpe Calogero — accueil">
+      <span class="marque-sigle" aria-hidden="true">VC</span>
+      <span class="marque-texte"><span class="marque-nom">Volpe Calogero</span><span class="marque-sous">Design &amp; web</span></span>
+    </a>
+    <label for="nav-reduit" class="sidebar-bascule" aria-label="Réduire ou déployer le menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="6" width="18" height="2" fill="currentColor"/><rect x="3" y="11" width="18" height="2" fill="currentColor"/><rect x="3" y="16" width="12" height="2" fill="currentColor"/></svg>
+    </label>
   </div>
-  <div class="chantier-formes" aria-hidden="true">
-    <span class="forme forme--jaune"></span>
-    <span class="forme forme--blanc"></span>
-    <span class="forme forme--contour"></span>
+  <nav class="site-nav" aria-label="Navigation principale">
+    <ul>
+      <li><a href="index.html" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18"/><rect x="9" y="11" width="6" height="7"/></svg><span class="nav-libelle">Accueil</span></a></li>
+      <li><a href="portfolio.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span class="nav-libelle">Projets</span></a></li>
+      <li><a href="html-css.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M3 14h18"/></svg><span class="nav-libelle">Démo</span></a></li>
+      <li><a href="a-propos.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18"/><rect x="9" y="7" width="6" height="6"/><rect x="7" y="15" width="10" height="3"/></svg><span class="nav-libelle">À propos</span></a></li>
+      <li><a href="contact.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14"/><path d="M7 10h10M7 14h7"/></svg><span class="nav-libelle">Contact</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<div class="site-contenu">
+<main class="site-main" id="contenu">
+<section class="hero" aria-labelledby="hero-titre">
+  <div class="hero-texte">
+    <p class="hero-label">Portfolio 2024 — 2026 · Design graphique &amp; web</p>
+    <h1 class="hero-titre" id="hero-titre">Des idées<br>en<br><span class="surligne">identités</span>.</h1>
+    <p class="hero-intro">Je conçois des identités visuelles, des chartes graphiques et des sites web qui tiennent debout : trois couleurs, des formes simples, un message clair.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#projets">Voir les projets</a>
+      <a class="btn btn--contour" href="contact.html">Me contacter</a>
+    </div>
+    <p class="hero-note">5 projets · 1 démo · 9 livrables Bakery · HTML / CSS / JS / Tailwind</p>
   </div>
+  <div class="hero-visuel" aria-hidden="true">
+    <div class="hero-calque" data-parallax="0.05">
+      <span class="hero-carre hero-carre--jaune"></span>
+      <span class="hero-carre hero-carre--contraste"></span>
+      <span class="hero-carre hero-carre--contour"></span>
+    </div>
+    <div class="hero-calque" data-parallax="0.14">
+      <span class="hero-carre hero-carre--petit"></span>
+    </div>
+  </div>
+</section>
+<div class="bandeau" aria-hidden="true">
+  <div class="bandeau-piste">
+    <span class="bandeau-groupe">Identité visuelle <b>■</b> Charte graphique <b>■</b> Site web <b>■</b> Datavisualisation <b>■</b> Mascotte <b>■</b> Print <b>■</b> Communication web <b>■</b></span>
+    <span class="bandeau-groupe">Identité visuelle <b>■</b> Charte graphique <b>■</b> Site web <b>■</b> Datavisualisation <b>■</b> Mascotte <b>■</b> Print <b>■</b> Communication web <b>■</b></span>
+  </div>
+</div>
+
+<section class="section" aria-labelledby="manifeste-titre">
+  <div class="manifeste" data-reveal>
+    <div>
+      <p class="section-numero">01 — Méthode</p>
+      <h2 class="manifeste-titre" id="manifeste-titre">Des formes simples.<br>Des messages <em>clairs</em>.</h2>
+      <div class="stats">
+        <div class="stat"><span class="stat-nombre">05</span><span class="stat-libelle">Projets</span></div>
+        <div class="stat"><span class="stat-nombre">03</span><span class="stat-libelle">Couleurs</span></div>
+        <div class="stat"><span class="stat-nombre">00</span><span class="stat-libelle">Arrondi</span></div>
+      </div>
+    </div>
+    <div class="manifeste-texte">
+      <p>Chaque projet part d'une contrainte : un public, un support, un message. Je construis ensuite un système visuel complet — couleurs, typographies, formes, déclinaisons — pour que l'identité reste lisible partout, du print au web.</p>
+      <p>Ce portfolio présente cinq travaux de formation et de commande. Il est lui-même un terrain d'expérimentation : HTML, CSS et JavaScript sans framework, avec une identité réduite à trois couleurs et deux formes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projets" aria-labelledby="projets-titre">
+  <div class="section-tete">
+    <h2 class="section-titre" id="projets-titre">Projets</h2>
+    <p class="section-numero">02 — Sélection</p>
+  </div>
+  <div class="grille-projets" data-reveal>
+    <a class="carte-projet carte-projet--large" href="bakery-bliss-cafe.html">
+      <div class="couverture couverture--bakery" aria-hidden="true"><span class="cv cv--1"></span><span class="cv cv--2"></span><span class="cv cv--3"></span></div>
+      <div class="carte-corps">
+        <div class="carte-entete"><span class="carte-index">01</span><span class="carte-type">Étude · Charte · Web · Print</span></div>
+        <h3 class="carte-titre">Bakery Bliss Café</h3>
+        <p class="carte-resume">Une boulangerie-café fictive, de l'étude de marché au dépliant : neuf livrables et une identité chaleureuse.</p>
+        <div class="carte-pied"><span>2025 · 9 livrables</span><span class="carte-lien">Voir le projet →</span></div>
+      </div>
+    </a>
+
+    <a class="carte-projet carte-projet--moyenne" href="business-plan-sosse.html">
+      <div class="couverture couverture--sosse" aria-hidden="true"><span class="cv cv--1"></span><span class="cv cv--2"></span><span class="cv cv--3"></span></div>
+      <div class="carte-corps">
+        <div class="carte-entete"><span class="carte-index">02</span><span class="carte-type">Business plan · InDesign</span></div>
+        <h3 class="carte-titre">Business plan Sosse</h3>
+        <p class="carte-resume">Une entreprise fictive et son business plan mis en page sous InDesign : structure financière et cohérence visuelle.</p>
+        <div class="carte-pied"><span>2024 · 1 document</span><span class="carte-lien">Voir le projet →</span></div>
+      </div>
+    </a>
+
+    <a class="carte-projet carte-projet--vedette" href="lilot-calins.html">
+      <div class="couverture couverture--ilot" aria-hidden="true"><span class="cv cv--1"></span><span class="cv cv--2"></span><span class="cv cv--3"></span></div>
+      <div class="carte-corps">
+        <div class="carte-entete"><span class="carte-index">04</span><span class="carte-type">Charte · Mascotte · Web</span></div>
+        <h3 class="carte-titre">L'îlot Câlins</h3>
+        <p class="carte-resume">Projet réel : une charte graphique et une mascotte pour L'îlot Câlins, présentées avec autorisation.</p>
+        <div class="carte-pied"><span>2025 · Charte + mascotte</span><span class="carte-lien">Voir le projet →</span></div>
+      </div>
+    </a>
+  </div>
+  <p style="margin-top:1.5rem"><a class="btn btn--contour" href="portfolio.html">Voir les 6 projets</a></p>
+</section>
+<section class="section" aria-labelledby="apercu-titre">
+  <div class="section-tete">
+    <h2 class="section-titre" id="apercu-titre">Aperçu réel</h2>
+    <p class="section-numero">03 — L'îlot Câlins</p>
+  </div>
+  <p class="section-intro">Projet réel, présenté avec autorisation. Trois extraits de la mascotte et de l'univers graphique. Cliquez sur une image pour l'ouvrir.</p>
+  <div class="galerie-apercu" data-reveal>
+    <button class="apercu apercu--noir" type="button" data-lightbox="assets/img/lilot/mascotte-blanche.webp" data-legende="Mascotte blanche — L'îlot Câlins" aria-label="Agrandir : mascotte blanche de L'îlot Câlins">
+      <img src="assets/img/lilot/mascotte-blanche.webp" alt="Mascotte blanche de L'îlot Câlins aux grands yeux bleus" width="1920" height="1080" loading="lazy">
+      <span class="apercu-legende">Mascotte</span>
+    </button>
+    <button class="apercu apercu--jaune" type="button" data-lightbox="assets/img/lilot/tete-rouge.webp" data-legende="Tête rouge — L'îlot Câlins" aria-label="Agrandir : tête rouge de L'îlot Câlins">
+      <img src="assets/img/lilot/tete-rouge.webp" alt="Tête rouge de la mascotte de L'îlot Câlins aux grands yeux" width="487" height="471" loading="lazy">
+      <span class="apercu-legende">Tête rouge</span>
+    </button>
+    <button class="apercu apercu--blanc" type="button" data-lightbox="assets/img/lilot/super-calin.webp" data-legende="Super câlin — L'îlot Câlins" aria-label="Agrandir : Super câlin de L'îlot Câlins">
+      <img src="assets/img/lilot/super-calin.webp" alt="Super câlin rouge avec une cape bleue et une bulle « Super câlin ! »" width="925" height="501" loading="lazy">
+      <span class="apercu-legende">Super câlin</span>
+    </button>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="outils-titre">
+  <div class="section-tete">
+    <h2 class="section-titre" id="outils-titre">Outils &amp; méthode</h2>
+    <p class="section-numero">04 — Savoir-faire</p>
+  </div>
+  <div class="tags">
+    <span class="tag">Figma</span>
+    <span class="tag">Illustrator</span>
+    <span class="tag">InDesign</span>
+    <span class="tag">Photoshop</span>
+    <span class="tag">HTML</span>
+    <span class="tag">CSS</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">Tailwind</span>
+    <span class="tag">Git</span>
+  </div>
+  <div class="methode" style="margin-top:2rem" data-reveal>
+    <div class="methode-etape">
+      <span class="methode-num">01</span>
+      <h3 class="methode-titre">Écouter</h3>
+      <p class="methode-texte">Comprendre le public, le message et les contraintes avant de dessiner.</p>
+    </div>
+    <div class="methode-etape">
+      <span class="methode-num">02</span>
+      <h3 class="methode-titre">Concevoir</h3>
+      <p class="methode-texte">Construire un système visuel simple, cohérent et déclinable.</p>
+    </div>
+    <div class="methode-etape">
+      <span class="methode-num">03</span>
+      <h3 class="methode-titre">Déployer</h3>
+      <p class="methode-texte">Mettre en page, développer, tester et publier — sans perdre le fil.</p>
+    </div>
+  </div>
+</section>
+<section class="section" aria-labelledby="cta-titre">
+  <div class="cta">
+    <div>
+      <h2 class="cta-titre" id="cta-titre">Un projet ?<br>Parlons-en.</h2>
+      <p class="cta-texte">Identité, charte, site, édition — réponse sous 48 h.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn--noir" href="contact.html">Me contacter</a>
+      <a class="btn btn--blanc" href="portfolio.html">Voir les projets</a>
+    </div>
+  </div>
+</section>
 </main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <nav class="footer-nav" aria-label="Navigation de pied de page">
+      <div class="footer-nav-groupe">
+        <span class="footer-nav-titre">Sections</span>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="portfolio.html">Projets</a></li>
+          <li><a href="html-css.html">Démo HTML &amp; CSS</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-groupe">
+        <span class="footer-nav-titre">Projets</span>
+        <ul>
+          <li><a href="bakery-bliss-cafe.html">Bakery Bliss Café</a></li>
+          <li><a href="business-plan-sosse.html">Business plan Sosse</a></li>
+          <li><a href="casa-urpi.html">Casa Urpi</a></li>
+          <li><a href="lilot-calins.html">L'îlot Câlins</a></li>
+          <li><a href="flat-design.html">Flat design</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-groupe">
+        <span class="footer-nav-titre">Informations</span>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:contact@calogero-volpe.eu">contact@calogero-volpe.eu</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="footer-bas">
+      <span>© 2026 Volpe Calogero — tous droits réservés</span>
+      <span>Projets fictifs, sauf L'îlot Câlins (avec autorisation)</span>
+    </div>
+  </div>
+</footer>
+</div>
 </body>
 </html>
+
+

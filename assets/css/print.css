@@ -56,4 +56,34 @@
   .couverture {
     border: 1px solid #000;
   }
+
+  .galerie-barre,
+  .cta-actions {
+    display: none !important;
+  }
+
+  .carte-competence,
+  .matrice-enveloppe,
+  .preuve {
+    break-inside: avoid;
+  }
+
+  .competences,
+  .preuves {
+    display: block;
+  }
+
+  .carte-competence,
+  .preuve {
+    margin-bottom: 1rem;
+  }
+
+  .preuve[hidden] {
+    display: grid !important;
+  }
+
+  .carte-competence,
+  .matrice-enveloppe {
+    border: 1px solid #000;
+  }
 }

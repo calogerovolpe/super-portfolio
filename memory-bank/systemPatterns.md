@@ -17,6 +17,7 @@ branche `main`, dossier racine, fichier `.nojekyll` présent.
 ├── lilot-calins.html
 ├── flat-design.html
 ├── html-css.html
+├── photographie.html
 ├── competences.html
 ├── a-propos.html
 ├── contact.html
@@ -28,7 +29,9 @@ branche `main`, dossier racine, fichier `.nojekyll` présent.
 │   ├── js/nav.js
 │   ├── js/viewer.js
 │   ├── js/home.js
-│   ├── js/competences.js   (à venir, jalon 6)
+│   ├── js/demo.js
+│   ├── js/photos.js
+│   ├── js/competences.js
 │   ├── img/
 │   ├── fichiers/
 │   └── video/

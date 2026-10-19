@@ -2,7 +2,7 @@
 
 ## Jalon en cours
 
-**Jalon 5 — Page Démo : HTML, CSS, Tailwind et outils web.** Terminé, puis enrichi de nouvelles démonstrations (pré-Jalon 6).
+**Jalon 6 — Page Compétences : six logiciels, matrice projets × outils et preuves filtrables.** Terminé et validé.
 
 ## Ce qui est en place
 
@@ -51,13 +51,26 @@
   (20 portraits retouchés Lightroom + Photoshop ; 42 rue/voyage dont 9
   Lightroom), galerie filtrable (`assets/js/photos.js`), lightbox, WebP
   dans `assets/img/photo/`.
+- **Jalon 6** : page `competences.html` — hero, méthode, six cartes logiciels
+  (Photoshop, Lightroom, Illustrator, InDesign, After Effects, Figma) avec
+  accordéons « Repères techniques », matrice projets × outils (6 projets,
+  tfoot des totaux), **13 preuves filtrables** par logiciel et passerelle web.
+- `assets/js/competences.js` : filtres par logiciel (compteur live, `aria-pressed`)
+  et accordéons (`aria-expanded`), amélioration progressive sans JavaScript.
+- CSS : `.competences`, `.carte-competence`, `.matrice`, `.preuves`, `.preuve`,
+  `.preuve-badge`, `.preuve-schema`, `.couverture--competences`,
+  `.visuellement-cache` ; composant d'accordéon générique `.accordeon`.
+- Intégration : lien « Compétences » dans la barre latérale et le footer de
+  toutes les pages, carte 08 dans `portfolio.html`, compteurs de l'accueil,
+  `nav-fin` html-css → compétences → à propos.
+- Impression : `print.css` masque les filtres, évite les coupures et affiche
+  les 13 preuves même filtrées.
 
 ## Prochaine étape
 
-**Jalon 6 — `competences.html`** : page complète dédiée aux logiciels
-maîtrisés (Photoshop, Illustrator, Lightroom, InDesign, Premiere Pro,
-After Effects, Figma…), avec des exemples tirés des projets et des sections
-interactives (filtres, accordéons). Les finitions passent au Jalon 7.
+**Jalon 7 — Finitions** : favicon (404 `/favicon.ico`), contrôle final des
+contrastes et du responsive, vérification des contenus, nettoyage et
+publication. La page `competences.html` est terminée.
 
 ## Ajouts de périmètre validés
 
@@ -67,6 +80,8 @@ interactives (filtres, accordéons). Les finitions passent au Jalon 7.
   maîtrisés (Photoshop, Illustrator, Lightroom, InDesign, Premiere Pro,
   After Effects, Figma, etc.), avec des exemples tirés des projets et des
   sections interactives (filtres, accordéons). Les finitions passent au Jalon 7.
+  Retenu finalement : **six logiciels** (Premiere Pro écarté, aucune preuve
+  dans les projets) et des preuves par livrables plutôt que des notes de maîtrise.
 
 ## Décisions récentes
 
@@ -105,11 +120,24 @@ interactives (filtres, accordéons). Les finitions passent au Jalon 7.
   du menu responsive dans une fenêtre redimensionnable (container query),
   de six exemples CSS et d'une grille 4×3 redimensionnable ; logos d'outils
   monochromes sur tuiles jaunes.
+- **Jalon 6 — six logiciels retenus** : Photoshop, Lightroom, Illustrator,
+  InDesign, After Effects, Figma. Premiere Pro écarté, faute de livrable
+  l'attestant dans les projets.
+- **Jalon 6 — preuves, pas de notes** : la page n'affiche pas de pourcentages
+  de maîtrise, mais 13 livrables réels, filtrables et reliés aux fiches projets.
+- **Jalon 6 — accordéon mutualisé** : `.demo-accordeon*` renommé `.accordeon*`
+  pour servir la page Démo et la page Compétences (`demo.js` cible toujours
+  `[data-accordeon]`).
+- **Jalon 6 — business plan Sosse** : « Illustrator » appliqué dans l'accueil,
+  le portfolio, la fiche projet et le README (en attente de confirmation).
+- **Jalon 6 — correction responsive** : `.galerie-apercu` et `.galerie-dessins`
+  passent de `1fr` à `minmax(0, 1fr)` sous 640/820 px ; les SVG à grande
+  largeur intrinsèque ne débordent plus sur mobile (flat-design).
 
 ## Points ouverts
 
-- Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).
-- Construire `competences.html` (Jalon 6).
+- Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
+  « Illustrator » est affiché partout depuis le Jalon 6.
 - Favicon absent : la console signale un 404 `/favicon.ico` — à traiter aux
   finitions (Jalon 7).
-- GitHub Pages : build `built` (vérifié le 2026-10-19 après l'incident).
+- GitHub Pages : build `built` (à revérifier après le push du Jalon 6).

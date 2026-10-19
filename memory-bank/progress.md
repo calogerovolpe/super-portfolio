@@ -9,7 +9,7 @@
 | 3 | Pages projets : Bakery Bliss Café + Sosse | ✅ Terminé |
 | 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ✅ Terminé |
 | 5 | Page « HTML & CSS » + Tailwind (compétences web) | ✅ Terminé |
-| 6 | Page « Compétences » (logiciels + exemples interactifs) | ⬜ À faire |
+| 6 | Page « Compétences » (logiciels + exemples interactifs) | ✅ Terminé |
 | 7 | Finitions | ⬜ À faire |
 
 ## Journal
@@ -153,9 +153,38 @@
 - Validation : `node --check` OK, 62 boutons, 0 placeholder, accents UTF-8.
 - Commit `85e9b1e`.
 
+### 2026-10-20 — Jalon 6
+
+- Page `competences.html` : hero, méthode (06 logiciels / 06 projets /
+  68 pages InDesign / 62 photos), six cartes logiciels avec accordéons
+  « Repères techniques », matrice projets × outils (6 lignes + totaux),
+  13 preuves filtrables et passerelle vers la page Démo.
+- `assets/js/competences.js` : filtres `data-filtre-preuve` (compteur
+  `aria-live`, `aria-pressed`), accordéons `data-accordeon`
+  (`aria-expanded`) ; sans JavaScript, tout reste visible.
+- CSS (+353 lignes) : `.competences`, `.carte-competence`, `.matrice`,
+  `.preuves`, `.preuve`, `.preuve-badge`, `.couverture--competences`,
+  `.visuellement-cache` ; `.demo-accordeon*` renommé `.accordeon*`
+  (`html-css.html` mis à jour ; `demo.js` inchangé car il cible l'attribut).
+- Intégration : lien « Compétences » dans la nav et le footer des 14 pages,
+  carte 08 du portfolio, compteurs de l'accueil, `nav-fin`
+  html-css → compétences → à propos, README (14 pages).
+- Sosse : « Illustrator » appliqué dans l'accueil, le portfolio, la fiche
+  projet et le README (confirmation encore attendue).
+- Correction responsive trouvée à la validation : `.galerie-apercu` et
+  `.galerie-dessins` passent à `minmax(0, 1fr)` sous 820/640 px ; les SVG
+  de 1920 px et les dessins de 963 px débordaient à 390 px sur
+  `flat-design.html`.
+- Validation : `node --check` OK sur les 6 JS ; 14 pages × 390/1440 px sans
+  débordement ; 0 image cassée ; 0 `id` double ; `aria-current` correct ;
+  filtre Photoshop = 2 preuves et compteur « 2 preuves affichées » ;
+  accordéon de la page Démo OK ; console vide ; 21 références `assets/`
+  de la page Compétences existent.
+- Commit à renseigner après le push.
+
 ## Points ouverts
 
-- Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).
-- Construire `competences.html` (Jalon 6).
+- Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
+  « Illustrator » est affiché partout depuis le Jalon 6.
 - Favicon absent : 404 `/favicon.ico` — à traiter au Jalon 7.
-- GitHub Pages : build `built` après l'incident du 2026-10-19.
+- GitHub Pages : build `built` à revérifier après le push du Jalon 6.

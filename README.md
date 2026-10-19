@@ -20,7 +20,7 @@ Site statique, publié sur GitHub Pages.
 | Projet | Nature | Page |
 | --- | --- | --- |
 | Bakery Bliss Café | Étude, charte graphique, prototype, vidéo, datavisualisation, affiche, dépliant | `bakery-bliss-cafe.html` |
-| Business plan Sosse | Business plan InDesign, entreprise fictive | `business-plan-sosse.html` |
+| Business plan Sosse | Business plan Illustrator, entreprise fictive | `business-plan-sosse.html` |
 | Casa Urpi | Charte graphique (InDesign 2025) | `casa-urpi.html` |
 | L'îlot Câlins | Charte graphique et mascotte — projet réel, diffusion autorisée | `lilot-calins.html` |
 | Flat design | 2 illustrations SVG, mascotte likeandsee, dessins main levée | `flat-design.html` |
@@ -29,8 +29,9 @@ Site statique, publié sur GitHub Pages.
 ## Pages transverses
 
 - `index.html` — accueil mémorable
-- `portfolio.html` — grille des sept projets
+- `portfolio.html` — grille des sept projets et de la page Compétences
 - `html-css.html` — démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web
+- `competences.html` — six logiciels, matrice projets × outils, treize preuves filtrables et repères techniques
 - `a-propos.html`, `contact.html`, `mentions-legales.html`, `404.html`
 
 ## Structure du dépôt
@@ -42,7 +43,7 @@ super-portfolio/
 ├── assets/
 │   ├── css/style.css        Feuille de style unique (tokens + composants)
 │   ├── css/print.css        Impression
-│   ├── js/                  Navigation, retour en haut, thème, lightbox
+│   ├── js/                  Navigation, thème, lightbox, démos, photos, compétences
 │   ├── img/                 Aperçus et visuels optimisés
 │   ├── fichiers/            PDF légers
 │   └── video/               Vidéos légères
@@ -69,12 +70,12 @@ super-portfolio/
 | 3 | Pages projets : Bakery Bliss Café + Sosse | ✅ Terminé |
 | 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ✅ Terminé |
 | 5 | Page « HTML & CSS » + Tailwind (compétences web) | ✅ Terminé |
-| 6 | Page « Compétences » (logiciels + exemples interactifs) | ⬜ À faire |
+| 6 | Page « Compétences » (logiciels + exemples interactifs) | ✅ Terminé |
 | 7 | Finitions | ⬜ À faire |
 
-Les treize pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
-L'îlot Câlins et Flat design sont complètes : textes issus des PDF, documents,
-galeries et lightbox.
+Les quatorze pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
+L'îlot Câlins, Flat design et Photographie sont complètes : textes issus des PDF,
+documents, galeries et lightbox.
 
 ## Publication
 

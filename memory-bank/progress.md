@@ -95,7 +95,7 @@
 - Captures desktop/mobile dans `docs/captures/` (non publiées).
 - Décisions : likeandsee = ancienne micro-entreprise ; L'îlot 2024 ; SVG direct
   + WebP ; visuels « triste » écartés.
-- Commit `Jalon 4` (hash à reporter après push).
+- Commit `f60194f`.
 
 ## Points ouverts
 

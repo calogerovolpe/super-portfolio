@@ -19,11 +19,11 @@ Site statique, publié sur GitHub Pages.
 
 | Projet | Nature | Page |
 | --- | --- | --- |
-| Bakery Bliss Café | Étude, charte graphique, prototype, site, vidéo, datavisualisation, affiche, dépliant | `bakery-bliss-cafe.html` |
+| Bakery Bliss Café | Étude, charte graphique, prototype, vidéo, datavisualisation, affiche, dépliant | `bakery-bliss-cafe.html` |
 | Business plan Sosse | Business plan InDesign, entreprise fictive | `business-plan-sosse.html` |
-| Casa Urpi | Charge graphique | `casa-urpi.html` |
+| Casa Urpi | Charte graphique (InDesign 2025) | `casa-urpi.html` |
 | L'îlot Câlins | Charte graphique et mascotte — projet réel, diffusion autorisée | `lilot-calins.html` |
-| Flat design | Illustration SVG | `flat-design.html` |
+| Flat design | 2 illustrations SVG, mascotte likeandsee, dessins main levée | `flat-design.html` |
 
 ## Pages transverses
 
@@ -65,14 +65,14 @@ super-portfolio/
 | --- | --- | --- |
 | 1 | Fondations, conventions, dépôt, GitHub Pages | ✅ Terminé |
 | 2 | Coquille du site, identité visuelle, accueil mémorable | ✅ Terminé |
-| 3 | Pages projets : Bakery Bliss Café + Sosse | ⬜ À faire |
-| 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ⬜ À faire |
+| 3 | Pages projets : Bakery Bliss Café + Sosse | ✅ Terminé |
+| 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ✅ Terminé |
 | 5 | Page « HTML & CSS » + Tailwind | ⬜ À faire |
 | 6 | Finitions : responsive, accessibilité, SEO | ⬜ À faire |
 
-Les douze pages sont en ligne. Les fiches projets sont des structures complètes
-(hero, métadonnées, navigation) qui seront enrichies aux jalons 3 et 4 avec les
-textes et documents issus des PDF.
+Les douze pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
+L'îlot Câlins et Flat design sont complètes : textes issus des PDF, documents,
+galeries et lightbox.
 
 ## Publication
 
@@ -83,4 +83,6 @@ des dossiers commençant par un underscore.
 ## Mentions
 
 © Volpe Calogero — tous droits réservés. Les projets présentés sont des travaux
-de formation ou fictifs, à l'exception de L'îlot Câlins, présenté avec autorisation.
+de formation ou fictifs, à l'exception de L'îlot Câlins (présenté avec
+autorisation) et de la mascotte likeandsee, réalisée pour l'ancienne
+micro-entreprise de l'auteur.

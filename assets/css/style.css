@@ -2074,5 +2074,43 @@ body.visionneuse-ouverte {
   }
 }
 
+/* ---------- Galeries Jalon 4 ---------- */
+
+/* Mascottes transparentes sur fond noir, image entière */
+.apercu--mascotte {
+  background: var(--noir);
+}
+
+/* Dessins : ratio naturel, sans recadrage */
+.galerie-dessins {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.galerie-dessins .apercu {
+  aspect-ratio: auto;
+  padding: 0.75rem;
+}
+
+.galerie-dessins .apercu img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+@media (max-width: 820px) {
+  .galerie-dessins {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .galerie-dessins {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Fin de la feuille de style */
 

@@ -7,7 +7,7 @@
 | 1 | Fondations et conventions | ✅ Terminé |
 | 2 | Coquille du site et accueil | ✅ Terminé |
 | 3 | Pages projets : Bakery Bliss Café + Sosse | ✅ Terminé |
-| 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ⬜ À faire |
+| 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ✅ Terminé |
 | 5 | Page « HTML & CSS » + Tailwind (compétences web) | ⬜ À faire |
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ⬜ À faire |
 | 7 | Finitions | ⬜ À faire |
@@ -74,9 +74,32 @@
   Code poussé (`e6b31d6`) ; relancer le build après rétablissement et vérifier
   les pages et les assets en ligne.
 
+### 2026-10-19 — Jalon 4
+
+- Retrait du site Bakery : carte « Site web » supprimée (9 → 8 livrables),
+  stats `08`, titre « Les 8 livrables », renumérotation 01-08, suppression de
+  `assets/fichiers/bakery/site-web.pdf` et `assets/img/bakery/site-web.webp`.
+- Casa Urpi : charte graphique 15 p. (InDesign 2025) ; PDF copié et 6 aperçus
+  WebP (couverture, logo, couleurs, motifs, déclinaisons, typographie).
+- L'îlot Câlins : charte 10 p. (avril 2024) ; PDF copié, 4 aperçus WebP
+  (couverture, logo, couleurs, mascottes) et 4 nouveaux visuels
+  (carte-monde, hero-site-web, tête blanche, câlin blanc).
+- Flat design : 2 SVG copiés + rasters WebP (Playwright/Chrome), 7 visuels
+  likeandsee et 4 dessins main levée/tablette convertis en WebP.
+- Pages complètes : Casa Urpi, L'îlot Câlins, Flat design, avec galeries,
+  lightbox, `nav-fin` et textes issus des PDF.
+- CSS : `.apercu--mascotte` et `.galerie-dessins`.
+- Validation : 416 références locales OK, balises équilibrées, HTTP 200 avec
+  types MIME corrects (PDF, WebP, SVG), Playwright 390/1440 sans débordement,
+  lightbox image + PDF (ouverture/Échap), aucune image cassée.
+- Captures desktop/mobile dans `docs/captures/` (non publiées).
+- Décisions : likeandsee = ancienne micro-entreprise ; L'îlot 2024 ; SVG direct
+  + WebP ; visuels « triste » écartés.
+- Commit `Jalon 4` (hash à reporter après push).
+
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign).
 - Fournir un exemple pour Lightroom (aucun livrable actuel).
-- Sélection du contenu des PDF du Jalon 4 (Casa Urpi, L'îlot Câlins, flat design).
 - Construire `competences.html` (Jalon 6) et enrichir `html-css.html` (Jalon 5).
+- GitHub Pages : build `built` après l'incident du 2026-10-19.

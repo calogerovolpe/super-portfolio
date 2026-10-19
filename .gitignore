@@ -1,0 +1,22 @@
+# Sources locales non publiées — les visuels retenus sont copiés dans assets/
+/docs/
+
+# Fichiers volumineux gérés en liens externes
+*.fig
+*.mp4
+
+# Système
+Thumbs.db
+desktop.ini
+.DS_Store
+ehthumbs.db
+
+# Outils
+node_modules/
+npm-debug.log*
+.vscode/
+.idea/
+
+# Divers
+*.log
+*.tmp

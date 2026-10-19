@@ -1,0 +1,72 @@
+# Règles projet — Super-portfolio Volpe Calogero
+
+## Langue
+
+- Tout le contenu éditorial, les commentaires et les échanges sont en français.
+- Noms de fichiers en kebab-case, sans accents ni espaces.
+
+## Identité visuelle (non négociable)
+
+- Trois couleurs uniquement : jaune `#FFD500`, noir `#0B0B0B`, blanc `#FFFFFF`.
+  La hiérarchie se fait par opacité du noir ou du blanc, jamais par l'ajout d'une
+  quatrième teinte.
+- Formes exclusivement carrées ou rectangulaires. Interdiction des cercles,
+  ellipses, triangles, arrondis (`border-radius` > 0) et formes organiques.
+- Les carrés et rectangles peuvent se superposer, se décaler, se chevaucher.
+- Typographie : Archivo (titres), Space Mono (labels et métadonnées), police
+  système pour le corps.
+- Ambiance : éditoriale, graphique, contrastée, mémorable.
+
+## Structure technique
+
+- Site statique : HTML + CSS maison + JavaScript vanilla. Aucun framework,
+  aucun build.
+- Pages HTML à plat à la racine du dépôt.
+- Une seule feuille de style principale : `assets/css/style.css`.
+  Impression : `assets/css/print.css`.
+- JavaScript découpé par rôle dans `assets/js/` (`nav.js`, `viewer.js`, `home.js`…).
+- Tailwind CSS autorisé uniquement sur `html-css.html` (démonstration, CDN scopé).
+- Amélioration progressive : le site reste lisible et navigable sans JavaScript.
+- Accessibilité : lien d'évitement, `alt` pertinents, `aria-current`, focus visible,
+  `prefers-reduced-motion` respecté.
+- Performance : aucune bibliothèque lourde, images en `loading="lazy"`, dimensions
+  explicites (`width` / `height`).
+
+## Composants imposés (héritage `mes-realisations-batiments`)
+
+- Barre latérale repliable avec icônes SVG et bascule de thème.
+- Bouton « retour en haut » créé en JavaScript, visible après 400 px de défilement.
+- Menu fixe en bas sur responsive (`env(safe-area-inset-bottom)`).
+- Footer en groupes, navigation précédent/suivant (`nav-fin`), lien d'évitement.
+- Toute image ou tout document s'ouvre dans une lightbox et se ferme (bouton,
+  touche Échap, clic sur le fond).
+
+## Contenu
+
+- Chaque projet possède sa propre page, avec un court texte descriptif et ses
+  fichiers consultables.
+- Les textes descriptifs sont rédigés à partir du contenu réel des PDF
+  (extraction avec PyMuPDF), pas inventés.
+- Tout est fictif sauf **L'îlot Câlins** (diffusion autorisée, mention explicite).
+- Fichiers volumineux (> 15 Mo, dont le `.fig` de 125 Mo, la datavisualisation de
+  30 Mo et la vidéo de 18 Mo) : liens externes, jamais dans le dépôt.
+
+## Workflow Git (obligatoire)
+
+- Après chaque modification : `git add -A`, `git commit -m "…"`, `git push`.
+- Le site doit être consultable en ligne après chaque push
+  (GitHub Pages, branche `main`, racine).
+- Messages de commit en français et explicites
+  (exemple : « Jalon 2 — coquille et accueil »).
+
+## Memory bank
+
+- Mettre à jour `memory-bank/activeContext.md` et `memory-bank/progress.md`
+  à la fin de chaque jalon.
+- Ne jamais effacer l'historique des décisions : l'ajouter à `progress.md`.
+
+## Qualité
+
+- Vérifier le rendu localement avant le push lorsque c'est possible.
+- Contrôler le responsive (mobile, tablette, desktop) et les contrastes.
+- Aucun texte de remplissage (« lorem ipsum ») dans le rendu final.

@@ -1,0 +1,192 @@
+/* ============================================================
+   Super-portfolio — Volpe Calogero
+   Jalon 1 : tokens d'identité + page de chantier
+   Palette stricte : jaune / noir / blanc
+   Formes : carrés et rectangles uniquement
+   ============================================================ */
+
+:root {
+  --jaune: #FFD500;
+  --noir: #0B0B0B;
+  --blanc: #FFFFFF;
+
+  --noir-70: rgba(11, 11, 11, 0.7);
+  --noir-15: rgba(11, 11, 11, 0.15);
+  --blanc-70: rgba(255, 255, 255, 0.7);
+  --blanc-15: rgba(255, 255, 255, 0.15);
+
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "Cascadia Mono", monospace;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --gouttiere: clamp(1.25rem, 5vw, 4rem);
+  --max: 1280px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--blanc);
+  background: var(--noir);
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* ---------- Page de chantier ---------- */
+
+.chantier {
+  min-height: 100vh;
+  min-height: 100svh;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding: var(--gouttiere);
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: var(--gouttiere);
+}
+
+.chantier-contenu {
+  min-width: 0;
+}
+
+.chantier-label {
+  font-family: var(--font-mono);
+  font-size: clamp(0.68rem, 1.3vw, 0.82rem);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--jaune);
+  padding-left: 0.9rem;
+  border-left: 6px solid var(--jaune);
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+}
+
+.chantier-titre {
+  font-size: clamp(2.75rem, 7.5vw, 6.5rem);
+  text-transform: uppercase;
+  margin-bottom: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+.chantier-titre span {
+  display: block;
+}
+
+.chantier-texte {
+  max-width: 33rem;
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  color: var(--blanc-70);
+}
+
+.chantier-statut {
+  display: inline-block;
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  padding: 0.55rem 1rem;
+  background: var(--jaune);
+  color: var(--noir);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- Composition de carrés ---------- */
+
+.chantier-formes {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+  aspect-ratio: 1;
+  justify-self: end;
+}
+
+.forme {
+  position: absolute;
+  display: block;
+  animation: forme-entree 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.forme--jaune {
+  width: 64%;
+  aspect-ratio: 1;
+  top: 0;
+  right: 0;
+  background: var(--jaune);
+}
+
+.forme--blanc {
+  width: 46%;
+  aspect-ratio: 1;
+  bottom: 6%;
+  left: 0;
+  background: var(--blanc);
+  animation-delay: 0.12s;
+}
+
+.forme--contour {
+  width: 52%;
+  aspect-ratio: 1;
+  top: 24%;
+  left: 24%;
+  border: 2px solid var(--blanc-15);
+  animation-delay: 0.24s;
+}
+
+@keyframes forme-entree {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 899px) {
+  .chantier {
+    grid-template-columns: 1fr;
+    align-content: center;
+  }
+
+  .chantier-formes {
+    max-width: 13rem;
+    justify-self: start;
+  }
+}
+
+/* ---------- Mouvement réduit ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

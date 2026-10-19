@@ -69,6 +69,10 @@
   (WordPress, Elementor, Divi, VS Code, Cline) ; nouvelle page
   `competences.html` prévue au Jalon 6.
 - Commit `2f49ebd`.
+- Déploiement GitHub Pages différé : incident GitHub du 2026-10-19
+  (Actions / Pages / Webhooks `degraded`), build `waiting` puis `errored`.
+  Code poussé (`e6b31d6`) ; relancer le build après rétablissement et vérifier
+  les pages et les assets en ligne.
 
 ## Points ouverts
 

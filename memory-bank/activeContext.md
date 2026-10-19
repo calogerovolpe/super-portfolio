@@ -69,3 +69,9 @@
 - Fournir un exemple pour Lightroom (aucun livrable actuel).
 - Sélection du contenu des PDF du Jalon 4 (Casa Urpi, L'îlot Câlins, flat design).
 - Construire `competences.html` (Jalon 6) et enrichir `html-css.html` (Jalon 5).
+- **Déploiement GitHub Pages du Jalon 3 en attente** : l'incident GitHub du
+  2026-10-19 (Actions / Pages / Webhooks, « degraded performance ») a laissé le
+  build en `waiting` puis `errored`. Le code est poussé (`e6b31d6`). Une fois le
+  service rétabli : `gh api -X POST repos/calogerovolpe/super-portfolio/pages/builds`
+  puis vérifier que `bakery-bliss-cafe.html` contient « Les 9 livrables » et que
+  les assets répondent en 200.

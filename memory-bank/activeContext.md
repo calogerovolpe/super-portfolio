@@ -8,8 +8,10 @@
 
 - Dépôt public `super-portfolio` et GitHub Pages (branche `main`, racine),
   statut `built`.
-- Douze pages HTML : accueil, portfolio, démo HTML/CSS, à propos, contact,
-  mentions légales, 404 et cinq fiches projets.
+- Quatorze pages HTML : accueil, portfolio, démo HTML/CSS, compétences,
+  à propos, contact, mentions légales, 404 et six fiches projets
+  (Bakery Bliss Café, Sosse, Casa Urpi, L'îlot Câlins, flat design,
+  photographie).
 - Coquille commune : barre latérale repliable, retour en haut, menu bas
   responsive, footer en trois groupes, navigation précédent/suivant.
 - Identité : jaune `#FFD500`, noir `#0B0B0B`, blanc `#FFFFFF`, carrés et

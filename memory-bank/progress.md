@@ -151,6 +151,7 @@
   `portfolio.html`, compteurs de l'accueil (6 projets / 7 cartes),
   `nav-fin` flat-design → photographie → html-css.
 - Validation : `node --check` OK, 62 boutons, 0 placeholder, accents UTF-8.
+- Commit `85e9b1e`.
 
 ## Points ouverts
 

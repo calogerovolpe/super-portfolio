@@ -68,6 +68,7 @@
 - Ajouts de périmètre : `html-css.html` recentrée sur les compétences web
   (WordPress, Elementor, Divi, VS Code, Cline) ; nouvelle page
   `competences.html` prévue au Jalon 6.
+- Commit `2f49ebd`.
 
 ## Points ouverts
 

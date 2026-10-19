@@ -67,8 +67,9 @@ super-portfolio/
 | 2 | Coquille du site, identité visuelle, accueil mémorable | ✅ Terminé |
 | 3 | Pages projets : Bakery Bliss Café + Sosse | ✅ Terminé |
 | 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ✅ Terminé |
-| 5 | Page « HTML & CSS » + Tailwind | ⬜ À faire |
-| 6 | Finitions : responsive, accessibilité, SEO | ⬜ À faire |
+| 5 | Page « HTML & CSS » + Tailwind (compétences web) | ⬜ À faire |
+| 6 | Page « Compétences » (logiciels + exemples interactifs) | ⬜ À faire |
+| 7 | Finitions | ⬜ À faire |
 
 Les douze pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
 L'îlot Câlins et Flat design sont complètes : textes issus des PDF, documents,

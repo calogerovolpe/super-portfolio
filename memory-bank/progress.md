@@ -180,7 +180,7 @@
   filtre Photoshop = 2 preuves et compteur « 2 preuves affichées » ;
   accordéon de la page Démo OK ; console vide ; 21 références `assets/`
   de la page Compétences existent.
-- Commit à renseigner après le push.
+- Commit `1ebb95c`.
 
 ## Points ouverts
 

@@ -319,12 +319,15 @@
   `calins-tristes.webp` (929×585) ; ajout de deux vignettes `.apercu--blanc`
   dans la galerie « Les mascottes » (légendes, alt, dimensions,
   `loading="lazy"`, lightbox) et mise à jour de l'intro.
-- **Parcours** : `.frise-entree` passe à
-  `padding: 0 0 clamp(2.4rem, 5vw, 3.4rem) …` et `.frise-entree--comm` reçoit
-  `padding-bottom: clamp(2.4rem, 5vw, 3.4rem)` pour espacer les marqueurs.
+- **Parcours** : `.frise-entree` reçoit
+  `margin-bottom: clamp(2.4rem, 5vw, 3.4rem)` (et `margin-bottom: 0` sur
+  `:last-child`), le `padding-bottom` étant retiré ; `.frise-entree--comm` ne
+  conserve que son padding uniforme de cadre. La séparation est donc à
+  l'extérieur de la bordure, pas à l'intérieur.
 - Validation : `verifier-jalon8.py` (597 liens, CSS OK) ; Chrome headless :
   8/8 images chargées, lightbox du câlin triste OK, 0 débordement ;
-  `padding_base` = `padding_comm` = 38,4 px, écart entre points = 170 px.
+  `margin_base` = `margin_comm` = 38,4 px, `padding_bottom` de base = 0,
+  écart entre points = 170 px.
 
 ## Points ouverts
 

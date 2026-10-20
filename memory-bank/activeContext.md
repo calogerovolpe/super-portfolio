@@ -161,13 +161,15 @@
   (`calin-triste.webp`, `calins-tristes.webp`, 929×585), avec légendes
   « Câlin triste » / « Câlins tristes », alt descriptifs, dimensions et
   lightbox ; intro de section mise à jour.
-- **Parcours** : espace bas des entrées de la frise porté à
-  `clamp(2.4rem, 5vw, 3.4rem)` (et `padding-bottom` aligné sur les entrées
-  `--comm`) pour que les marqueurs ne collent plus au point suivant.
+- **Parcours** : espace bas des entrées de la frise converti en
+  `margin-bottom: clamp(2.4rem, 5vw, 3.4rem)` (séparation à l'extérieur de la
+  bordure, `margin-bottom: 0` sur la dernière entrée), le `padding-bottom`
+  étant retiré ; les entrées `--comm` ne gardent que leur padding uniforme de
+  cadre. Les marqueurs ne collent plus au point suivant sans étirer le trait.
 - Validation : `verifier-jalon8.py` (14 pages, 597 liens, CSS OK) ; tests
   headless Chrome : 8 vignettes et 8 images chargées, lightbox OK, 0
-  débordement ; `padding_base` = `padding_comm` = 38,4 px, écart entre points
-  de 170 px.
+  débordement ; `margin_base` = `margin_comm` = 38,4 px, `padding_bottom` de
+  base = 0, écart entre points de 170 px.
 
 ## Prochaine étape
 

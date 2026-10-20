@@ -357,4 +357,18 @@
   `.btn--contour` avec les mêmes libellés ; CSS `.candidature`,
   `.candidature-actions`.
 - Matrice « projets × outils » inchangée : Canva n'est utilisé dans aucun projet.
+### 2026-10-20 — Mise à jour du CV et de la lettre de motivation
+
+- Nouvelle version des deux PDF depuis `docs/CV communication.pdf` et
+  `docs/Lettre motivation communication.pdf`, publiée sous les noms
+  kebab-case `cv-volpe-calogero.pdf` (125 Ko) et
+  `lettre-motivation-volpe-calogero.pdf` (448 Ko).
+- Métadonnées corrigées : le titre interne (`/Title` et XMP `dc:title`)
+  reprend le nom exact du fichier, au lieu de « Plan de travail 11 » /
+  « Plan de travail 21 » affiché dans l'onglet du navigateur.
+- Réécriture PyMuPDF contrôlée : texte et rendu 150 dpi strictement
+  identiques aux sources ; une seule page par document.
+- Libellés de taille mis à jour dans `parcours.html` et `contact.html`
+  (`(PDF, 125 Ko)` / `(PDF, 448 Ko)`).
+
 

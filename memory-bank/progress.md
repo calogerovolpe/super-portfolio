@@ -201,7 +201,7 @@
   loading, ids, noopener, pas de lorem), HTTP réel 14/14 (aucun 404, console
   vide, pas de débordement 390/1440, 2 icônes par page), contrastes WCAG AA OK
   sur index, compétences, à propos, contact et portfolio.
-- Commit à renseigner après le push.
+- Commit `e6715e8`.
 
 ## Points ouverts
 

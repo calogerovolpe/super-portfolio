@@ -3809,7 +3809,7 @@ body.visionneuse-ouverte {
   grid-template-columns: 10rem minmax(0, 1fr);
   gap: clamp(1rem, 3vw, 2.5rem);
   margin-left: 0.35rem;
-  padding: 0 0 clamp(1.6rem, 3.5vw, 2.4rem) clamp(1.4rem, 3vw, 2rem);
+  padding: 0 0 clamp(2.4rem, 5vw, 3.4rem) clamp(1.4rem, 3vw, 2rem);
   border-left: 2px solid var(--filet-fort);
 }
 
@@ -3837,6 +3837,7 @@ body.visionneuse-ouverte {
 .frise-entree--comm,
 .frise-entree--comm:last-child {
   padding: clamp(1rem, 2.5vw, 1.5rem);
+  padding-bottom: clamp(2.4rem, 5vw, 3.4rem);
   border: 2px solid var(--forme-contraste);
 }
 

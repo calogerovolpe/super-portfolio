@@ -155,6 +155,20 @@
 - Validation : `verifier-jalon8.py` OK ; test headless Chrome (onglets,
   contenus rendus, tuile Compétences, 0 débordement).
 
+## Ajout — câlins tristes et espacement de la frise
+
+- **L'îlot Câlins** : ajout de deux visuels dans la galerie « Les mascottes »
+  (`calin-triste.webp`, `calins-tristes.webp`, 929×585), avec légendes
+  « Câlin triste » / « Câlins tristes », alt descriptifs, dimensions et
+  lightbox ; intro de section mise à jour.
+- **Parcours** : espace bas des entrées de la frise porté à
+  `clamp(2.4rem, 5vw, 3.4rem)` (et `padding-bottom` aligné sur les entrées
+  `--comm`) pour que les marqueurs ne collent plus au point suivant.
+- Validation : `verifier-jalon8.py` (14 pages, 597 liens, CSS OK) ; tests
+  headless Chrome : 8 vignettes et 8 images chargées, lightbox OK, 0
+  débordement ; `padding_base` = `padding_comm` = 38,4 px, écart entre points
+  de 170 px.
+
 ## Prochaine étape
 
 **Projet complet.** Les dix jalons sont terminés. La suite relève de la
@@ -196,8 +210,10 @@ surveillance du déploiement GitHub Pages.
   travaux, publiés sans restriction.
 - **Flat design** : les SVG sont affichés en vectoriel direct **et** doublés
   d'aperçus WebP rasterisés (les deux techniques).
-- **L'îlot Câlins** : année **2024** (PDF daté 04/2024) ; visuels « triste »
-  écartés (`calin triste voit enfant mourir`, `pluieurs calins triste`).
+- **L'îlot Câlins** : année **2024** (PDF daté 04/2024) ; les deux visuels
+  « triste » (`calin triste voit enfant mourir`, `pluieurs calins triste`) sont
+  désormais intégrés à la galerie sous les noms `calin-triste.webp` et
+  `calins-tristes.webp`.
 - **Casa Urpi** : **charte graphique** (et non « charge graphique »),
   InDesign 2025.
 - **Jalon 5** : Tailwind Play CDN **scopé** (`prefix: 'tw-'`,

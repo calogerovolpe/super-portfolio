@@ -39,7 +39,8 @@
   .carte-projet,
   .methode-etape,
   .stat,
-  .apercu {
+  .apercu,
+  .frise-entree {
     break-inside: avoid;
   }
 

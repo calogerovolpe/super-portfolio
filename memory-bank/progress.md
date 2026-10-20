@@ -11,6 +11,7 @@
 | 5 | Page « HTML & CSS » + Tailwind (compétences web) | ✅ Terminé |
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ✅ Terminé |
 | 7 | Finitions | ✅ Terminé |
+| 8 | Page « Parcours » (savoir-faire & savoir-être) | ✅ Terminé |
 
 ## Journal
 
@@ -203,8 +204,26 @@
   sur index, compétences, à propos, contact et portfolio.
 - Commit `e6715e8`.
 
+### 2026-10-20 — Jalon 8
+
+- Page `parcours.html` : hero, profil (06 ans d'école d'art, 13 étapes,
+  04 métiers), six savoir-faire, frise de treize étapes (emplois, formations,
+  activité complémentaire, mobilité), six savoir-être, quatre métiers visés
+  et appel à l'action.
+- Contenu issu des pages `mes-realisations/parcours.html` (référence
+  principale, mise à jour du 10 octobre 2026) et
+  `mes-realisations-batiments/parcours.html` (compléments), sans invention.
+- CSS : `.frise` (ligne verticale, marqueurs carrés, étiquettes de type,
+  tags de compétences) et `.methode--metiers` (4 → 2 → 1 colonnes) ;
+  `.frise-entree` en `break-inside: avoid` à l'impression.
+- Intégration : « Parcours » dans la nav et le footer des 15 pages,
+  `nav-fin` compétences → parcours → à propos, lien depuis `a-propos.html`,
+  sitemap (14 URLs), README.
+- Validation : balises équilibrées, liens locaux, `aria-current`, responsive
+  390/1440, contrastes, 0 placeholder.
+
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
   « Illustrator » est affiché partout depuis le Jalon 6.
-- GitHub Pages : build `built` à revérifier après le push du Jalon 7.
+- GitHub Pages : build `built` à revérifier après le push du Jalon 8.

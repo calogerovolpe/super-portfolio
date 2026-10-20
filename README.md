@@ -32,6 +32,7 @@ Site statique, publié sur GitHub Pages.
 - `portfolio.html` — grille des sept projets et de la page Compétences
 - `html-css.html` — démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web
 - `competences.html` — six logiciels, matrice projets × outils, treize preuves filtrables et repères techniques
+- `parcours.html` — parcours professionnel et formations, savoir-faire et savoir-être pour les métiers de la communication, du design et du web
 - `a-propos.html`, `contact.html`, `mentions-legales.html`, `404.html`
 
 ## Structure du dépôt
@@ -43,7 +44,7 @@ super-portfolio/
 ├── favicon.svg              Icône vectorielle
 ├── favicon.ico              Icône 32×32
 ├── robots.txt               Directives d'indexation
-├── sitemap.xml              Plan du site (13 URLs)
+├── sitemap.xml              Plan du site (14 URLs)
 ├── assets/
 │   ├── css/style.css        Feuille de style unique (tokens + composants)
 │   ├── css/print.css        Impression
@@ -76,8 +77,9 @@ super-portfolio/
 | 5 | Page « HTML & CSS » + Tailwind (compétences web) | ✅ Terminé |
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ✅ Terminé |
 | 7 | Finitions | ✅ Terminé |
+| 8 | Page « Parcours » (savoir-faire & savoir-être) | ✅ Terminé |
 
-Les quatorze pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
+Les quinze pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
 L'îlot Câlins, Flat design et Photographie sont complètes : textes issus des PDF,
 documents, galeries et lightbox.
 

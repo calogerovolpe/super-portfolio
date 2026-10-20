@@ -2,14 +2,14 @@
 
 ## Jalon en cours
 
-**Jalon 7 — Finitions : favicon, image de partage, SEO et nettoyage.** Terminé et validé. Le projet est complet.
+**Jalon 8 — Page Parcours : savoir-faire & savoir-être.** Terminé et validé. Le projet compte quinze pages.
 
 ## Ce qui est en place
 
 - Dépôt public `super-portfolio` et GitHub Pages (branche `main`, racine),
   statut `built`.
-- Quatorze pages HTML : accueil, portfolio, démo HTML/CSS, compétences,
-  à propos, contact, mentions légales, 404 et six fiches projets
+- Quinze pages HTML : accueil, portfolio, démo HTML/CSS, compétences,
+  parcours, à propos, contact, mentions légales, 404 et six fiches projets
   (Bakery Bliss Café, Sosse, Casa Urpi, L'îlot Câlins, flat design,
   photographie).
 - Coquille commune : barre latérale repliable, retour en haut, menu bas
@@ -73,15 +73,32 @@
   `theme-color`.
 - **Jalon 7 — partage social** : `assets/img/og-image.png` (1200×630) et
   métadonnées `og:image` + `twitter:card` sur toutes les pages.
-- **Jalon 7 — SEO** : `robots.txt` et `sitemap.xml` (13 URLs, 404 exclue).
+- **Jalon 7 — SEO** : `robots.txt` et `sitemap.xml` (13 URLs au Jalon 7, 14 avec Parcours, 404 exclue).
 - **Jalon 7 — propreté** : styles inline résiduels remplacés par des classes
   utilitaires (`.marge-haut*`, `.actions-ligne`, `.cadre-image--blanc`,
   `.texte-legal`) ; seules les variables CSS de démonstration restent inline
   sur `html-css.html`. `loading="lazy"` ajouté à l'image 404.
+- **Jalon 8 — parcours.html** : page dédiée au parcours professionnel et aux
+  formations, orientée savoir-faire et savoir-être pour les métiers de la
+  communication, du graphisme, du web design et du graphisme multimédia.
+  Contenu repris des pages `mes-realisations/parcours.html` (référence
+  principale) et `mes-realisations-batiments/parcours.html` (compléments),
+  sans invention.
+- Contenu : hero, profil (06 ans d'école d'art, 13 étapes, 04 métiers),
+  six savoir-faire, frise de treize étapes (emplois, formations, activité
+  complémentaire, mobilité), six savoir-être, quatre métiers visés et
+  appel à l'action.
+- CSS : composant `.frise` (ligne verticale, marqueurs carrés, étiquettes
+  Emploi/Formation/Activité/Mobilité, tags de compétences) et
+  `.methode--metiers` (4 → 2 → 1 colonnes) ; `.frise-entree` en
+  `break-inside: avoid` à l'impression.
+- Intégration : « Parcours » dans la barre latérale et le footer des 15 pages,
+  `nav-fin` compétences → parcours → à propos, lien depuis `a-propos.html`,
+  sitemap (14 URLs), README.
 
 ## Prochaine étape
 
-**Projet complet.** Les sept jalons sont terminés. La suite relève de la
+**Projet complet.** Les huit jalons sont terminés. La suite relève de la
 maintenance : mise à jour des contenus, confirmation de l'outil Sosse et
 surveillance du déploiement GitHub Pages.
 
@@ -159,4 +176,4 @@ surveillance du déploiement GitHub Pages.
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
   « Illustrator » est affiché partout depuis le Jalon 6.
-- GitHub Pages : build `built` à revérifier après le push du Jalon 7.
+- GitHub Pages : build `built` à revérifier après le push du Jalon 8.

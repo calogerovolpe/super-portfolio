@@ -49,7 +49,6 @@
       <li><a href="html-css.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M3 14h18"/></svg><span class="nav-libelle">Démo</span></a></li>
       <li><a href="competences.html" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="5" height="5"/><rect x="10" y="3" width="5" height="5"/><rect x="17" y="3" width="4" height="5"/><rect x="3" y="10" width="5" height="5"/><rect x="10" y="10" width="5" height="5"/><rect x="17" y="10" width="4" height="5"/><rect x="3" y="17" width="18" height="4"/></svg><span class="nav-libelle">Compétences</span></a></li>
       <li><a href="parcours.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="4" height="4"/><rect x="10" y="4" width="11" height="3"/><rect x="3" y="10" width="4" height="4"/><rect x="10" y="10" width="8" height="3"/><rect x="3" y="16" width="4" height="4"/><rect x="10" y="16" width="11" height="3"/></svg><span class="nav-libelle">Parcours</span></a></li>
-      <li><a href="a-propos.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18"/><rect x="9" y="7" width="6" height="6"/><rect x="7" y="15" width="10" height="3"/></svg><span class="nav-libelle">À propos</span></a></li>
       <li><a href="contact.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14"/><path d="M7 10h10M7 14h7"/></svg><span class="nav-libelle">Contact</span></a></li>
     </ul>
   </nav>
@@ -258,8 +257,14 @@
     <h2 class="section-titre" id="matrice-titre">La matrice</h2>
     <p class="section-numero">03 — Projets × outils</p>
   </div>
-  <p class="section-intro">Lecture croisée : une ligne par projet, une colonne par logiciel. Une marque signale que l'outil a servi à au moins un livrable du projet ; le détail donne le volume.</p>
-  <div class="matrice-enveloppe" role="region" aria-labelledby="matrice-titre" tabindex="0">
+  <div class="demo-onglets" role="tablist" aria-label="Matrice : graphiste ou développeur">
+    <button class="demo-onglet" type="button" role="tab" id="onglet-matrice-graphiste" aria-controls="panneau-matrice-graphiste" aria-selected="true">Graphiste</button>
+    <button class="demo-onglet" type="button" role="tab" id="onglet-matrice-dev" aria-controls="panneau-matrice-dev" aria-selected="false">Développeur</button>
+  </div>
+
+  <div class="matrice-panneau" role="tabpanel" id="panneau-matrice-graphiste" aria-labelledby="onglet-matrice-graphiste">
+    <p class="section-intro">Lecture croisée : une ligne par projet, une colonne par logiciel. Une marque signale que l'outil a servi à au moins un livrable du projet ; le détail donne le volume.</p>
+    <div class="matrice-enveloppe" role="region" aria-labelledby="matrice-titre" tabindex="0">
     <table class="matrice">
       <caption>Logiciels mobilisés projet par projet. ✓ signifie que l'outil a servi à au moins un livrable ; — signifie qu'il n'a pas été utilisé.</caption>
       <thead>
@@ -342,6 +347,25 @@
         </tr>
       </tfoot>
     </table>
+    </div>
+  </div>
+
+  <div class="matrice-panneau" role="tabpanel" id="panneau-matrice-dev" aria-labelledby="onglet-matrice-dev">
+    <p class="section-intro">Les environnements et outils que je sais utiliser côté développement : du code maison au déploiement sur serveur.</p>
+    <div class="dev-outils">
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">HT</span><h3 class="dev-outil-nom">HTML</h3></div><p class="dev-outil-texte">Structure sémantique, formulaires et documents accessibles.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">CS</span><h3 class="dev-outil-nom">CSS</h3></div><p class="dev-outil-texte">Grilles, flexbox, variables, responsive et thèmes clair/sombre.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">JS</span><h3 class="dev-outil-nom">JavaScript</h3></div><p class="dev-outil-texte">JavaScript vanilla, composants accessibles et amélioration progressive.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">TW</span><h3 class="dev-outil-nom">Tailwind</h3></div><p class="dev-outil-texte">Utilitaires scopés, préfixe tw- et préflight désactivé.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">WP</span><h3 class="dev-outil-nom">WordPress</h3></div><p class="dev-outil-texte">Installation, thème, contenus et réglages d'un site vitrine.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">EL</span><h3 class="dev-outil-nom">Elementor</h3></div><p class="dev-outil-texte">Mise en page par blocs, responsive et typographie.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">DV</span><h3 class="dev-outil-nom">Divi</h3></div><p class="dev-outil-texte">Construction de pages et de sections pour sites vitrines.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">VS</span><h3 class="dev-outil-nom">VS Code</h3></div><p class="dev-outil-texte">Édition HTML, CSS et JavaScript, Git intégré et aperçu local.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">CL</span><h3 class="dev-outil-nom">Cline</h3></div><p class="dev-outil-texte">Assistance à l'écriture et à la vérification du code.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">GH</span><h3 class="dev-outil-nom">GitHub Pages</h3></div><p class="dev-outil-texte">Versionnage Git et publication statique du portfolio.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">DK</span><h3 class="dev-outil-nom">Docker &amp; VPS</h3></div><p class="dev-outil-texte">Chatbots (OpenWebUI, LibreChat…) dans un VPS via Docker ; hébergement de sites.</p></article>
+      <article class="dev-outil"><div class="dev-outil-tete"><span class="dev-outil-sigle" aria-hidden="true">BS</span><h3 class="dev-outil-nom">Bash</h3></div><p class="dev-outil-texte">Navigation, permissions, processus et scripts simples.</p></article>
+    </div>
   </div>
 </section>
 
@@ -485,7 +509,6 @@
           <li><a href="html-css.html">Démo HTML &amp; CSS</a></li>
           <li><a href="competences.html">Compétences</a></li>
           <li><a href="parcours.html">Parcours</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>

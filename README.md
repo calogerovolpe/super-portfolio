@@ -30,10 +30,10 @@ Site statique, publié sur GitHub Pages.
 
 - `index.html` — accueil mémorable
 - `portfolio.html` — grille des sept projets et de la page Compétences
-- `html-css.html` — démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web
-- `competences.html` — six logiciels, matrice projets × outils, treize preuves filtrables et repères techniques
+- `html-css.html` — démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web (dont Docker/VPS et Bash)
+- `competences.html` — six logiciels, onglets Graphiste / Développeur, matrice projets × outils, treize preuves filtrables et repères techniques
 - `parcours.html` — parcours professionnel et formations, savoir-faire et savoir-être pour les métiers de la communication, du design et du web
-- `a-propos.html`, `contact.html`, `mentions-legales.html`, `404.html`
+- `contact.html` — formulaire, disponibilité, carte et calcul de distance ; `mentions-legales.html`, `404.html`
 
 ## Structure du dépôt
 

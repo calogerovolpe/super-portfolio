@@ -100,32 +100,38 @@
 
   function construireCopieEmail() {
     var liens = document.querySelectorAll('a[href^="mailto:"]');
-    Array.prototype.forEach.call(liens, function (lien) {
-      var bouton = document.createElement('button');
-      bouton.type = 'button';
-      bouton.className = 'copy-email';
-      bouton.innerHTML = ICO_COPIE;
-      bouton.setAttribute('aria-label', "Copier l'adresse e-mail");
-      lien.parentNode.insertBefore(bouton, lien.nextSibling);
+    var lien = null;
+    Array.prototype.forEach.call(liens, function (candidat) {
+      if (lien) { return; }
+      var href = candidat.getAttribute('href') || '';
+      if (href.indexOf('?') === -1) { lien = candidat; }
+    });
+    if (!lien) { return; }
 
-      var minuterie = null;
-      bouton.addEventListener('click', function () {
-        var adresse = lien.getAttribute('href').replace('mailto:', '').split('?')[0];
-        copierTexte(adresse).then(function () {
-          bouton.innerHTML = ICO_OK;
-          bouton.setAttribute('aria-label', 'Adresse e-mail copiée');
-          if (minuterie) { clearTimeout(minuterie); }
-          minuterie = setTimeout(function () {
-            bouton.innerHTML = ICO_COPIE;
-            bouton.setAttribute('aria-label', "Copier l'adresse e-mail");
-          }, 2000);
-        }).catch(function () {
-          var selection = window.getSelection();
-          var plage = document.createRange();
-          plage.selectNodeContents(lien);
-          selection.removeAllRanges();
-          selection.addRange(plage);
-        });
+    var bouton = document.createElement('button');
+    bouton.type = 'button';
+    bouton.className = 'copy-email';
+    bouton.innerHTML = ICO_COPIE;
+    bouton.setAttribute('aria-label', "Copier l'adresse e-mail");
+    lien.parentNode.insertBefore(bouton, lien.nextSibling);
+
+    var minuterie = null;
+    bouton.addEventListener('click', function () {
+      var adresse = lien.getAttribute('href').replace('mailto:', '').split('?')[0];
+      copierTexte(adresse).then(function () {
+        bouton.innerHTML = ICO_OK;
+        bouton.setAttribute('aria-label', 'Adresse e-mail copiée');
+        if (minuterie) { clearTimeout(minuterie); }
+        minuterie = setTimeout(function () {
+          bouton.innerHTML = ICO_COPIE;
+          bouton.setAttribute('aria-label', "Copier l'adresse e-mail");
+        }, 2000);
+      }).catch(function () {
+        var selection = window.getSelection();
+        var plage = document.createRange();
+        plage.selectNodeContents(lien);
+        selection.removeAllRanges();
+        selection.addRange(plage);
       });
     });
   }

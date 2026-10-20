@@ -13,6 +13,7 @@
 | 7 | Finitions | ✅ Terminé |
 | 8 | Page « Parcours » (savoir-faire & savoir-être) | ✅ Terminé |
 | 9 | Accueil : synthèses Parcours & Compétences, cartes-affiches | ✅ Terminé |
+| 10 | Refonte des demandes client (accueil, projets, démo, compétences, parcours, contact) | ✅ Terminé |
 
 ## Journal
 
@@ -246,6 +247,37 @@
 - Rendu contrôlé par captures Chrome headless : desktop 1440 px et mobile
   500 px (Chrome impose 500 px de largeur interne), sans débordement
   (`scrollWidth` 485 < 500).
+
+### 2026-10-20 — Jalon 10
+
+- **Accueil** : ajout de la photo de profil (`assets/img/photo-profil.jpg`,
+  478×480) dans le hero, dans un cadre carré jaune ; les calques animés
+  passent en `aria-hidden` pour laisser le portrait accessible.
+- **portfolio.html** : fonds gris supprimés (seules les couleurs noir, blanc
+  et jaune restent) ; projets triés par nature sous cinq titres de groupe
+  (Identité & chartes, Édition & illustration, Web & code, Photographie,
+  Savoir-faire) ; « Photo-Graphie » sur deux lignes pour éviter le
+  chevauchement ; survol jaune.
+- **html-css.html / demo.js** : formulaire de don centré, **remboursement
+  fiscal à 66 %** affiché dynamiquement (y compris montant libre), contenus
+  de cartes centrés, un seul logo GitHub, ajout de **Docker & VPS** et
+  **Bash** (icônes `docker.svg`, `bash.svg`).
+- **competences.html / competences.js** : « La matrice » devient deux onglets
+  **Graphiste** (matrice projets × logiciels) et **Développeur** (HTML, CSS,
+  JS, Tailwind, WordPress, Elementor, Divi, VS Code, Cline, GitHub Pages,
+  Docker/VPS, Bash).
+- **parcours.html** : cadre de contraste autour des étapes communication /
+  graphisme (Bac+2 communication web, écriture, consultant marketing,
+  école d'art) et section **Prochaine étape** (Python & SQL).
+- **a-propos.html** supprimée ; liens retirés de la barre latérale et du
+  footer des 14 pages ; `nav-fin` parcours → contact ; sitemap et README
+  mis à jour.
+- **contact.html / contact.js** : formulaire avec champ « Vous êtes ? »,
+  mention « disponible immédiatement », carte Google de la place de
+  Guignies et calcul de distance/durée par adresse d'entreprise (Photon +
+  OSRM, sans clé API) ; un seul bouton « copier l'e-mail » (`nav.js`).
+- Validation : `node --check` OK sur les quatre scripts, accolades CSS
+  équilibrées (554/554), structure HTML validée sur les 14 pages.
 
 ## Points ouverts
 

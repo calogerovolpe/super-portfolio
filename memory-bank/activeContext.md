@@ -2,14 +2,14 @@
 
 ## Jalon en cours
 
-**Jalon 9 — Accueil : synthèses Parcours & Compétences, cartes-affiches.** Terminé et validé. Le projet compte quinze pages.
+**Jalon 10 — Refonte des demandes client (photo de profil, tri des projets, démo, onglets compétences, parcours, contact).** Terminé et validé. Le projet compte quatorze pages (la page « À propos » a été supprimée).
 
 ## Ce qui est en place
 
 - Dépôt public `super-portfolio` et GitHub Pages (branche `main`, racine),
   statut `built`.
-- Quinze pages HTML : accueil, portfolio, démo HTML/CSS, compétences,
-  parcours, à propos, contact, mentions légales, 404 et six fiches projets
+- Quatorze pages HTML : accueil, portfolio, démo HTML/CSS, compétences,
+  parcours, contact, mentions légales, 404 et six fiches projets
   (Bakery Bliss Café, Sosse, Casa Urpi, L'îlot Câlins, flat design,
   photographie).
 - Coquille commune : barre latérale repliable, retour en haut, menu bas
@@ -46,7 +46,8 @@
   Tailwind, formulaire de don, menu responsive, grille redimensionnable),
   onglets « Résultat / Code » et accordéon accessibles.
 - Environnement & outils : **WordPress, Elementor, Divi, VS Code, Cline,
-  Git & GitHub Pages** présentés en cartes avec **logos monochromes**.
+  GitHub Pages, Docker & VPS, Bash** présentés en cartes avec logos
+  monochromes.
 - `assets/js/demo.js` (onglets ARIA, accordéon, don, fenêtre redimensionnable,
   grille, amélioration progressive) ; CSS `.demo-*`, `.outil`, `.outil-logo`.
 - Tailwind Play CDN chargé uniquement sur cette page, **préfixe `tw-`** et
@@ -75,7 +76,7 @@
   `theme-color`.
 - **Jalon 7 — partage social** : `assets/img/og-image.png` (1200×630) et
   métadonnées `og:image` + `twitter:card` sur toutes les pages.
-- **Jalon 7 — SEO** : `robots.txt` et `sitemap.xml` (13 URLs au Jalon 7, 14 avec Parcours, 404 exclue).
+- **Jalon 7 — SEO** : `robots.txt` et `sitemap.xml` (12 URLs après retrait d'`a-propos.html` au Jalon 10, 404 exclue).
 - **Jalon 7 — propreté** : styles inline résiduels remplacés par des classes
   utilitaires (`.marge-haut*`, `.actions-ligne`, `.cadre-image--blanc`,
   `.texte-legal`) ; seules les variables CSS de démonstration restent inline
@@ -94,13 +95,38 @@
   Emploi/Formation/Activité/Mobilité, tags de compétences) et
   `.methode--metiers` (4 → 2 → 1 colonnes) ; `.frise-entree` en
   `break-inside: avoid` à l'impression.
-- Intégration : « Parcours » dans la barre latérale et le footer des 15 pages,
-  `nav-fin` compétences → parcours → à propos, lien depuis `a-propos.html`,
-  sitemap (14 URLs), README.
+- Intégration : « Parcours » dans la barre latérale et le footer des 14 pages,
+  `nav-fin` compétences → parcours → contact (a-propos retirée au Jalon 10),
+  sitemap, README.
+
+## Jalon 10 — Refonte des demandes client
+
+- Accueil : photo de profil carrée (`assets/img/photo-profil.jpg`) dans le
+  hero, calques décoratifs en `aria-hidden`.
+- `portfolio.html` : fonds gris supprimés, tri des projets par nature
+  (Identité & chartes, Édition & illustration, Web & code, Photographie,
+  Savoir-faire), titre « Photo-Graphie » sur deux lignes, survol jaune.
+- `html-css.html` : formulaire de don centré, **remboursement fiscal 66 %**
+  calculé par `demo.js`, contenus de cartes centrés, un seul logo GitHub,
+  ajout **Docker & VPS** et **Bash** (`docker.svg`, `bash.svg`).
+- `competences.html` : « La matrice » en **onglets Graphiste / Développeur**
+  (`competences.js`) ; l'onglet Développeur liste HTML, CSS, JS, Tailwind,
+  WordPress, Elementor, Divi, VS Code, Cline, GitHub Pages, Docker/VPS, Bash.
+- `parcours.html` : cadre de contraste autour des étapes communication /
+  graphisme (`.frise-entree--comm`) et section **Prochaine étape**
+  (Python & SQL).
+- `a-propos.html` supprimée, liens retirés des 14 pages, `nav-fin`
+  parcours → contact, sitemap et README mis à jour.
+- `contact.html` : formulaire (« Vous êtes ? »), disponibilité immédiate,
+  carte Google de Guignies et calcul distance/durée (Photon + OSRM,
+  `contact.js`) ; un seul bouton « copier l'e-mail » via `nav.js`.
+- CSS : `.hero-portrait`, `.grille-groupe-titre`, `.carte-projet--pleine`,
+  `.demo-don-fiscal`, `.matrice-panneau`, `.dev-outil*`,
+  `.frise-entree--comm`, `.contact-*`.
 
 ## Prochaine étape
 
-**Projet complet.** Les huit jalons sont terminés. La suite relève de la
+**Projet complet.** Les dix jalons sont terminés. La suite relève de la
 maintenance : mise à jour des contenus, confirmation de l'outil Sosse et
 surveillance du déploiement GitHub Pages.
 

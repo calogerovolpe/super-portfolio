@@ -60,7 +60,6 @@ if (window.tailwind) {
       <li><a href="html-css.html" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M3 14h18"/></svg><span class="nav-libelle">Démo</span></a></li>
       <li><a href="competences.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="5" height="5"/><rect x="10" y="3" width="5" height="5"/><rect x="17" y="3" width="4" height="5"/><rect x="3" y="10" width="5" height="5"/><rect x="10" y="10" width="5" height="5"/><rect x="17" y="10" width="4" height="5"/><rect x="3" y="17" width="18" height="4"/></svg><span class="nav-libelle">Compétences</span></a></li>
       <li><a href="parcours.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="4" height="4"/><rect x="10" y="4" width="11" height="3"/><rect x="3" y="10" width="4" height="4"/><rect x="10" y="10" width="8" height="3"/><rect x="3" y="16" width="4" height="4"/><rect x="10" y="16" width="11" height="3"/></svg><span class="nav-libelle">Parcours</span></a></li>
-      <li><a href="a-propos.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18"/><rect x="9" y="7" width="6" height="6"/><rect x="7" y="15" width="10" height="3"/></svg><span class="nav-libelle">À propos</span></a></li>
       <li><a href="contact.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14"/><path d="M7 10h10M7 14h7"/></svg><span class="nav-libelle">Contact</span></a></li>
     </ul>
   </nav>
@@ -335,7 +334,10 @@ if (window.tailwind) {
           </fieldset>
 
           <div class="demo-don-pied">
-            <p class="demo-don-recap" id="demo-don-recap" aria-live="polite">Don ponctuel de 5 €</p>
+            <div class="demo-don-recap-groupe">
+              <p class="demo-don-recap" id="demo-don-recap" aria-live="polite">Don ponctuel de 5 €</p>
+              <p class="demo-don-fiscal" id="demo-don-fiscal" aria-live="polite">Remboursement fiscal : 3,30 € (66 %)</p>
+            </div>
             <button class="demo-bouton-maison" type="submit">Faire un don</button>
           </div>
         </form>
@@ -510,14 +512,27 @@ if (window.tailwind) {
     </article>
     <article class="outil">
       <div class="outil-tete">
-        <span class="outil-logo outil-logo--double" aria-hidden="true">
-          <img src="assets/img/outils/git.svg" alt="" width="17" height="17" loading="lazy">
-          <img src="assets/img/outils/github.svg" alt="" width="17" height="17" loading="lazy">
-        </span>
-        <h3 class="outil-nom">Git &amp; GitHub Pages</h3>
+        <span class="outil-logo" aria-hidden="true"><img src="assets/img/outils/github.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">GitHub Pages</h3>
       </div>
       <p class="outil-role">Versionnage &amp; publication</p>
       <p class="outil-texte">Commits, branches et publication statique. Le portfolio est en ligne sur <a href="https://calogerovolpe.github.io/super-portfolio/">GitHub Pages</a>.</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="assets/img/outils/docker.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Docker &amp; VPS</h3>
+      </div>
+      <p class="outil-role">Serveur &amp; déploiement</p>
+      <p class="outil-texte">Installation de chatbots (OpenWebUI, LibreChat, etc.) dans un VPS via Docker, et hébergement de sites web sur un VPS.</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="assets/img/outils/bash.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Bash</h3>
+      </div>
+      <p class="outil-role">Ligne de commande</p>
+      <p class="outil-texte">Notions du shell bash : navigation, fichiers, permissions, processus et scripts simples pour administrer un serveur.</p>
     </article>
   </div>
 </section>
@@ -544,7 +559,6 @@ if (window.tailwind) {
           <li><a href="html-css.html">Démo HTML &amp; CSS</a></li>
           <li><a href="competences.html">Compétences</a></li>
           <li><a href="parcours.html">Parcours</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>

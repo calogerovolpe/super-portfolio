@@ -59,31 +59,54 @@
     var formulaire = document.querySelector('.demo-don');
     if (!formulaire) { return; }
     var recap = formulaire.querySelector('#demo-don-recap');
+    var fiscal = formulaire.querySelector('#demo-don-fiscal');
     var champLibre = formulaire.querySelector('#demo-don-montant-libre');
     var frequences = formulaire.querySelectorAll('input[name="frequence"]');
     var montants = formulaire.querySelectorAll('input[name="montant"]');
+    var TAUX_FISCAL = 0.66;
 
     function frequenceChoisie() {
       var choisi = formulaire.querySelector('input[name="frequence"]:checked');
       return choisi && choisi.value === 'mensuel' ? 'mensuel' : 'ponctuel';
     }
 
-    function montantChoisi() {
+    function montantValeur() {
       var choisi = formulaire.querySelector('input[name="montant"]:checked');
       if (!choisi) { return null; }
       if (choisi.value === 'autre') {
-        var valeur = champLibre ? champLibre.value.trim() : '';
-        return valeur ? valeur + ' €' : null;
+        var libre = parseFloat(champLibre ? champLibre.value : '');
+        return isFinite(libre) && libre > 0 ? libre : null;
       }
-      return choisi.value + ' €';
+      var nombre = parseFloat(choisi.value);
+      return isFinite(nombre) ? nombre : null;
+    }
+
+    function montantChoisi() {
+      var valeur = montantValeur();
+      if (!valeur) { return null; }
+      return (Math.round(valeur * 100) / 100).toString().replace('.', ',') + ' €';
+    }
+
+    function formaterEuros(nombre) {
+      return nombre.toFixed(2).replace('.', ',') + ' €';
     }
 
     function rendre() {
-      if (!recap) { return; }
       var montant = montantChoisi();
-      recap.textContent = montant ?
-        'Don ' + frequenceChoisie() + ' de ' + montant :
-        'Don ' + frequenceChoisie() + ' — montant libre à saisir';
+      var valeur = montantValeur();
+      if (recap) {
+        recap.textContent = montant ?
+          'Don ' + frequenceChoisie() + ' de ' + montant :
+          'Don ' + frequenceChoisie() + ' — montant libre à saisir';
+      }
+      if (fiscal) {
+        if (valeur) {
+          var remboursement = Math.round(valeur * TAUX_FISCAL * 100) / 100;
+          fiscal.textContent = 'Remboursement fiscal : ' + formaterEuros(remboursement) + ' (66 %)';
+        } else {
+          fiscal.textContent = 'Remboursement fiscal : 66 % du montant';
+        }
+      }
     }
 
     function majChampLibre() {

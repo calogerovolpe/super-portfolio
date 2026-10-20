@@ -357,6 +357,7 @@
   `.btn--contour` avec les mêmes libellés ; CSS `.candidature`,
   `.candidature-actions`.
 - Matrice « projets × outils » inchangée : Canva n'est utilisé dans aucun projet.
+
 ### 2026-10-20 — Mise à jour du CV et de la lettre de motivation
 
 - Nouvelle version des deux PDF depuis `docs/CV communication.pdf` et

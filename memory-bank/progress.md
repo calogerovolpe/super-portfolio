@@ -386,3 +386,42 @@
   (`(PDF, 126 Ko)` / `(PDF, 120 Ko)`).
 
 
+
+### 2026-10-20 — Refonte accueil, parcours, projets et contact
+
+- `index.html` : suppression de la section « Aperçu réel » ; section
+  **Parcours** déplacée avant **Projets** ; numérotation 01 En chiffres,
+  02 Profil, 03 Sélection, 04 Savoir-faire. L'ancienne section « Méthode »
+  (qui parlait de l'identité du site) est remplacée par **cinq blocs
+  cliquables** : 07 logiciels → `competences.html#logiciels-titre`,
+  09 démonstrations → `html-css.html#briques-titre`, 07 projets →
+  `portfolio.html`, 62 photos → `photographie.html`, 13 outils de
+  développement → `competences.html#matrice-titre`. Survol « encre »
+  (remplissage jaune montant), focus visible, responsive 5 → 3 → 2 colonnes.
+- `index.html` hero : bouton « Me contacter » remplacé par « Mon parcours »
+  (`#parcours`) ; portrait retiré et remplacé par une animation graphique
+  de carrés (`.hero-graphisme`, translate/scale uniquement, pas de rotation,
+  `prefers-reduced-motion` hérité). Note du hero mise à jour
+  (« 7 projets · 9 démos · 7 logiciels · 62 photos »). CTA passé à
+  « Un poste ? Parlons-en. ».
+- `parcours.html` : la section « Profil » devient **« Qui suis-je »** avec
+  la photo `assets/img/photo-profil.jpg` et un texte de profil ; grille
+  `.qui-suis-je` (photo + texte + stats).
+- `portfolio.html` : sélecteur de taille de cartes **Liste / Moyen / Grand**
+  (`.vue-choix`, `data-vue` sur la grille, `assets/js/portfolio.js`,
+  mémorisation `localStorage`), accessible (`aria-pressed`, focus).
+- `competences.html` : suppression complète de la section « Les preuves »
+  (101 lignes) ; « Passerelle » renumérotée 04 — Web ; meta descriptions
+  nettoyées ; `competences.js` délesté du filtre de preuves.
+- `contact.html` : un seul affichage de l'e-mail (le grand titre, transformé
+  en lien `mailto:` pour que `nav.js` place l'icône de copie juste à côté) ;
+  suppression du petit lien doublon ; « Pour un brief efficace » remplacé
+  par **« Pourquoi me choisir ? »** ; hero orienté recrutement
+  (« Un poste ? Écrivons-nous. »).
+- `assets/css/style.css` : nouveaux blocs `.hero-graphisme`, `.chiffres`/
+  `.chiffre`, `.qui-suis-je`, `.vue-choix`, variantes `[data-vue]`, styles
+  `.manifeste-titre a` et `.manifeste-titre .copy-email` (+ ~320 lignes).
+- `README.md` mis à jour.
+- Validation : `node --check` OK sur les 6 JS ; 0 id dupliqué ; liens
+  locaux résolus ; sections équilibrées.
+

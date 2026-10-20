@@ -295,3 +295,21 @@ surveillance du déploiement GitHub Pages.
 - **Choix** : Canva n'entre pas dans la matrice projets × outils (aucun livrable
   de projet ne l'utilise) ; il est signalé comme compétence transversale.
 
+
+## Refonte — accueil, parcours, projets et contact
+
+- **Accueil** : plus d'« Aperçu réel » ; ordre Chiffres (01) → Parcours (02)
+  → Projets (03) → Compétences (04). La section « Méthode » est remplacée par
+  cinq chiffres cliquables (07 logiciels, 09 démos, 07 projets, 62 photos,
+  13 outils de développement), avec effet « encre » au survol.
+- **Hero** : bouton « Mon parcours », animation graphique de carrés à la place
+  du portrait ; note mise à jour.
+- **Parcours** : section « Qui suis-je » avec la photo de profil et un texte
+  de profil.
+- **Projets** : choix de la taille des cartes (Liste / Moyen / Grand).
+- **Compétences** : section « Les preuves » retirée ; Passerelle en 04.
+- **Contact** : e-mail affiché une seule fois, icône de copie à côté du grand
+  e-mail ; « Pourquoi me choisir ? » remplace le brief ; orientation
+  recrutement.
+- **Doctrine** : le site vise un emploi (employeurs), pas une clientèle.
+

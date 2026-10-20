@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="assets/css/print.css" media="print">
 <script src="assets/js/nav.js" defer></script>
 <script src="assets/js/viewer.js" defer></script>
+<script src="assets/js/portfolio.js" defer></script>
 
 </head>
 <body>
@@ -61,7 +62,13 @@
   <p class="page-hero-intro">Identités visuelles, chartes graphiques, business plan, mascotte, illustration et démonstrations web. Chaque projet possède sa page dédiée, ses documents et son récit.</p>
 </header>
 
-<div class="grille-projets grille-projets--categories">
+<div class="vue-choix" role="group" aria-label="Taille des cartes de projet">
+  <button class="vue-choix-bouton" type="button" data-vue-choix="liste" aria-pressed="false">Liste</button>
+  <button class="vue-choix-bouton" type="button" data-vue-choix="moyenne" aria-pressed="false">Moyen</button>
+  <button class="vue-choix-bouton" type="button" data-vue-choix="grande" aria-pressed="true">Grand</button>
+</div>
+
+<div class="grille-projets grille-projets--categories" data-vue="grande">
   <h2 class="grille-groupe-titre" id="projets-identite">Identité visuelle &amp; chartes <span class="grille-groupe-numero">01</span></h2>
 
   <a class="carte-projet carte-projet--etroite" href="bakery-bliss-cafe.html">
@@ -139,7 +146,7 @@
     <div class="carte-corps">
       <div class="carte-entete"><span class="carte-index">08</span><span class="carte-type">Savoir-faire · Logiciels</span></div>
       <h3 class="carte-titre">Compétences</h3>
-      <p class="carte-resume">Photoshop, Lightroom, Illustrator, InDesign, After Effects, Figma et Canva : les preuves par les livrables, une matrice projets × outils et les repères techniques.</p>
+      <p class="carte-resume">Photoshop, Lightroom, Illustrator, InDesign, After Effects, Figma et Canva : les livrables réels, une matrice projets × outils et les repères techniques.</p>
       <div class="carte-pied"><span class="carte-meta">2026 · 7 logiciels</span><span class="carte-bouton">Voir les compétences →</span></div>
     </div>
   </a>

@@ -28,12 +28,12 @@ Site statique, publié sur GitHub Pages.
 
 ## Pages transverses
 
-- `index.html` — accueil mémorable
-- `portfolio.html` — grille des sept projets et de la page Compétences
+- `index.html` — accueil : chiffres cliquables, parcours, projets, compétences
+- `portfolio.html` — grille des sept projets (taille des cartes au choix : liste, moyen, grand) et page Compétences
 - `html-css.html` — démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web (dont Docker/VPS et Bash)
-- `competences.html` — sept logiciels, onglets Graphiste / Développeur, matrice projets × outils, treize preuves filtrables et repères techniques
-- `parcours.html` — parcours professionnel et formations, savoir-faire et savoir-être pour les métiers de la communication, du design et du web
-- `contact.html` — formulaire, disponibilité, carte et calcul de distance ; `mentions-legales.html`, `404.html`
+- `competences.html` — sept logiciels, onglets Graphiste / Développeur, matrice projets × outils et repères techniques
+- `parcours.html` — section « Qui suis-je » avec photo, parcours professionnel et formations, savoir-faire et savoir-être pour les métiers de la communication, du design et du web
+- `contact.html` — formule de contact orientée recrutement, disponibilité, carte et calcul de distance ; `mentions-legales.html`, `404.html`
 
 ## Structure du dépôt
 
@@ -48,7 +48,7 @@ super-portfolio/
 ├── assets/
 │   ├── css/style.css        Feuille de style unique (tokens + composants)
 │   ├── css/print.css        Impression
-│   ├── js/                  Navigation, thème, lightbox, démos, photos, compétences
+│   ├── js/                  Navigation, thème, lightbox, démos, photos, compétences, projets
 │   ├── img/                 Aperçus, image de partage et icône Apple
 │   ├── fichiers/            PDF légers
 │   └── video/               Vidéos légères

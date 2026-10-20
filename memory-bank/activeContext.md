@@ -282,14 +282,14 @@ surveillance du déploiement GitHub Pages.
 - **Cohérence** : `index.html` (hero-note 7 logiciels, intro, tag Canva),
   `portfolio.html` (carte Compétences), `README.md`.
 - **Documents de candidature** : `assets/fichiers/candidature/cv-volpe-calogero.pdf`
-  (125 Ko) et `lettre-motivation-volpe-calogero.pdf` (448 Ko), versions du
-  20 octobre 2026 issues de `docs/CV communication.pdf` et
-  `docs/Lettre motivation communication.pdf`, renommées en kebab-case.
+  (126 Ko) et `lettre-motivation-volpe-calogero.pdf` (120 Ko), dernières
+  versions du 20 octobre 2026 issues de `docs/cv communication.pdf` et
+  `docs/lettre motivation communication.pdf`, renommées en kebab-case.
   Le titre interne (Info + XMP) reprend le nom exact du fichier : plus de
   « Plan de travail 11 / 21 » dans l'onglet du navigateur.
 - **Parcours (`parcours.html`)** : bloc CTA « CV & lettre de motivation » juste
-  après « Métiers visés », deux boutons explicites `(PDF, 125 Ko)` /
-  `(PDF, 448 Ko)`.
+  après « Métiers visés », deux boutons explicites `(PDF, 126 Ko)` /
+  `(PDF, 120 Ko)`.
 - **Contact (`contact.html`)** : mêmes téléchargements sous le formulaire
   (`.candidature`, `.candidature-actions`), en boutons contour.
 - **Choix** : Canva n'entre pas dans la matrice projets × outils (aucun livrable

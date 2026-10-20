@@ -372,4 +372,17 @@
 - Libellés de taille mis à jour dans `parcours.html` et `contact.html`
   (`(PDF, 125 Ko)` / `(PDF, 448 Ko)`).
 
+### 2026-10-20 — Secondes versions du CV et de la lettre de motivation
+
+- Nouvelles versions depuis `docs/cv communication.pdf` (18:36) et
+  `docs/lettre motivation communication.pdf` (18:37), publiées sous
+  `cv-volpe-calogero.pdf` (126 Ko) et `lettre-motivation-volpe-calogero.pdf`
+  (120 Ko).
+- Titres internes (`/Title` et XMP `dc:title`) à nouveau alignés sur le nom
+  exact du fichier ; plus de « Plan de travail 11 / 21 ».
+- Réécriture PyMuPDF contrôlée : texte et rendu 150 dpi identiques aux
+  sources ; une page par document.
+- Libellés de taille actualisés dans `parcours.html` et `contact.html`
+  (`(PDF, 126 Ko)` / `(PDF, 120 Ko)`).
+
 

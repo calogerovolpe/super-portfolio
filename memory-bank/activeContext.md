@@ -269,3 +269,26 @@ surveillance du déploiement GitHub Pages.
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
   « Illustrator » est affiché partout depuis le Jalon 6.
 - GitHub Pages : build `built` à revérifier après le push du Jalon 9.
+
+## Ajout — Canva et documents de candidature
+
+- **Compétences (`competences.html`)** : 7ᵉ logiciel **Canva** (sigle Ca) dans
+  « Les logiciels », présenté comme maîtrise professionnelle (entreprises qui
+  l'utilisent en interne), avec repères techniques et lien vers la page Démo.
+  Compteurs « six → sept » mis à jour (meta, hero, stat `07`, intro).
+- **Démo (`html-css.html`)** : 9ᵉ outil **Canva** dans « Environnement & outils »,
+  logo monochrome `assets/img/outils/canva.svg` (marque cerclée, comme
+  WordPress/Elementor).
+- **Cohérence** : `index.html` (hero-note 7 logiciels, intro, tag Canva),
+  `portfolio.html` (carte Compétences), `README.md`.
+- **Documents de candidature** : `assets/fichiers/candidature/cv-volpe-calogero.pdf`
+  (123 Ko) et `lettre-motivation-volpe-calogero.pdf` (120 Ko), issus de `docs/`,
+  renommés en kebab-case.
+- **Parcours (`parcours.html`)** : bloc CTA « CV & lettre de motivation » juste
+  après « Métiers visés », deux boutons explicites `(PDF, 123 Ko)` /
+  `(PDF, 120 Ko)`.
+- **Contact (`contact.html`)** : mêmes téléchargements sous le formulaire
+  (`.candidature`, `.candidature-actions`), en boutons contour.
+- **Choix** : Canva n'entre pas dans la matrice projets × outils (aucun livrable
+  de projet ne l'utilise) ; il est signalé comme compétence transversale.
+

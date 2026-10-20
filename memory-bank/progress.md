@@ -334,3 +334,27 @@
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
   « Illustrator » est affiché partout depuis le Jalon 6.
 - GitHub Pages : build `built` à revérifier après le push du Jalon 9.
+
+### 2026-10-20 — Canva et documents de candidature
+
+- `competences.html` : 7ᵉ carte `.carte-competence` « Canva » (sigle Ca,
+  création rapide & réseaux sociaux) avec accordéon « Repères techniques » et
+  lien vers `html-css.html#outils-titre` ; compteurs passés de six à sept
+  (meta, og, hero, stat `07`, intro « Sept cartes »).
+- `html-css.html` : 9ᵉ tuile `.outil` « Canva » dans « Environnement & outils »,
+  logo monochrome `assets/img/outils/canva.svg` ; « Canva » ajouté au chapô et
+  aux meta descriptions.
+- Cohérence : `index.html` (hero-note « 7 logiciels », intro « Sept logiciels »,
+  tag Canva), `portfolio.html` (carte Compétences, « 7 logiciels »), `README.md`.
+- Documents de candidature : déplacement de `docs/CV Charge de com.pdf` et
+  `docs/lettre motivation com gen.pdf` vers
+  `assets/fichiers/candidature/cv-volpe-calogero.pdf` (123 Ko) et
+  `lettre-motivation-volpe-calogero.pdf` (120 Ko), en kebab-case.
+- `parcours.html` : bloc `.cta` « CV & lettre de motivation » juste après
+  « Métiers visés », deux boutons (`.btn--noir` CV, `.btn--blanc` lettre) avec
+  libellés explicites `(PDF, 123 Ko)` / `(PDF, 120 Ko)`.
+- `contact.html` : bloc `.candidature` sous le formulaire, deux boutons
+  `.btn--contour` avec les mêmes libellés ; CSS `.candidature`,
+  `.candidature-actions`.
+- Matrice « projets × outils » inchangée : Canva n'est utilisé dans aucun projet.
+

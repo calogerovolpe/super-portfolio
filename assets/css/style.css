@@ -3790,6 +3790,22 @@ body.visionneuse-ouverte {
   font-size: 0.8rem;
 }
 
+/* Candidature : CV & lettre de motivation */
+
+.candidature {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--filet);
+}
+
+.candidature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.6rem;
+}
+
+
 @media (max-width: 820px) {
   .contact-grille {
     grid-template-columns: 1fr;

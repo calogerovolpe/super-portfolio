@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" fill="currentColor">
+  <title>Canva</title>
+  <mask id="canva-c">
+    <rect width="24" height="24" fill="#fff"/>
+    <path d="M 15.54 8.46 A 5 5 0 1 0 15.54 15.54" fill="none" stroke="#000" stroke-width="3"/>
+  </mask>
+  <circle cx="12" cy="12" r="9" mask="url(#canva-c)"/>
+</svg>

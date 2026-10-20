@@ -221,6 +221,7 @@
   sitemap (14 URLs), README.
 - Validation : balises équilibrées, liens locaux, `aria-current`, responsive
   390/1440, contrastes, 0 placeholder.
+- Commit `b99b9ee`.
 
 ## Points ouverts
 

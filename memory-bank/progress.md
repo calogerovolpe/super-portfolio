@@ -296,6 +296,22 @@
   clic, actions nettoyées, aucune action sur les images) ;
   `verifier-jalon8.py` : 14 pages, 595 liens locaux OK, CSS OK.
 
+### 2026-10-20 — Markdown dans la Démo et les Compétences
+
+- `html-css.html` : nouvelle 9ᵉ carte de démonstration « Markdown » (onglets
+  « Résultat / Code ») ; le rendu présente un titre 1, un titre 2, de
+  l'italique, une citation, du code inline et un tableau ; le panneau Code
+  contient le Markdown brut correspondant. Intro passée de « Huit » à
+  « Neuf », descriptions et chapô mis à jour.
+- `competences.html` : tuile `.dev-outil` « Markdown » (sigle MD) ajoutée dans
+  l'onglet Développeur (12 → 13 outils) et « Markdown » ajouté au texte de la
+  passerelle.
+- `assets/css/style.css` : bloc `.demo-markdown` (titres, `em`, `code`,
+  `blockquote`, `table`), scopé, sans arrondi ni couleur hors charte.
+- Validation : `verifier-jalon8.py` (14 pages, 595 liens, CSS OK) ; test
+  headless Chrome : onglets Markdown, retour Résultat, 2 lignes de tableau,
+  Markdown brut présent, tuile Compétences visible, aucun débordement.
+
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —

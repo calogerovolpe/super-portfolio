@@ -2304,6 +2304,82 @@ body.visionneuse-ouverte {
   font-size: 0.86rem;
 }
 
+/* --- Démo Markdown : rendu propre --- */
+.demo-markdown {
+  margin-inline: auto;
+  max-width: 46rem;
+  padding: 1.1rem;
+  text-align: left;
+  border: 1px solid var(--filet);
+  background: var(--fond);
+}
+
+.demo-markdown h3 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.demo-markdown h4 {
+  margin: 1.2rem 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.demo-markdown p {
+  margin: 0.4rem 0;
+}
+
+.demo-markdown em {
+  font-style: italic;
+}
+
+.demo-markdown code {
+  padding: 0.1em 0.4em;
+  background: var(--surface);
+  border: 1px solid var(--filet);
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+}
+
+.demo-markdown blockquote {
+  margin: 0.8rem 0;
+  padding: 0.5rem 0.8rem;
+  border-left: 4px solid var(--jaune);
+  background: var(--surface);
+  font-style: italic;
+  color: var(--texte-doux);
+}
+
+.demo-markdown table {
+  width: 100%;
+  margin-top: 0.8rem;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+.demo-markdown th,
+.demo-markdown td {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--filet);
+  text-align: left;
+}
+
+.demo-markdown th {
+  background: var(--jaune);
+  color: var(--noir);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .accordeon {
   display: grid;
   gap: 0.5rem;

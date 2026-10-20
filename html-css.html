@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Démo — HTML, CSS &amp; outils web | Super-portfolio Volpe Calogero</title>
-<meta name="description" content="Démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
+<meta name="description" content="Démonstrations HTML, CSS, JavaScript, Markdown, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Démo — HTML, CSS & outils web | Super-portfolio Volpe Calogero">
-<meta property="og:description" content="Démonstrations HTML, CSS, JavaScript, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
+<meta property="og:description" content="Démonstrations HTML, CSS, JavaScript, Markdown, Tailwind, formulaire de don, menu responsive, grille redimensionnable et outils web (WordPress, Elementor, Divi, VS Code, Cline).">
 <meta property="og:url" content="https://calogerovolpe.github.io/super-portfolio/html-css.html">
 <meta property="og:image" content="https://calogerovolpe.github.io/super-portfolio/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -83,7 +83,7 @@ if (window.tailwind) {
       <h3 class="manifeste-titre">Montrer le code,<br>pas seulement le résultat.</h3>
     </div>
     <div class="manifeste-texte">
-      <p>Un portfolio de communication web doit prouver qu'il sait construire, pas seulement composer. Cette page montre les briques de base : une structure HTML propre, un CSS lisible, du JavaScript vanilla et l'équivalent en Tailwind.</p>
+      <p>Un portfolio de communication web doit prouver qu'il sait construire, pas seulement composer. Cette page montre les briques de base : une structure HTML propre, un CSS lisible, du JavaScript vanilla, l'équivalent en Tailwind et l'écriture en Markdown.</p>
       <p>Chaque démonstration est interactive et accessible : elle s'ouvre au clavier, se teste et se compare. Le site reste statique, sans framework ni build ; le CSS maison reste la référence.</p>
     </div>
   </div>
@@ -94,7 +94,7 @@ if (window.tailwind) {
     <h2 class="section-titre" id="briques-titre">Les briques</h2>
     <p class="section-numero">02 — Démonstrations</p>
   </div>
-  <p class="section-intro">Huit démonstrations à ouvrir, tester et comparer. Les onglets « Résultat / Code » fonctionnent au clavier ; sans JavaScript, les deux restent visibles.</p>
+  <p class="section-intro">Neuf démonstrations à ouvrir, tester et comparer. Les onglets « Résultat / Code » fonctionnent au clavier ; sans JavaScript, les deux restent visibles.</p>
   <div class="galerie-demo">
     <article class="carte-demo">
       <div class="carte-demo-tete">
@@ -458,6 +458,48 @@ if (window.tailwind) {
   background: var(--jaune);
   color: var(--noir);
 }</code></pre>
+      </div>
+    </article>
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Markdown</h3>
+        <span class="carte-demo-numero">09</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Markdown : résultat ou code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-md-resultat" aria-controls="panneau-md-resultat" aria-selected="true">Résultat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-md-code" aria-controls="panneau-md-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-md-resultat" aria-labelledby="onglet-md-resultat">
+        <div class="demo-markdown">
+          <h3>Titre de niveau 1</h3>
+          <p>Un paragraphe avec un mot en <em>italique</em> et du <code>code en ligne</code>.</p>
+          <h4>Titre de niveau 2</h4>
+          <blockquote>Une citation pour mettre une phrase en avant.</blockquote>
+          <table>
+            <thead>
+              <tr><th scope="col">Logiciel</th><th scope="col">Usage</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>HTML</td><td>Structure</td></tr>
+              <tr><td>CSS</td><td>Mise en forme</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-md-code" aria-labelledby="onglet-md-code">
+        <pre class="demo-code"><code># Titre de niveau 1
+
+Un paragraphe avec un mot en *italique* et
+du `code en ligne`.
+
+## Titre de niveau 2
+
+&gt; Une citation pour mettre une phrase en avant.
+
+| Logiciel | Usage        |
+| -------- | ------------ |
+| HTML     | Structure    |
+| CSS      | Mise en forme |</code></pre>
       </div>
     </article>
   </div>

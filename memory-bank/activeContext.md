@@ -138,6 +138,23 @@
   nettoyage, absence sur les images) + `verifier-jalon8.py` (14 pages,
   595 liens locaux, CSS OK).
 
+## Ajout — Markdown (pages Démo et Compétences)
+
+- **Démo (`html-css.html`)** : 9ᵉ carte `.carte-demo` « Markdown » avec deux
+  onglets « Résultat / Code ». Le rendu montre un titre 1, un titre 2, de
+  l'italique, une citation, du code inline et un tableau ; le panneau « Code »
+  affiche le Markdown brut (`#`, `##`, `*…*`, `>`, `` `…` ``, tableau).
+- **Compétences (`competences.html`)** : nouvelle tuile `.dev-outil` « Markdown »
+  dans l'onglet **Développeur** (12 → 13 outils), et « Markdown » ajouté au
+  texte de la passerelle.
+- **CSS** : styles scopés `.demo-markdown` (titres, citation, code, tableau) —
+  jaune/noir/blanc, rectangles, Archivo/Space Mono.
+- **Choix** : le rendu utilise `h3`/`h4` (pas de second `h1`) pour rester
+  conforme au validateur et au plan du document ; le Markdown brut montre bien
+  `#` et `##`.
+- Validation : `verifier-jalon8.py` OK ; test headless Chrome (onglets,
+  contenus rendus, tuile Compétences, 0 débordement).
+
 ## Prochaine étape
 
 **Projet complet.** Les dix jalons sont terminés. La suite relève de la

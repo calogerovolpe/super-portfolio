@@ -3508,8 +3508,9 @@ body.visionneuse-ouverte {
 }
 
 @media (max-width: 640px) {
+  .competences,
   .preuves {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -3517,5 +3518,38 @@ body.visionneuse-ouverte {
   .preuve:hover {
     transform: none;
   }
+}
+
+/* ---------- Finitions Jalon 7 ---------- */
+
+.marge-haut {
+  margin-top: 1.5rem;
+}
+
+.marge-haut-2 {
+  margin-top: 2rem;
+}
+
+.marge-haut-1 {
+  margin-top: 1rem;
+}
+
+.marge-haut-075 {
+  margin-top: 0.75rem;
+}
+
+.actions-ligne {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.cadre-image--blanc {
+  background: var(--blanc);
+}
+
+.texte-legal {
+  max-width: 48rem;
 }
 

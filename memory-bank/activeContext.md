@@ -2,7 +2,7 @@
 
 ## Jalon en cours
 
-**Jalon 6 — Page Compétences : six logiciels, matrice projets × outils et preuves filtrables.** Terminé et validé.
+**Jalon 7 — Finitions : favicon, image de partage, SEO et nettoyage.** Terminé et validé. Le projet est complet.
 
 ## Ce qui est en place
 
@@ -67,12 +67,23 @@
   `nav-fin` html-css → compétences → à propos.
 - Impression : `print.css` masque les filtres, évite les coupures et affiche
   les 13 preuves même filtrées.
+- **Jalon 7 — favicon** : `favicon.svg` (monogramme VC géométrique),
+  `favicon.ico` (32×32 PNG dans un conteneur ICO) et
+  `assets/img/apple-touch-icon.png` (180×180), liés dans les 14 pages avec
+  `theme-color`.
+- **Jalon 7 — partage social** : `assets/img/og-image.png` (1200×630) et
+  métadonnées `og:image` + `twitter:card` sur toutes les pages.
+- **Jalon 7 — SEO** : `robots.txt` et `sitemap.xml` (13 URLs, 404 exclue).
+- **Jalon 7 — propreté** : styles inline résiduels remplacés par des classes
+  utilitaires (`.marge-haut*`, `.actions-ligne`, `.cadre-image--blanc`,
+  `.texte-legal`) ; seules les variables CSS de démonstration restent inline
+  sur `html-css.html`. `loading="lazy"` ajouté à l'image 404.
 
 ## Prochaine étape
 
-**Jalon 7 — Finitions** : favicon (404 `/favicon.ico`), contrôle final des
-contrastes et du responsive, vérification des contenus, nettoyage et
-publication. La page `competences.html` est terminée.
+**Projet complet.** Les sept jalons sont terminés. La suite relève de la
+maintenance : mise à jour des contenus, confirmation de l'outil Sosse et
+surveillance du déploiement GitHub Pages.
 
 ## Ajouts de périmètre validés
 
@@ -135,11 +146,17 @@ publication. La page `competences.html` est terminée.
 - **Jalon 6 — correction responsive** : `.galerie-apercu` et `.galerie-dessins`
   passent de `1fr` à `minmax(0, 1fr)` sous 640/820 px ; les SVG à grande
   largeur intrinsèque ne débordent plus sur mobile (flat-design).
+- **Jalon 7 — favicon et OG** : monogramme « VC » construit uniquement en
+  rectangles (V en deux rectangles pivotés, C en trois rectangles), trois
+  couleurs, aucun arrondi ; image OG 1200×630 dans le même langage.
+- **Jalon 7 — sitemap** : 13 URLs publiques, `404.html` exclue ; `robots.txt`
+  pointe vers le sitemap.
+- **Jalon 7 — styles** : les espacements ponctuels passent en classes
+  utilitaires dans `style.css` ; les variables inline de `html-css.html`
+  restent (configuration des démos, pas de style).
 
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
   « Illustrator » est affiché partout depuis le Jalon 6.
-- Favicon absent : la console signale un 404 `/favicon.ico` — à traiter aux
-  finitions (Jalon 7).
-- GitHub Pages : build `built` (à revérifier après le push du Jalon 6).
+- GitHub Pages : build `built` à revérifier après le push du Jalon 7.

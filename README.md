@@ -40,11 +40,15 @@ Site statique, publié sur GitHub Pages.
 super-portfolio/
 ├── index.html               Accueil
 ├── *.html                   Pages projets et pages transverses (à plat)
+├── favicon.svg              Icône vectorielle
+├── favicon.ico              Icône 32×32
+├── robots.txt               Directives d'indexation
+├── sitemap.xml              Plan du site (13 URLs)
 ├── assets/
 │   ├── css/style.css        Feuille de style unique (tokens + composants)
 │   ├── css/print.css        Impression
 │   ├── js/                  Navigation, thème, lightbox, démos, photos, compétences
-│   ├── img/                 Aperçus et visuels optimisés
+│   ├── img/                 Aperçus, image de partage et icône Apple
 │   ├── fichiers/            PDF légers
 │   └── video/               Vidéos légères
 ├── memory-bank/             Contexte et avancement du projet
@@ -71,7 +75,7 @@ super-portfolio/
 | 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ✅ Terminé |
 | 5 | Page « HTML & CSS » + Tailwind (compétences web) | ✅ Terminé |
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ✅ Terminé |
-| 7 | Finitions | ⬜ À faire |
+| 7 | Finitions | ✅ Terminé |
 
 Les quatorze pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
 L'îlot Câlins, Flat design et Photographie sont complètes : textes issus des PDF,

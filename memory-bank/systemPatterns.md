@@ -23,6 +23,10 @@ branche `main`, dossier racine, fichier `.nojekyll` présent.
 ├── contact.html
 ├── mentions-legales.html
 ├── 404.html
+├── favicon.svg
+├── favicon.ico
+├── robots.txt
+├── sitemap.xml
 ├── assets/
 │   ├── css/style.css
 │   ├── css/print.css
@@ -93,6 +97,18 @@ branche `main`, dossier racine, fichier `.nojekyll` présent.
   légers dans `assets/fichiers/`.
 - Gros fichiers : release GitHub `livrables-volumineux`, liens externes.
 - Lightbox : `.visionneuse-telecharger`, lien de secours pour les PDF.
+
+## Finitions (jalon 7)
+
+- Favicon : `favicon.svg` (monogramme VC en rectangles), `favicon.ico` (32×32)
+  et `assets/img/apple-touch-icon.png` (180×180) ; `theme-color` sur chaque page.
+- Partage social : `assets/img/og-image.png` (1200×630), `og:image`
+  (+ dimensions et alt) et `twitter:card` sur les 14 pages.
+- SEO : `robots.txt` et `sitemap.xml` (13 URLs, `404.html` exclue).
+- Classes utilitaires : `.marge-haut`, `.marge-haut-1`, `.marge-haut-2`,
+  `.marge-haut-075`, `.actions-ligne`, `.cadre-image--blanc`, `.texte-legal`.
+- Les seuls styles inline restants sont les variables de configuration des
+  démonstrations de `html-css.html` (`--largeur-fenetre`, `--largeur-grille`).
 
 ## Conventions de code
 

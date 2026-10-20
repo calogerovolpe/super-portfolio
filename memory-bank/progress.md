@@ -10,7 +10,7 @@
 | 4 | Pages projets : Casa Urpi + L'îlot Câlins + flat design | ✅ Terminé |
 | 5 | Page « HTML & CSS » + Tailwind (compétences web) | ✅ Terminé |
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ✅ Terminé |
-| 7 | Finitions | ⬜ À faire |
+| 7 | Finitions | ✅ Terminé |
 
 ## Journal
 
@@ -182,9 +182,29 @@
   de la page Compétences existent.
 - Commit `1ebb95c`.
 
+### 2026-10-20 — Jalon 7
+
+- Favicon complet : `favicon.svg` (monogramme VC en rectangles, trois couleurs),
+  `favicon.ico` (32×32) et `assets/img/apple-touch-icon.png` (180×180) ;
+  liens + `theme-color` dans les 14 pages. Le 404 `/favicon.ico` est résolu.
+- Image de partage `assets/img/og-image.png` (1200×630) et métadonnées
+  `og:image`, `og:image:width/height/alt`, `twitter:card` sur toutes les pages.
+- `robots.txt` et `sitemap.xml` (13 URLs, 404 exclue) ; XML valide et toutes
+  les pages du sitemap existent.
+- Nettoyage : 10 styles inline remplacés par `.marge-haut`, `.marge-haut-1`,
+  `.marge-haut-2`, `.marge-haut-075`, `.actions-ligne`, `.cadre-image--blanc`
+  et `.texte-legal` ; `loading="lazy"` ajouté à l'image 404 ; description 404
+  allongée. Les variables `--largeur-*` de `html-css.html` restent inline.
+- Robustesse : `.competences` et `.preuves` passent aussi à `minmax(0, 1fr)`
+  sous 640 px.
+- Validation : audit statique 14/14 (lang, h1, description, alt, width/height,
+  loading, ids, noopener, pas de lorem), HTTP réel 14/14 (aucun 404, console
+  vide, pas de débordement 390/1440, 2 icônes par page), contrastes WCAG AA OK
+  sur index, compétences, à propos, contact et portfolio.
+- Commit à renseigner après le push.
+
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
   « Illustrator » est affiché partout depuis le Jalon 6.
-- Favicon absent : 404 `/favicon.ico` — à traiter au Jalon 7.
-- GitHub Pages : build `built` à revérifier après le push du Jalon 6.
+- GitHub Pages : build `built` à revérifier après le push du Jalon 7.

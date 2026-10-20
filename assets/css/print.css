@@ -54,10 +54,6 @@
     background: #fff;
   }
 
-  .couverture {
-    border: 1px solid #000;
-  }
-
   .galerie-barre,
   .cta-actions {
     display: none !important;

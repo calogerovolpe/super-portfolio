@@ -760,16 +760,22 @@ ol {
 
 .carte-projet {
   grid-column: span 6;
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: clamp(1rem, 2vw, 1.5rem);
+  padding: clamp(1.1rem, 2.2vw, 1.8rem);
   background: var(--fond);
+  border-top: 4px solid var(--jaune);
   transition: background-color var(--transition);
 }
 
-.carte-projet:hover {
+.carte-projet:nth-child(even) {
   background: var(--surface);
+}
+
+.carte-projet:hover {
+  background: var(--surface-forte);
 }
 
 .carte-projet--large {
@@ -790,14 +796,20 @@ ol {
 
 .carte-projet--vedette {
   grid-column: span 12;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(1rem, 3vw, 2.5rem);
-  align-items: center;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: var(--jaune);
+  color: var(--noir);
+  border-top-color: var(--noir);
 }
 
-.carte-projet--vedette .couverture {
-  margin-bottom: 0;
+.carte-projet--vedette:hover {
+  background: var(--jaune);
+}
+
+.carte-projet--vedette .carte-type,
+.carte-projet--vedette .carte-resume,
+.carte-projet--vedette .carte-meta {
+  color: rgba(11, 11, 11, 0.72);
 }
 
 .carte-corps {
@@ -818,13 +830,19 @@ ol {
 .carte-index {
   display: grid;
   place-items: center;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: clamp(2.6rem, 4vw, 3.4rem);
+  height: clamp(2.6rem, 4vw, 3.4rem);
   background: var(--jaune);
   color: var(--noir);
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 0.72rem;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  line-height: 1;
+}
+
+.carte-projet--vedette .carte-index {
+  background: var(--noir);
+  color: var(--jaune);
 }
 
 .carte-type {
@@ -837,246 +855,81 @@ ol {
 }
 
 .carte-titre {
-  font-size: clamp(1.25rem, 2.4vw, 2rem);
+  font-size: clamp(1.9rem, 4.5vw, 4rem);
   text-transform: uppercase;
-  margin-bottom: 0.35rem;
+  line-height: 0.92;
+  margin-bottom: clamp(0.5rem, 1vw, 0.9rem);
+}
+
+.carte-projet--vedette .carte-titre {
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
 }
 
 .carte-resume {
   color: var(--texte-doux);
   font-size: 0.92rem;
-  max-width: 34rem;
-  margin-bottom: 1rem;
+  max-width: 40rem;
+  margin-bottom: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+.carte-projet--vedette .carte-resume {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  max-width: 48rem;
 }
 
 .carte-pied {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-top: auto;
+  padding-top: 1rem;
   font-family: var(--font-mono);
   font-size: 0.66rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-.carte-lien {
+.carte-meta {
+  color: var(--texte-doux);
+}
+
+.carte-bouton {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding-bottom: 0.1rem;
-  border-bottom: 2px solid var(--jaune);
+  padding: 0.7rem 1rem;
+  background: var(--jaune);
+  color: var(--noir);
+  border: 2px solid var(--noir);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
 }
 
-.carte-projet:hover .carte-lien {
-  background: var(--jaune);
+.carte-projet:hover .carte-bouton {
+  background: var(--noir);
+  color: var(--jaune);
+  border-color: var(--jaune);
+  transform: translateY(-2px);
+}
+
+.carte-projet--vedette .carte-bouton {
+  background: var(--noir);
+  color: var(--blanc);
+  border-color: var(--noir);
+}
+
+.carte-projet--vedette:hover .carte-bouton {
+  background: var(--blanc);
   color: var(--noir);
   border-color: var(--noir);
 }
 
-/* ---------- Couvertures abstraites ---------- */
-
-.couverture {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: var(--noir);
-  border: 1px solid var(--filet);
-  margin-bottom: 1rem;
-}
-
-.cv {
-  position: absolute;
-  display: block;
-  background: var(--jaune);
-  transition: transform 350ms cubic-bezier(0.2, 0.7, 0.2, 1);
-}
-
-.cv--1 {
-  width: 52%;
-  aspect-ratio: 1;
-  top: -10%;
-  right: -4%;
-}
-
-.cv--2 {
-  width: 34%;
-  aspect-ratio: 1;
-  bottom: 8%;
-  left: 8%;
-  background: var(--blanc);
-}
-
-.cv--3 {
-  width: 20%;
-  aspect-ratio: 1;
-  top: 28%;
-  left: 44%;
-  border: 2px solid var(--blanc);
-  background: transparent;
-}
-
-.carte-projet:hover .cv--1 {
-  transform: translate(-5%, 5%);
-}
-
-.carte-projet:hover .cv--2 {
-  transform: translate(5%, -5%);
-}
-
-.carte-projet:hover .cv--3 {
-  transform: translate(-3%, -3%);
-}
-
-.couverture--bakery {
-  background: var(--jaune);
-}
-
-.couverture--bakery .cv--1 {
-  background: var(--noir);
-}
-
-.couverture--bakery .cv--2 {
-  background: var(--blanc);
-}
-
-.couverture--bakery .cv--3 {
-  border-color: var(--noir);
-}
-
-.couverture--sosse {
-  background: var(--noir);
-}
-
-.couverture--sosse .cv--1 {
-  width: 66%;
-  top: -14%;
-  right: -8%;
-}
-
-.couverture--sosse .cv--2 {
-  width: 22%;
-  bottom: 12%;
-  left: 10%;
-}
-
-.couverture--sosse .cv--3 {
-  width: 26%;
-  top: 34%;
-  left: 36%;
-  border-color: var(--jaune);
-}
-
-.couverture--urpi {
-  background: var(--blanc);
-}
-
-.couverture--urpi .cv--1 {
-  background: var(--noir);
-}
-
-.couverture--urpi .cv--2 {
-  background: var(--jaune);
-}
-
-.couverture--urpi .cv--3 {
-  border-color: var(--noir);
-}
-
-.couverture--ilot {
-  background: var(--jaune);
-}
-
-.couverture--ilot .cv--1 {
-  background: var(--blanc);
-}
-
-.couverture--ilot .cv--2 {
-  background: var(--noir);
-}
-
-.couverture--ilot .cv--3 {
-  border-color: var(--noir);
-}
-
-.couverture--flat {
-  background-color: var(--noir);
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
-  background-size: 12% 12%;
-}
-
-.couverture--flat .cv--1 {
-  width: 30%;
-  top: 8%;
-  right: 8%;
-}
-
-.couverture--flat .cv--2 {
-  width: 30%;
-  bottom: 8%;
-  left: 8%;
-}
-
-.couverture--flat .cv--3 {
-  width: 16%;
-  top: 42%;
-  left: 42%;
-  border-color: var(--blanc);
-}
-
-.couverture--demo {
-  background: var(--jaune);
-}
-
-.couverture--demo .cv--1 {
-  width: 46%;
-  top: 12%;
-  right: 10%;
-  background: var(--noir);
-}
-
-.couverture--demo .cv--2 {
-  width: 18%;
-  bottom: 12%;
-  left: 10%;
-  background: var(--noir);
-}
-
-.couverture--demo .cv--3 {
-  width: 26%;
-  top: 34%;
-  left: 30%;
-  border-color: var(--noir);
-}
-
-.couverture--competences {
-  background: var(--jaune);
-}
-
-.couverture--competences .cv--1 {
-  width: 34%;
-  top: 10%;
-  right: 8%;
-  background: var(--noir);
-}
-
-.couverture--competences .cv--2 {
-  width: 22%;
-  top: 18%;
-  left: 10%;
-  background: var(--noir);
-}
-
-.couverture--competences .cv--3 {
-  width: 48%;
-  bottom: -8%;
-  left: 26%;
-  background: transparent;
-  border-color: var(--noir);
-}
 
 /* ---------- Étiquettes et méthode ---------- */
 
@@ -1686,14 +1539,6 @@ body.visionneuse-ouverte {
     grid-template-columns: 1fr;
   }
 
-  .carte-projet--vedette {
-    grid-template-columns: 1fr;
-  }
-
-  .carte-projet--vedette .couverture {
-    margin-bottom: 1rem;
-  }
-
   .footer-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1717,10 +1562,6 @@ body.visionneuse-ouverte {
     grid-column: auto;
     display: flex;
     flex-direction: column;
-  }
-
-  .carte-projet--vedette .couverture {
-    margin-bottom: 1rem;
   }
 
   .section-tete {
@@ -3143,32 +2984,6 @@ body.visionneuse-ouverte {
   .galerie-photo .apercu:hover img {
     transform: none;
   }
-}
-
-/* Carte projet — Photographie */
-.couverture--photo {
-  background: var(--blanc);
-}
-
-.couverture--photo .cv--1 {
-  width: 44%;
-  top: 8%;
-  right: 8%;
-  background: var(--noir);
-}
-
-.couverture--photo .cv--2 {
-  width: 26%;
-  bottom: 10%;
-  left: 10%;
-  background: var(--jaune);
-}
-
-.couverture--photo .cv--3 {
-  width: 18%;
-  top: 30%;
-  left: 38%;
-  border-color: var(--noir);
 }
 
 /* ---------- Compétences Jalon 6 ---------- */

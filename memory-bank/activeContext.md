@@ -2,7 +2,7 @@
 
 ## Jalon en cours
 
-**Jalon 8 — Page Parcours : savoir-faire & savoir-être.** Terminé et validé. Le projet compte quinze pages.
+**Jalon 9 — Accueil : synthèses Parcours & Compétences, cartes-affiches.** Terminé et validé. Le projet compte quinze pages.
 
 ## Ce qui est en place
 
@@ -20,8 +20,10 @@
   `assets/css/print.css`.
 - `assets/js/nav.js` (retour en haut, thème, copie d'e-mail, état de la barre),
   `assets/js/home.js` (parallaxe, apparitions), `assets/js/viewer.js` (lightbox).
-- Accueil mémorable : hero animé, bandeau défilant, projets, galerie réelle de
-  L'îlot Câlins, outils, méthode, appel à l'action.
+- Accueil mémorable : hero animé, bandeau défilant, projets en **cartes-affiches
+  typographiques** (grand numéro, titre massif, bouton), galerie réelle de
+  L'îlot Câlins, synthèse **Parcours** (profil hybride + stats + lien), synthèse
+  **Compétences** (tags + lien + méthode), appel à l'action.
 - Jalon 3 : pages **Bakery Bliss Café** (désormais **8 livrables**) et
   **Business plan Sosse** (10 pages), avec lightbox PDF/image.
 - Jalon 4 : pages **Casa Urpi** (charte graphique 15 p., InDesign 2025),
@@ -171,9 +173,22 @@ surveillance du déploiement GitHub Pages.
 - **Jalon 7 — styles** : les espacements ponctuels passent en classes
   utilitaires dans `style.css` ; les variables inline de `html-css.html`
   restent (configuration des démos, pas de style).
+- **Jalon 9 — cartes-affiches** : les couvertures abstraites (`.couverture`,
+  `.cv--1/2/3`, variantes par projet) sont supprimées de l'accueil et du
+  portfolio. Les cartes reposent désormais sur le **titre en grand**, un
+  **grand numéro carré jaune**, les métadonnées et un **bouton jaune**
+  (`.carte-bouton`), avec fonds alternés (`:nth-child(even)`) et carte
+  vedette jaune inversée. Les classes de portée `large/moyenne/etroite/
+  large2/vedette` sont conservées pour le rythme éditorial.
+- **Jalon 9 — synthèses d'accueil** : nouvelle section **Parcours**
+  (06 ans d'école d'art, 13 étapes, 04 métiers visés, bouton vers
+  `parcours.html`) ; l'ancienne section « Outils & méthode » devient
+  **Compétences** (intro, tags, bouton vers `competences.html`, méthode
+  3 étapes). Numérotation des sections : 01 Méthode, 02 Projets,
+  03 Aperçu réel, 04 Parcours, 05 Compétences.
 
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
   « Illustrator » est affiché partout depuis le Jalon 6.
-- GitHub Pages : build `built` à revérifier après le push du Jalon 8.
+- GitHub Pages : build `built` à revérifier après le push du Jalon 9.

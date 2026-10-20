@@ -12,6 +12,7 @@
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ✅ Terminé |
 | 7 | Finitions | ✅ Terminé |
 | 8 | Page « Parcours » (savoir-faire & savoir-être) | ✅ Terminé |
+| 9 | Accueil : synthèses Parcours & Compétences, cartes-affiches | ✅ Terminé |
 
 ## Journal
 
@@ -223,8 +224,31 @@
   390/1440, contrastes, 0 placeholder.
 - Commit `b99b9ee`.
 
+### 2026-10-20 — Jalon 9
+
+- Accueil : suppression des couvertures abstraites de la section Projets ;
+  les cartes deviennent des **affiches typographiques** (grand numéro carré,
+  titre massif, métadonnées, bouton « Voir le projet → »).
+- `portfolio.html` : même traitement pour les huit cartes, en conservant les
+  portées `large/moyenne/etroite/large2`.
+- `style.css` : `.carte-projet` (fond alterné, filet jaune supérieur),
+  `.carte-titre` agrandi, `.carte-index` carré jaune, `.carte-bouton`,
+  carte vedette jaune inversée ; suppression de `.couverture*`, `.cv*` et
+  `.carte-lien`. `print.css` nettoyé.
+- Accueil : nouvelle section **Parcours** (profil hybride, 06 / 13 / 04,
+  bouton vers `parcours.html`) et section **Compétences** (intro, tags,
+  bouton vers `competences.html`, méthode 3 étapes). L'ancienne section
+  04 « Outils & méthode » est renommée et renumérotée.
+- Validation : balises HTML équilibrées (accueil 51/51 `div`, 35/35 `a`,
+  7/7 `section` ; portfolio 32/32 `div`, 33/33 `a`), accolades CSS 511/511
+  et 15/15, aucune référence résiduelle à `.couverture`, `.cv` ou
+  `.carte-lien`.
+- Rendu contrôlé par captures Chrome headless : desktop 1440 px et mobile
+  500 px (Chrome impose 500 px de largeur interne), sans débordement
+  (`scrollWidth` 485 < 500).
+
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —
   « Illustrator » est affiché partout depuis le Jalon 6.
-- GitHub Pages : build `built` à revérifier après le push du Jalon 8.
+- GitHub Pages : build `built` à revérifier après le push du Jalon 9.

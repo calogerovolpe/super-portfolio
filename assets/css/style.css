@@ -1968,25 +1968,60 @@ body.visionneuse-ouverte {
   border-bottom: 2px solid var(--jaune);
 }
 
-/* ---------- Lightbox : secours PDF ---------- */
+/* ---------- Lightbox : actions PDF (retour + télécharger) ---------- */
 
+.visionneuse-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.visionneuse-actions[hidden] {
+  display: none;
+}
+
+.visionneuse-retour,
 .visionneuse-telecharger {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0.7rem;
-  padding: 0.6rem 0.85rem;
-  background: var(--jaune);
-  color: var(--noir);
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  border: 2px solid var(--noir);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.66rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.visionneuse-retour {
+  flex: 1 1 auto;
+  background: var(--jaune);
+  color: var(--noir);
+}
+
+.visionneuse-retour:hover {
+  background: var(--noir);
+  color: var(--jaune);
+  border-color: var(--jaune);
+  transform: translateY(-2px);
+}
+
+.visionneuse-telecharger {
+  background: transparent;
+  color: var(--blanc);
+  border-color: var(--filet-fort);
+  text-decoration: none;
 }
 
 .visionneuse-telecharger:hover {
   background: var(--blanc);
+  color: var(--noir);
+  border-color: var(--blanc);
+  transform: translateY(-2px);
 }
 
 /* ---------- Responsive des livrables ---------- */
@@ -2012,6 +2047,15 @@ body.visionneuse-ouverte {
 
   .visionneuse-contenu iframe {
     height: 58vh;
+  }
+
+  .visionneuse-actions {
+    flex-direction: column;
+  }
+
+  .visionneuse-retour,
+  .visionneuse-telecharger {
+    width: 100%;
   }
 }
 

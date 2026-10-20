@@ -279,6 +279,23 @@
 - Validation : `node --check` OK sur les quatre scripts, accolades CSS
   équilibrées (554/554), structure HTML validée sur les 14 pages.
 
+### 2026-10-20 — Retour vers le site depuis les PDF
+
+- **Constat mobile** : dans la lightbox PDF, l'`<iframe>` capte les gestes et
+  le petit bouton `×` reste le seul retour ; le lien de téléchargement était
+  placé dans la zone défilante.
+- `assets/js/viewer.js` : nouvelle barre `.visionneuse-actions` placée **hors**
+  de la zone défilante, contenant un bouton **« ← Retour vers le site »**
+  (ferme la lightbox, rend le focus au déclencheur) et le lien
+  « Télécharger le PDF ». La barre est masquée pour les images.
+- `assets/css/style.css` : styles `.visionneuse-actions`, `.visionneuse-retour`,
+  `.visionneuse-telecharger` (jaune/noir/blanc, rectangles, aucun arrondi) ;
+  sous 640 px, les actions passent en colonne pleine largeur (cible tactile).
+- Validation : `node --check` OK ; test headless Chrome (ouverture du PDF,
+  iframe présente, actions visibles, bouton hors zone défilante, fermeture au
+  clic, actions nettoyées, aucune action sur les images) ;
+  `verifier-jalon8.py` : 14 pages, 595 liens locaux OK, CSS OK.
+
 ## Points ouverts
 
 - Confirmer l'outil réel du business plan Sosse (Illustrator vs InDesign) —

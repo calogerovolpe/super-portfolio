@@ -124,6 +124,20 @@
   `.demo-don-fiscal`, `.matrice-panneau`, `.dev-outil*`,
   `.frise-entree--comm`, `.contact-*`.
 
+## Correctif — retour vers le site (PDF)
+
+- Demande client : sur mobile, une fois un PDF ouvert, la navigation retour
+  était difficile (l'`iframe` capte les gestes tactiles, le bouton `×` est
+  petit et le lien de téléchargement était dans la zone défilante).
+- `viewer.js` ajoute une barre `.visionneuse-actions` **hors de la zone
+  défilante**, avec un bouton **« ← Retour vers le site »** (ferme la lightbox
+  et rend le focus au déclencheur) et le lien « Télécharger le PDF ».
+- La barre n'apparaît que pour les PDF ; sous 640 px, les deux actions sont
+  empilées en pleine largeur pour une cible tactile confortable.
+- Validation : test headless Chrome (ouverture, visibilité, fermeture,
+  nettoyage, absence sur les images) + `verifier-jalon8.py` (14 pages,
+  595 liens locaux, CSS OK).
+
 ## Prochaine étape
 
 **Projet complet.** Les dix jalons sont terminés. La suite relève de la
@@ -156,6 +170,8 @@ surveillance du déploiement GitHub Pages.
 - Sosse : le PDF est signé **Adobe Illustrator 28.4** (2024), pas InDesign ;
   la page affiche donc « Adobe Illustrator » (à confirmer par Calogero).
 - Lightbox : lien « Télécharger le PDF » ajouté en secours de l'iframe.
+- **Retour vers le site** : bouton explicite ajouté dans la lightbox PDF,
+  hors de la zone défilante, pour la navigation mobile.
 - **Jalon 4 — retrait du site Bakery** : suppression de toute la carte
   « Site web » (9 → 8 livrables), et non du seul lien mort.
 - **likeandsee** = ancienne micro-entreprise de Calogero Volpe : la mascotte

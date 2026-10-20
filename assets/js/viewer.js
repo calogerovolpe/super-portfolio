@@ -8,6 +8,7 @@
   var contenu = null;
   var legende = null;
   var boutonFermer = null;
+  var actions = null;
   var dernierFocus = null;
 
   function creer() {
@@ -25,12 +26,14 @@
         '<button type="button" class="visionneuse-fermer" aria-label="Fermer l\'aperçu">×</button>' +
         '<div class="visionneuse-contenu"></div>' +
         '<p class="visionneuse-legende"></p>' +
+        '<div class="visionneuse-actions" hidden></div>' +
       '</div>';
 
     document.body.appendChild(boite);
     contenu = boite.querySelector('.visionneuse-contenu');
     legende = boite.querySelector('.visionneuse-legende');
     boutonFermer = boite.querySelector('.visionneuse-fermer');
+    actions = boite.querySelector('.visionneuse-actions');
 
     boutonFermer.addEventListener('click', fermer);
     boite.querySelector('[data-fermer]').addEventListener('click', fermer);
@@ -45,12 +48,20 @@
     creer();
     dernierFocus = document.activeElement;
     contenu.innerHTML = '';
+    actions.innerHTML = '';
+    actions.hidden = true;
 
     if (type === 'pdf') {
       var cadre = document.createElement('iframe');
       cadre.src = source;
       cadre.title = texte || 'Document PDF';
       contenu.appendChild(cadre);
+
+      var retour = document.createElement('button');
+      retour.type = 'button';
+      retour.className = 'visionneuse-retour';
+      retour.textContent = '← Retour vers le site';
+      retour.addEventListener('click', fermer);
 
       var secours = document.createElement('a');
       secours.className = 'visionneuse-telecharger';
@@ -59,7 +70,10 @@
       secours.setAttribute('target', '_blank');
       secours.setAttribute('rel', 'noopener');
       secours.textContent = 'Télécharger le PDF';
-      contenu.appendChild(secours);
+
+      actions.appendChild(retour);
+      actions.appendChild(secours);
+      actions.hidden = false;
     } else {
       var image = document.createElement('img');
       image.src = source;
@@ -77,6 +91,8 @@
     if (!boite || boite.hidden) { return; }
     boite.hidden = true;
     contenu.innerHTML = '';
+    actions.innerHTML = '';
+    actions.hidden = true;
     document.body.classList.remove('visionneuse-ouverte');
     if (dernierFocus && dernierFocus.focus) { dernierFocus.focus(); }
   }

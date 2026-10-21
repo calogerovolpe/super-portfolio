@@ -4,6 +4,9 @@
 (function () {
   'use strict';
 
+  var NL = (document.documentElement.lang || '').toLowerCase().indexOf('nl') === 0;
+  function t(fr, nl) { return NL ? nl : fr; }
+
   var ICO_CLAIR = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16"/><rect x="9" y="9" width="6" height="6" fill="currentColor"/></svg>';
   var ICO_SOMBRE = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" fill="currentColor"/><rect x="12" y="4" width="8" height="16" fill="var(--fond)"/></svg>';
   var ICO_COPIE = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="12" height="12"/><path d="M4 16V4h12"/></svg>';
@@ -18,8 +21,8 @@
     var bouton = document.createElement('button');
     bouton.type = 'button';
     bouton.className = 'back-to-top';
-    bouton.setAttribute('aria-label', 'Retour en haut de page');
-    bouton.innerHTML = '↑ <span class="btn-libelle">Haut</span>';
+    bouton.setAttribute('aria-label', t('Retour en haut de page', 'Terug naar boven'));
+    bouton.innerHTML = '↑ <span class="btn-libelle">' + t('Haut', 'Boven') + '</span>';
     document.body.appendChild(bouton);
 
     var enAttente = false;
@@ -54,8 +57,11 @@
     function rendre() {
       var clair = mode === 'clair';
       bouton.innerHTML = (clair ? ICO_CLAIR : ICO_SOMBRE) +
-        '<span class="theme-libelle">Thème ' + (clair ? 'sombre' : 'clair') + '</span>';
-      bouton.setAttribute('aria-label', clair ? 'Passer au thème sombre' : 'Passer au thème clair');
+        '<span class="theme-libelle">' + t('Thème ', 'Thema ') +
+        (clair ? t('sombre', 'donker') : t('clair', 'licht')) + '</span>';
+      bouton.setAttribute('aria-label', clair ?
+        t('Passer au thème sombre', 'Schakel naar donker thema') :
+        t('Passer au thème clair', 'Schakel naar licht thema'));
       bouton.setAttribute('aria-pressed', clair ? 'true' : 'false');
     }
 
@@ -112,7 +118,7 @@
     bouton.type = 'button';
     bouton.className = 'copy-email';
     bouton.innerHTML = ICO_COPIE;
-    bouton.setAttribute('aria-label', "Copier l'adresse e-mail");
+    bouton.setAttribute('aria-label', t("Copier l'adresse e-mail", 'E-mailadres kopiëren'));
     lien.parentNode.insertBefore(bouton, lien.nextSibling);
 
     var minuterie = null;
@@ -120,11 +126,11 @@
       var adresse = lien.getAttribute('href').replace('mailto:', '').split('?')[0];
       copierTexte(adresse).then(function () {
         bouton.innerHTML = ICO_OK;
-        bouton.setAttribute('aria-label', 'Adresse e-mail copiée');
+        bouton.setAttribute('aria-label', t('Adresse e-mail copiée', 'E-mailadres gekopieerd'));
         if (minuterie) { clearTimeout(minuterie); }
         minuterie = setTimeout(function () {
           bouton.innerHTML = ICO_COPIE;
-          bouton.setAttribute('aria-label', "Copier l'adresse e-mail");
+          bouton.setAttribute('aria-label', t("Copier l'adresse e-mail", 'E-mailadres kopiëren'));
         }, 2000);
       }).catch(function () {
         var selection = window.getSelection();

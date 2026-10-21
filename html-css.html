@@ -25,6 +25,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/print.css" media="print">
+<link rel="alternate" hreflang="fr" href="https://calogerovolpe.github.io/super-portfolio/html-css.html">
+<link rel="alternate" hreflang="nl" href="https://calogerovolpe.github.io/super-portfolio/nl/html-css.html">
+<link rel="alternate" hreflang="x-default" href="https://calogerovolpe.github.io/super-portfolio/html-css.html">
+<script src="assets/js/lang.js"></script>
 <script src="assets/js/nav.js" defer></script>
 <script src="assets/js/viewer.js" defer></script>
 <script src="assets/js/demo.js" defer></script>
@@ -65,6 +69,11 @@ if (window.tailwind) {
   </nav>
 </aside>
 <div class="site-contenu">
+<div class="bandeau-transparence" role="region" aria-label="Transparence sur l'usage de l'IA">
+  <p class="bandeau-transparence-texte"><strong>Transparence.</strong> J'utilise l'IA pour pallier mes lacunes : chaque production est vérifiée, corrigée et assumée.</p>
+  <a class="bandeau-transparence-lien" href="methode-ia.html">En savoir plus</a>
+  <button class="bandeau-transparence-fermer" type="button" aria-label="Masquer le bandeau">×</button>
+</div>
 <main class="site-main" id="contenu">
 <header class="page-hero">
   <p class="page-hero-label">Savoir-faire — Démonstrations web</p>
@@ -628,6 +637,7 @@ du `code en ligne`.
         <span class="footer-nav-titre">Informations</span>
         <ul>
           <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="methode-ia.html">Ma méthode avec l'IA</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="mailto:contact@calogero-volpe.eu">contact@calogero-volpe.eu</a></li>
         </ul>

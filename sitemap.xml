@@ -2,79 +2,169 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/portfolio.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/portfolio.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/competences.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/competences.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/html-css.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/html-css.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/parcours.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/parcours.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/bakery-bliss-cafe.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/bakery-bliss-cafe.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/business-plan-sosse.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/business-plan-sosse.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/casa-urpi.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/casa-urpi.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/lilot-calins.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/lilot-calins.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/flat-design.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/flat-design.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/photographie.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/photographie.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/contact.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/contact.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/methode-ia.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/transparantie.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://calogerovolpe.github.io/super-portfolio/mentions-legales.html</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://calogerovolpe.github.io/super-portfolio/nl/mentions-legales.html</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

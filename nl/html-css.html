@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demo — HTML, CSS &amp; webtools | Super-portfolio Volpe Calogero</title>
+<meta name="description" content="Demo's met HTML, CSS, JavaScript, Markdown, Tailwind, een doneerformulier, een responsief menu, een schaalbare grid en webtools (WordPress, Elementor, Divi, VS Code, Cline, Canva).">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Demo — HTML, CSS &amp; webtools | Super-portfolio Volpe Calogero">
+<meta property="og:description" content="Demo's met HTML, CSS, JavaScript, Markdown, Tailwind, een doneerformulier, een responsief menu en webtools.">
+<meta property="og:url" content="https://calogerovolpe.github.io/super-portfolio/nl/html-css.html">
+<meta property="og:image" content="https://calogerovolpe.github.io/super-portfolio/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Volpe Calogero — grafisch ontwerp en webcommunicatie">
+<meta name="twitter:card" content="summary_large_image">
+<script>try{var t=localStorage.getItem('theme');if(t==='clair'){document.documentElement.setAttribute('data-theme','clair')}document.documentElement.classList.add('js')}catch(e){document.documentElement.classList.add('js')}</script>
+<script src="../assets/js/lang.js"></script>
+<link rel="icon" href="../favicon.ico" sizes="32x32">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="alternate" hreflang="fr" href="https://calogerovolpe.github.io/super-portfolio/html-css.html">
+<link rel="alternate" hreflang="nl" href="https://calogerovolpe.github.io/super-portfolio/nl/html-css.html">
+<link rel="alternate" hreflang="x-default" href="https://calogerovolpe.github.io/super-portfolio/html-css.html">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/print.css" media="print">
+<script src="../assets/js/nav.js" defer></script>
+<script src="../assets/js/viewer.js" defer></script>
+<script src="../assets/js/demo.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+if (window.tailwind) {
+  tailwind.config = {
+    prefix: 'tw-',
+    corePlugins: { preflight: false },
+    theme: { extend: { colors: { jaune: '#FFD500', noir: '#0B0B0B' } } }
+  };
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#contenu">Ga naar de inhoud</a>
+<input type="checkbox" id="nav-reduit" class="nav-reduit" aria-label="Menu in- of uitklappen">
+<aside class="site-sidebar">
+  <div class="sidebar-tete">
+    <a class="site-title" href="index.html" aria-label="Volpe Calogero — home">
+      <span class="marque-sigle" aria-hidden="true">VC</span>
+      <span class="marque-texte"><span class="marque-nom">Volpe Calogero</span><span class="marque-sous">Design &amp; web</span></span>
+    </a>
+    <label for="nav-reduit" class="sidebar-bascule" aria-label="Menu in- of uitklappen">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="6" width="18" height="2" fill="currentColor"/><rect x="3" y="11" width="18" height="2" fill="currentColor"/><rect x="3" y="16" width="12" height="2" fill="currentColor"/></svg>
+    </label>
+  </div>
+  <nav class="site-nav" aria-label="Hoofdnavigatie">
+    <ul>
+<li><a href="index.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18"/><rect x="9" y="11" width="6" height="7"/></svg><span class="nav-libelle">Home</span></a></li>
+<li><a href="portfolio.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span class="nav-libelle">Projecten</span></a></li>
+<li><a href="html-css.html" aria-current="page"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M3 14h18"/></svg><span class="nav-libelle">Demo</span></a></li>
+<li><a href="competences.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="5" height="5"/><rect x="10" y="3" width="5" height="5"/><rect x="17" y="3" width="4" height="5"/><rect x="3" y="10" width="5" height="5"/><rect x="10" y="10" width="5" height="5"/><rect x="17" y="10" width="4" height="5"/><rect x="3" y="17" width="18" height="4"/></svg><span class="nav-libelle">Vaardigheden</span></a></li>
+<li><a href="parcours.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="4" height="4"/><rect x="10" y="4" width="11" height="3"/><rect x="3" y="10" width="4" height="4"/><rect x="10" y="10" width="8" height="3"/><rect x="3" y="16" width="4" height="4"/><rect x="10" y="16" width="11" height="3"/></svg><span class="nav-libelle">Traject</span></a></li>
+<li><a href="contact.html"><svg class="nav-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14"/><path d="M7 10h10M7 14h7"/></svg><span class="nav-libelle">Contact</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<div class="site-contenu">
+<div class="bandeau-transparence" role="region" aria-label="Transparantie over het gebruik van AI">
+  <p class="bandeau-transparence-texte"><strong>Transparantie.</strong> De inhoud van deze site is volledig met AI gegenereerd: mijn B2-niveau Nederlands laat mij niet toe een complete site als deze alleen te schrijven.</p>
+  <a class="bandeau-transparence-lien" href="transparantie.html">Meer lezen</a>
+  <button class="bandeau-transparence-fermer" type="button" aria-label="Banner verbergen">×</button>
+</div>
+<main class="site-main" id="contenu">
+<header class="page-hero">
+  <p class="page-hero-label">Knowhow — Webdemo's</p>
+  <h1>HTML &amp;<br>CSS.</h1>
+  <p class="page-hero-intro">Concrete bouwstenen met hun code: semantische structuur, moderne CSS, vanilla JavaScript, Tailwind, een doneerformulier, een responsief menu en een schaalbare grid — plus de omgeving WordPress, Elementor, Divi, VS Code, Cline, Canva en GitHub.</p>
+</header>
+
+<section class="section" aria-labelledby="principe-titre">
+  <div class="section-tete">
+    <h2 class="section-titre" id="principe-titre">Het principe</h2>
+    <p class="section-numero">01 — Transparantie</p>
+  </div>
+  <div class="manifeste">
+    <div>
+      <p class="section-numero">Methode</p>
+      <h3 class="manifeste-titre">Toon de code,<br>niet alleen het resultaat.</h3>
+    </div>
+    <div class="manifeste-texte">
+      <p>Een webcommunicatieportfolio moet bewijzen dat het kan bouwen, niet alleen componeren. Deze pagina toont de basisbouwstenen: een propere HTML-structuur, leesbare CSS, vanilla JavaScript, het Tailwind-equivalent en schrijven in Markdown.</p>
+      <p>Elke demo is interactief en toegankelijk: hij opent met het toetsenbord, laat zich testen en vergelijken. De site blijft statisch, zonder framework of build; de eigen CSS blijft de referentie.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="briques-titre">
+  <div class="section-tete">
+    <h2 class="section-titre" id="briques-titre">De bouwstenen</h2>
+    <p class="section-numero">02 — Demo's</p>
+  </div>
+  <p class="section-intro">Negen demo's om te openen, testen en vergelijken. De tabbladen « Resultaat / Code » werken met het toetsenbord; zonder JavaScript blijven beide zichtbaar.</p>
+  <div class="galerie-demo">
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Semantische HTML</h3>
+        <span class="carte-demo-numero">01</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Semantische HTML: resultaat of code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-html-resultat" aria-controls="panneau-html-resultat" aria-selected="true">Resultaat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-html-code" aria-controls="panneau-html-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-html-resultat" aria-labelledby="onglet-html-resultat">
+        <form class="demo-formulaire" action="#" method="post">
+          <div class="demo-champ">
+            <label for="demo-nom">Naam</label>
+            <input id="demo-nom" name="naam" type="text" autocomplete="name" required>
+          </div>
+          <div class="demo-champ">
+            <label for="demo-email">E-mail</label>
+            <input id="demo-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="demo-champ">
+            <label for="demo-message">Bericht</label>
+            <textarea id="demo-message" name="bericht" rows="3" required></textarea>
+          </div>
+          <button class="btn btn--contour" type="submit">Verzenden</button>
+        </form>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-html-code" aria-labelledby="onglet-html-code">
+        <pre class="demo-code"><code>&lt;form action="#" method="post"&gt;
+  &lt;label for="naam"&gt;Naam&lt;/label&gt;
+  &lt;input id="naam" name="naam" type="text"
+         autocomplete="name" required&gt;
+  &lt;button type="submit"&gt;Verzenden&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Moderne CSS</h3>
+        <span class="carte-demo-numero">02</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Moderne CSS: resultaat of code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-css-resultat" aria-controls="panneau-css-resultat" aria-selected="true">Resultaat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-css-code" aria-controls="panneau-css-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-css-resultat" aria-labelledby="onglet-css-resultat">
+        <div class="demo-produit">
+          <div class="demo-produit-visuel" aria-hidden="true"></div>
+          <div>
+            <h4 class="demo-produit-titre">Productkaart</h4>
+            <p class="demo-produit-texte">Grid, variabelen en transition: bij hover wordt de rand geel en licht de kaart op.</p>
+          </div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-css-code" aria-labelledby="onglet-css-code">
+        <pre class="demo-code"><code>.demo-produit {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
+  border: 1px solid var(--filet);
+  transition: transform 180ms ease;
+}
+
+.demo-produit:hover {
+  border-color: var(--jaune);
+  transform: translateY(-3px);
+}</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo carte-demo--large" id="demo-cssplus">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Meer CSS-voorbeelden</h3>
+        <span class="carte-demo-numero">03</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Meer CSS-voorbeelden: resultaat of code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-cssplus-resultat" aria-controls="panneau-cssplus-resultat" aria-selected="true">Resultaat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-cssplus-code" aria-controls="panneau-cssplus-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-cssplus-resultat" aria-labelledby="onglet-cssplus-resultat">
+        <div class="demo-exemples">
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Flexbox</span>
+            <div class="demo-exemple-boite demo-exemple-flex"><span>Gecentreerd</span></div>
+            <p class="demo-exemple-note">display: flex; align-items: center; justify-content: center;</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Aspect-ratio</span>
+            <div class="demo-exemple-boite demo-exemple-ratio"><span>16 / 9</span></div>
+            <p class="demo-exemple-note">aspect-ratio: 16 / 9;</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Clamp</span>
+            <div class="demo-exemple-boite demo-exemple-clamp"><span>Aa</span></div>
+            <p class="demo-exemple-note">font-size: clamp(1.5rem, 6vw, 2.75rem);</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Pseudo-element</span>
+            <div class="demo-exemple-boite demo-exemple-pseudo"></div>
+            <p class="demo-exemple-note">.boite::before { content: ""; }</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Transition</span>
+            <div class="demo-exemple-boite demo-exemple-hover"><span>Hover</span></div>
+            <p class="demo-exemple-note">transition + transform</p>
+          </div>
+          <div class="demo-exemple">
+            <span class="demo-exemple-label">Position</span>
+            <div class="demo-exemple-boite demo-exemple-position"><span class="demo-exemple-pastille">01</span></div>
+            <p class="demo-exemple-note">position: absolute; inset: 0.4rem;</p>
+          </div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-cssplus-code" aria-labelledby="onglet-cssplus-code">
+        <pre class="demo-code"><code>/* Flexbox: centreren zonder marge */
+.boite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Vloeiende grootte */
+.titre {
+  font-size: clamp(1.5rem, 6vw, 2.75rem);
+}
+
+/* Vierkant dat zijn verhoudingen behoudt */
+.vignette {
+  aspect-ratio: 1;
+  transition: transform 180ms ease;
+}
+
+.vignette:hover {
+  transform: translateY(-3px);
+}</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Vanilla JavaScript</h3>
+        <span class="carte-demo-numero">04</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Vanilla JavaScript: resultaat of code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-js-resultat" aria-controls="panneau-js-resultat" aria-selected="true">Resultaat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-js-code" aria-controls="panneau-js-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-js-resultat" aria-labelledby="onglet-js-resultat">
+        <div class="accordeon">
+          <button class="accordeon-bouton" type="button" data-accordeon aria-controls="demo-reponse-1" aria-expanded="true">Waarom vanilla JavaScript?</button>
+          <div class="accordeon-panneau" id="demo-reponse-1">Omdat een statische site geen framework nodig heeft om interactief te zijn: een paar functies volstaan en het gewicht blijft minimaal.</div>
+          <button class="accordeon-bouton" type="button" data-accordeon aria-controls="demo-reponse-2" aria-expanded="true">Hoe werkt de accordeon?</button>
+          <div class="accordeon-panneau" id="demo-reponse-2">Een klik wijzigt het attribuut aria-expanded en het attribuut hidden van het paneel. De focus blijft zichtbaar en de inhoud blijft leesbaar met het toetsenbord.</div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-js-code" aria-labelledby="onglet-js-code">
+        <pre class="demo-code"><code>bouton.addEventListener('click', function () {
+  var ouvert =
+    bouton.getAttribute('aria-expanded') === 'true';
+  bouton.setAttribute('aria-expanded',
+    ouvert ? 'false' : 'true');
+  panneau.hidden = ouvert;
+});</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Tailwind</h3>
+        <span class="carte-demo-numero">05</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Tailwind: resultaat of code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-tw-resultat" aria-controls="panneau-tw-resultat" aria-selected="true">Resultaat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-tw-code" aria-controls="panneau-tw-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-tw-resultat" aria-labelledby="onglet-tw-resultat">
+        <div class="demo-comparaison">
+          <div class="demo-comparaison-colonne">
+            <span class="demo-comparaison-label">Eigen CSS</span>
+            <button class="demo-bouton-maison" type="button">Kopen</button>
+          </div>
+          <div class="demo-comparaison-colonne">
+            <span class="demo-comparaison-label">Tailwind</span>
+            <button type="button" class="tw-bg-jaune tw-text-noir tw-border-2 tw-border-noir tw-px-5 tw-py-3 tw-font-bold tw-uppercase tw-tracking-wider tw-text-xs hover:tw-bg-noir hover:tw-text-jaune">Kopen</button>
+          </div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-tw-code" aria-labelledby="onglet-tw-code">
+        <pre class="demo-code"><code>&lt;button class="tw-bg-jaune tw-text-noir
+  tw-border-2 tw-border-noir tw-px-5 tw-py-3
+  tw-font-bold tw-uppercase hover:tw-bg-noir"&gt;
+  Kopen
+&lt;/button&gt;</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo carte-demo--large" id="demo-don">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Doneerformulier</h3>
+        <span class="carte-demo-numero">06</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Doneerformulier: resultaat of code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-don-resultat" aria-controls="panneau-don-resultat" aria-selected="true">Resultaat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-don-code" aria-controls="panneau-don-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-don-resultat" aria-labelledby="onglet-don-resultat">
+        <form class="demo-don" action="#" method="post">
+          <fieldset class="demo-don-groupe">
+            <legend class="demo-don-legende">Frequentie</legend>
+            <div class="demo-don-segments">
+              <label class="demo-don-segment">
+                <input type="radio" name="frequence" value="ponctuel" checked>
+                <span>Eenmalig</span>
+              </label>
+              <label class="demo-don-segment">
+                <input type="radio" name="frequence" value="mensuel">
+                <span>Maandelijks</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset class="demo-don-groupe">
+            <legend class="demo-don-legende">Bedrag</legend>
+            <div class="demo-don-montants">
+              <label class="demo-don-montant"><input type="radio" name="montant" value="5" checked><span>5 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="10"><span>10 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="20"><span>20 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="50"><span>50 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="100"><span>100 €</span></label>
+              <label class="demo-don-montant"><input type="radio" name="montant" value="autre"><span>Ander</span></label>
+            </div>
+            <div class="demo-champ demo-don-autre">
+              <label for="demo-don-montant-libre">Vrij bedrag (€)</label>
+              <input id="demo-don-montant-libre" name="montant_libre" type="number" inputmode="decimal" min="1" step="1" placeholder="Bv. 35" disabled>
+            </div>
+          </fieldset>
+
+          <div class="demo-don-pied">
+            <div class="demo-don-recap-groupe">
+              <p class="demo-don-recap" id="demo-don-recap" aria-live="polite">Eenmalige donatie van 5 €</p>
+              <p class="demo-don-fiscal" id="demo-don-fiscal" aria-live="polite">Belastingaftrek: 3,30 € (66 %)</p>
+            </div>
+            <button class="demo-bouton-maison" type="submit">Doneer</button>
+          </div>
+        </form>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-don-code" aria-labelledby="onglet-don-code">
+        <pre class="demo-code"><code>&lt;fieldset&gt;
+  &lt;legend&gt;Bedrag&lt;/legend&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="montant"
+           value="5" checked&gt; 5 €
+  &lt;/label&gt;
+  &lt;label&gt;
+    &lt;input type="radio" name="montant"
+           value="autre"&gt; Ander
+  &lt;/label&gt;
+  &lt;input type="number" name="montant_libre"
+         min="1" placeholder="Bv. 35"&gt;
+&lt;/fieldset&gt;</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo carte-demo--large" id="demo-menu">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Responsief menu</h3>
+        <span class="carte-demo-numero">07</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Responsief menu: resultaat of code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-menu-resultat" aria-controls="panneau-menu-resultat" aria-selected="true">Resultaat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-menu-code" aria-controls="panneau-menu-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-menu-resultat" aria-labelledby="onglet-menu-resultat">
+        <div class="demo-fenetre-outils">
+          <label for="demo-menu-largeur">Breedte van het venster</label>
+          <input id="demo-menu-largeur" type="range" min="260" max="640" step="10" value="640">
+          <output id="demo-menu-largeur-valeur" for="demo-menu-largeur">640 px</output>
+        </div>
+        <div class="demo-fenetre" id="demo-fenetre" style="--largeur-fenetre: 640px;">
+          <div class="demo-fenetre-barre" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <span class="demo-fenetre-url">portfolio.local</span>
+          </div>
+          <div class="demo-fenetre-corps">
+            <aside class="demo-menu" aria-label="Voorbeeld van het menu van de site">
+              <p class="demo-menu-marque"><span aria-hidden="true">VC</span> Volpe Calogero</p>
+              <nav class="demo-menu-nav" aria-label="Demonstratiemenu">
+                <a href="#panneau-menu-resultat" aria-current="page"><svg class="demo-menu-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18"/><rect x="9" y="11" width="6" height="7"/></svg><span>Home</span></a>
+                <a href="#panneau-menu-resultat"><svg class="demo-menu-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg><span>Projecten</span></a>
+                <a href="#panneau-menu-resultat"><svg class="demo-menu-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M3 14h18"/></svg><span>Demo</span></a>
+                <a href="#panneau-menu-resultat"><svg class="demo-menu-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18"/><rect x="9" y="7" width="6" height="6"/><rect x="7" y="15" width="10" height="3"/></svg><span>Contact</span></a>
+              </nav>
+            </aside>
+            <div class="demo-menu-contenu">
+              <p class="demo-menu-label">Voorbeeld</p>
+              <p>Verklein de breedte van het venster: het menu gaat van zijbalk op desktop naar de mobiele balk, zoals op het breekpunt van 959 px van de site.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-menu-code" aria-labelledby="onglet-menu-code">
+        <pre class="demo-code"><code>/* Het kader is de container */
+.demo-fenetre {
+  container-type: inline-size;
+}
+
+.demo-fenetre-corps {
+  display: flex;
+}
+
+/* Mobiel: balk onderaan */
+@container (max-width: 430px) {
+  .demo-fenetre-corps {
+    flex-direction: column;
+  }
+  .demo-menu {
+    order: 2;
+    flex-direction: row;
+  }
+}</code></pre>
+      </div>
+    </article>
+
+    <article class="carte-demo carte-demo--large" id="demo-grille">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Schaalbare grid</h3>
+        <span class="carte-demo-numero">08</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Schaalbare grid: resultaat of code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-grille-resultat" aria-controls="panneau-grille-resultat" aria-selected="true">Resultaat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-grille-code" aria-controls="panneau-grille-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-grille-resultat" aria-labelledby="onglet-grille-resultat">
+        <div class="demo-grille-outils">
+          <label for="demo-grille-largeur">Breedte van de kaart</label>
+          <input id="demo-grille-largeur" type="range" min="170" max="480" step="5" value="480">
+          <output id="demo-grille-largeur-valeur" for="demo-grille-largeur">480 px</output>
+          <span class="demo-grille-colonnes" id="demo-grille-colonnes" aria-live="polite">4 kolommen</span>
+        </div>
+        <div class="demo-grille-cadre">
+          <div class="demo-grille" style="--largeur-grille: 480px;">
+            <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span><span>08</span><span>09</span><span>10</span><span>11</span><span>12</span>
+          </div>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-grille-code" aria-labelledby="onglet-grille-code">
+        <pre class="demo-code"><code>.grille {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(6.5rem, 1fr));
+  gap: 0.6rem;
+}
+
+.grille &gt; span {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: var(--jaune);
+  color: var(--noir);
+}</code></pre>
+      </div>
+    </article>
+    <article class="carte-demo">
+      <div class="carte-demo-tete">
+        <h3 class="carte-demo-titre">Markdown</h3>
+        <span class="carte-demo-numero">09</span>
+      </div>
+      <div class="demo-onglets" role="tablist" aria-label="Markdown: resultaat of code">
+        <button class="demo-onglet" type="button" role="tab" id="onglet-md-resultat" aria-controls="panneau-md-resultat" aria-selected="true">Resultaat</button>
+        <button class="demo-onglet" type="button" role="tab" id="onglet-md-code" aria-controls="panneau-md-code" aria-selected="false">Code</button>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-md-resultat" aria-labelledby="onglet-md-resultat">
+        <div class="demo-markdown">
+          <h3>Titel niveau 1</h3>
+          <p>Een paragraaf met een woord in <em>cursief</em> en <code>inline code</code>.</p>
+          <h4>Titel niveau 2</h4>
+          <blockquote>Een citaat om een zin in de kijker te zetten.</blockquote>
+          <table>
+            <thead>
+              <tr><th scope="col">Software</th><th scope="col">Gebruik</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>HTML</td><td>Structuur</td></tr>
+              <tr><td>CSS</td><td>Opmaak</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="demo-panneau" role="tabpanel" id="panneau-md-code" aria-labelledby="onglet-md-code">
+        <pre class="demo-code"><code># Titel niveau 1
+
+Een paragraaf met een woord in *cursief* en
+`inline code`.
+
+## Titel niveau 2
+
+&gt; Een citaat om een zin in de kijker te zetten.
+
+| Software | Gebruik |
+| -------- | ------- |
+| HTML     | Structuur |
+| CSS      | Opmaak  |</code></pre>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="outils-titre">
+  <div class="section-tete">
+    <h2 class="section-titre" id="outils-titre">Omgeving &amp; tools</h2>
+    <p class="section-numero">03 — Knowhow</p>
+  </div>
+  <p class="section-intro">De tools die het ontwerp, de opmaak en de publicatie van het portfolio begeleiden. Logo's van de respectieve merken, ter informatie.</p>
+  <div class="outils">
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="../assets/img/outils/wordpress.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">WordPress</h3>
+      </div>
+      <p class="outil-role">CMS · website</p>
+      <p class="outil-texte">Installatie, thema, inhoud en instellingen. Ervaring met een website (thema Hello Elementor, hosting O2switch).</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="../assets/img/outils/elementor.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Elementor</h3>
+      </div>
+      <p class="outil-role">Thema &amp; page builder</p>
+      <p class="outil-texte">Pagina's en secties bouwen met de Elementor-builder, voor gestructureerde websites.</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="../assets/img/outils/divi-mono.png" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Divi</h3>
+      </div>
+      <p class="outil-role">Thema &amp; page builder</p>
+      <p class="outil-texte">Pagina's en secties bouwen met de Divi-builder, voor gestructureerde websites.</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="../assets/img/outils/visualstudiocode.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">VS Code</h3>
+      </div>
+      <p class="outil-role">Code-editor</p>
+      <p class="outil-texte">HTML-, CSS- en JavaScript-editor van dit portfolio, met geïntegreerde Git en lokale preview.</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="../assets/img/outils/cline.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Cline</h3>
+      </div>
+      <p class="outil-role">Bewerkassistent</p>
+      <p class="outil-texte">Hulp bij het schrijven, controleren en documenteren van code, in VS Code.</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="../assets/img/outils/github.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">GitHub Pages</h3>
+      </div>
+      <p class="outil-role">Versiebeheer &amp; publicatie</p>
+      <p class="outil-texte">Commits, branches en statische publicatie. Het portfolio staat online op <a href="https://calogerovolpe.github.io/super-portfolio/">GitHub Pages</a>.</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="../assets/img/outils/docker.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Docker &amp; VPS</h3>
+      </div>
+      <p class="outil-role">Server &amp; deployment</p>
+      <p class="outil-texte">Chatbots (OpenWebUI, LibreChat, enz.) installeren in een VPS via Docker, en websites hosten op een VPS.</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="../assets/img/outils/bash.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Bash</h3>
+      </div>
+      <p class="outil-role">Commandoregel</p>
+      <p class="outil-texte">Noties van de bash-shell: navigatie, bestanden, rechten, processen en eenvoudige scripts om een server te beheren.</p>
+    </article>
+    <article class="outil">
+      <div class="outil-tete">
+        <span class="outil-logo" aria-hidden="true"><img src="../assets/img/outils/canva.svg" alt="" width="24" height="24" loading="lazy"></span>
+        <h3 class="outil-nom">Canva</h3>
+      </div>
+      <p class="outil-role">Creatie &amp; sociale media</p>
+      <p class="outil-texte">Beheersing van Canva voor snelle visuals — publicaties, presentaties, communicatiedragers — gebruikt bij bepaalde bedrijven die intern met deze tool werken.</p>
+    </article>
+
+  </div>
+</section>
+
+<div class="nav-fin">
+  <a class="nav-fin-lien" href="photographie.html">
+    <span class="nav-fin-direction">← Fotografie</span>
+    <span class="nav-fin-titre">Vorig project</span>
+  </a>
+  <a class="nav-fin-lien nav-fin-suivant" href="competences.html">
+    <span class="nav-fin-direction">Vaardigheden →</span>
+    <span class="nav-fin-titre">Volgend project</span>
+  </a>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <nav class="footer-nav" aria-label="Voettekstnavigatie">
+      <div class="footer-nav-groupe">
+        <span class="footer-nav-titre">Secties</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Projecten</a></li>
+          <li><a href="html-css.html">Demo HTML &amp; CSS</a></li>
+          <li><a href="competences.html">Vaardigheden</a></li>
+          <li><a href="parcours.html">Traject</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-groupe">
+        <span class="footer-nav-titre">Projecten</span>
+        <ul>
+          <li><a href="bakery-bliss-cafe.html">Bakery Bliss Café</a></li>
+          <li><a href="business-plan-sosse.html">Businessplan Sosse</a></li>
+          <li><a href="casa-urpi.html">Casa Urpi</a></li>
+          <li><a href="lilot-calins.html">L'îlot Câlins</a></li>
+          <li><a href="flat-design.html">Flat design</a></li>
+          <li><a href="photographie.html">Fotografie</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-groupe">
+        <span class="footer-nav-titre">Informatie</span>
+        <ul>
+          <li><a href="mentions-legales.html">Juridische informatie</a></li>
+          <li><a href="transparantie.html">Transparantie over AI</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:contact@calogero-volpe.eu">contact@calogero-volpe.eu</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="footer-bas">
+      <span>© 2026 Volpe Calogero — alle rechten voorbehouden</span>
+      <span>Fictieve projecten, behalve L'îlot Câlins (met toestemming)</span>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>

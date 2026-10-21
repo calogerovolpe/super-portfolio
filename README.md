@@ -6,6 +6,21 @@ Site statique, publié sur GitHub Pages.
 
 **En ligne :** https://calogerovolpe.github.io/super-portfolio/
 
+## Langues et transparence
+
+- **FR** à la racine, **NL** dans `nl/` : 14 pages traduites + `transparantie.html`.
+- `assets/js/lang.js` détecte la langue du navigateur (`navigator.language`) et
+  redirige un visiteur néerlandais vers `nl/`, sauf choix manuel mémorisé
+  (`localStorage.lang`). Sélecteur FR/NL dans la barre latérale.
+- Chaque page porte les liens `hreflang` `fr`, `nl` et `x-default`.
+- Bandeau de transparence en haut de toutes les pages :
+  - version NL : contenu généré à 100 % avec l'IA (niveau B2) ;
+  - version FR : usage de l'IA pour pallier les lacunes, sans revendiquer
+    que la page a été écrite par l'IA.
+- Pages dédiées : `methode-ia.html` (FR) et `nl/transparantie.html` (NL),
+  avec procédure en cinq étapes, exemples (JavaScript, traductions, Python)
+  et méthode de vérification.
+
 ## Identité visuelle
 
 - **Trois couleurs uniquement** : jaune `#FFD500`, noir `#0B0B0B`, blanc `#FFFFFF`.
@@ -34,6 +49,8 @@ Site statique, publié sur GitHub Pages.
 - `competences.html` — sept logiciels, onglets Graphiste / Développeur, matrice projets × outils et repères techniques
 - `parcours.html` — section « Qui suis-je » avec photo, parcours professionnel et formations, savoir-faire et savoir-être pour les métiers de la communication, du design et du web
 - `contact.html` — formule de contact orientée recrutement, disponibilité, carte et calcul de distance ; `mentions-legales.html`, `404.html`
+- `methode-ia.html` — méthode d'usage de l'IA (FR) ; `nl/transparantie.html` — transparence complète (NL)
+- `nl/` — version néerlandaise des 14 pages + page de transparence
 
 ## Structure du dépôt
 
@@ -41,10 +58,12 @@ Site statique, publié sur GitHub Pages.
 super-portfolio/
 ├── index.html               Accueil
 ├── *.html                   Pages projets et pages transverses (à plat)
+├── methode-ia.html          Méthode d'usage de l'IA (FR)
+├── nl/                      Version néerlandaise (14 pages + transparence)
 ├── favicon.svg              Icône vectorielle
 ├── favicon.ico              Icône 32×32
 ├── robots.txt               Directives d'indexation
-├── sitemap.xml              Plan du site (14 URLs)
+├── sitemap.xml              Plan du site (28 URLs)
 ├── assets/
 │   ├── css/style.css        Feuille de style unique (tokens + composants)
 │   ├── css/print.css        Impression
@@ -78,10 +97,13 @@ super-portfolio/
 | 6 | Page « Compétences » (logiciels + exemples interactifs) | ✅ Terminé |
 | 7 | Finitions | ✅ Terminé |
 | 8 | Page « Parcours » (savoir-faire & savoir-être) | ✅ Terminé |
+| 9 | Accueil : synthèses Parcours & Compétences, cartes-affiches | ✅ Terminé |
+| 10 | Refonte des demandes client (accueil, projets, démo, compétences, parcours, contact) | ✅ Terminé |
+| 11 | Version NL, sélecteur de langue, détection automatique et transparence IA | ✅ Terminé |
 
-Les quinze pages sont en ligne. Les fiches projets Bakery, Sosse, Casa Urpi,
-L'îlot Câlins, Flat design et Photographie sont complètes : textes issus des PDF,
-documents, galeries et lightbox.
+Les trente pages sont en ligne (15 FR + 15 NL). Les fiches projets Bakery, Sosse,
+Casa Urpi, L'îlot Câlins, Flat design et Photographie sont complètes : textes issus
+des PDF, documents, galeries et lightbox.
 
 ## Publication
 

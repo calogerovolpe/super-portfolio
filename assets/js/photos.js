@@ -3,6 +3,9 @@
 (function () {
   'use strict';
 
+  var NL = (document.documentElement.lang || '').toLowerCase().indexOf('nl') === 0;
+  function t(fr, nl) { return NL ? nl : fr; }
+
   function initialiser() {
     var filtres = document.querySelectorAll('.galerie-filtre');
     var cartes = document.querySelectorAll('.galerie-photo .apercu');
@@ -11,7 +14,9 @@
 
     function compter(visibles) {
       if (!compteur) { return; }
-      compteur.textContent = visibles + ' photo' + (visibles > 1 ? 's' : '') + ' affichée' + (visibles > 1 ? 's' : '');
+      compteur.textContent = NL ?
+        (visibles + ' foto' + (visibles > 1 ? "'s" : '') + ' weergegeven') :
+        (visibles + ' photo' + (visibles > 1 ? 's' : '') + ' affichée' + (visibles > 1 ? 's' : ''));
     }
 
     function appliquer(valeur) {

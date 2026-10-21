@@ -327,3 +327,31 @@ surveillance du déploiement GitHub Pages.
 - **Cohérence** : libellés de taille à jour dans `parcours.html` et
   `contact.html` (126 Ko / 121 Ko).
 
+## Jalon 11 — version NL, langue et transparence IA (21 octobre 2026)
+
+- **Version NL** : dossier `nl/` avec les 14 pages traduites + `transparantie.html`.
+  `lang="nl"`, `og:locale="nl_NL"`, chemins d'assets `../assets/…`, liens
+  internes relatifs au dossier.
+- **Sélecteur FR/NL** injecté par `assets/js/lang.js` dans la barre latérale
+  (à côté de la bascule de thème), mémorisé dans `localStorage.lang`.
+- **Détection automatique** : `navigator.language` ; un navigateur néerlandais
+  arrivé côté FR est redirigé vers `nl/`. Aucune redirection automatique depuis
+  NL vers FR (préserve l'indexation) ; choix manuel respecté dans les deux sens.
+- **Bannière de transparence** `.bandeau-transparence` en haut de toutes les pages,
+  avec lien « En savoir plus » et bouton de fermeture (sessionStorage).
+  Texte NL : contenu 100 % généré par IA (B2) ; texte FR : usage de l'IA pour
+  pallier les lacunes, sans revendiquer l'écriture par l'IA.
+- **Pages IA** : `methode-ia.html` (FR, sans mention « écrite par l'IA ») et
+  `nl/transparantie.html` (NL, transparence complète). Structure : pourquoi,
+  procédure en 5 cartes, exemples JS/traductions/Python, méthode de vérification,
+  professionnalisme.
+- **JS bilingue** : `nav.js`, `viewer.js`, `demo.js`, `photos.js`, `contact.js`
+  détectent `document.documentElement.lang` et traduisent leurs libellés.
+- **CSS** : `.bandeau-transparence`, `.lang-switch`, `.ia-*`, responsive
+  (barre basse mobile, sidebar repliée), masquage à l'impression.
+- **Métadonnées** : `hreflang` fr/nl/x-default sur les 30 pages, `sitemap.xml`
+  à 28 URL, `README.md` mis à jour.
+- **Validation** : `node --check` sur 9 JS ; `docs/verifier-jalon11.py` :
+  30 pages, 0 erreur HTML/H1/ID, 0 lien cassé, 0 image sans attribut,
+  CSS équilibré (673 accolades).
+

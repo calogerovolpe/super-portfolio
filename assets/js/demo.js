@@ -3,6 +3,9 @@
 (function () {
   'use strict';
 
+  var NL = (document.documentElement.lang || '').toLowerCase().indexOf('nl') === 0;
+  function t(fr, nl) { return NL ? nl : fr; }
+
   function chaque(liste, action) {
     Array.prototype.forEach.call(liste, action);
   }
@@ -91,20 +94,26 @@
       return nombre.toFixed(2).replace('.', ',') + ' €';
     }
 
+    function frequenceLibelle() {
+      return frequenceChoisie() === 'mensuel' ?
+        t('mensuel', 'maandelijks') : t('ponctuel', 'eenmalig');
+    }
+
     function rendre() {
       var montant = montantChoisi();
       var valeur = montantValeur();
+      var frequence = frequenceLibelle();
       if (recap) {
         recap.textContent = montant ?
-          'Don ' + frequenceChoisie() + ' de ' + montant :
-          'Don ' + frequenceChoisie() + ' — montant libre à saisir';
+          t('Don ', 'Donatie ') + frequence + t(' de ', ' van ') + montant :
+          t('Don ', 'Donatie ') + frequence + t(' — montant libre à saisir', ' — vrij bedrag invullen');
       }
       if (fiscal) {
         if (valeur) {
           var remboursement = Math.round(valeur * TAUX_FISCAL * 100) / 100;
-          fiscal.textContent = 'Remboursement fiscal : ' + formaterEuros(remboursement) + ' (66 %)';
+          fiscal.textContent = t('Remboursement fiscal : ', 'Belastingaftrek: ') + formaterEuros(remboursement) + ' (66 %)';
         } else {
-          fiscal.textContent = 'Remboursement fiscal : 66 % du montant';
+          fiscal.textContent = t('Remboursement fiscal : 66 % du montant', 'Belastingaftrek: 66 % van het bedrag');
         }
       }
     }
@@ -132,9 +141,11 @@
       evenement.preventDefault();
       if (!recap) { return; }
       var montant = montantChoisi();
+      var frequence = frequenceChoisie() === 'mensuel' ?
+        t('mensuel', 'maandelijks') : t('ponctuel', 'eenmalig');
       recap.textContent = montant ?
-        'Merci ! Don ' + frequenceChoisie() + ' de ' + montant + ' (démonstration)' :
-        'Merci ! Don ' + frequenceChoisie() + ' — montant libre à saisir';
+        t('Merci ! Don ', 'Bedankt! Donatie ') + frequence + t(' de ', ' van ') + montant + t(' (démonstration)', ' (demo)') :
+        t('Merci ! Don ', 'Bedankt! Donatie ') + frequence + t(' — montant libre à saisir', ' — vrij bedrag invullen');
     });
 
     majChampLibre();
@@ -174,7 +185,7 @@
     function majColonnes() {
       if (!colonnes || grille.offsetParent === null) { return; }
       var nombre = compterColonnes();
-      colonnes.textContent = nombre + ' colonne' + (nombre > 1 ? 's' : '');
+      colonnes.textContent = nombre + t(' colonne', ' kolom') + (nombre > 1 ? t('s', 'men') : '');
     }
 
     function appliquer() {

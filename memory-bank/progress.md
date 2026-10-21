@@ -450,3 +450,25 @@
   l'italien ; les langues affichées sur le site suivent la demande
   (français langue maternelle, NL B2, italien B2).
 
+### 2026-10-21 — Jalon 11 — version NL, sélecteur de langue et transparence IA
+
+- Traduction complète des 14 pages en néerlandais dans `nl/` (+ `transparantie.html`),
+  avec `lang="nl"`, `og:locale` `nl_NL`, chemins `../assets/…`, `hreflang`.
+- `assets/js/lang.js` : détection `navigator.language`, redirection FR → NL pour
+  un navigateur néerlandais, respect de `localStorage.lang`, sélecteur FR/NL
+  dans la barre latérale, fermeture de la bannière (sessionStorage).
+- Bannière de transparence sur toutes les pages ; texte NL (contenu 100 % IA, B2)
+  et texte FR (usage de l'IA pour pallier les lacunes, sans revendiquer l'écriture).
+- Pages `methode-ia.html` (FR) et `nl/transparantie.html` (NL) : procédure en
+  5 cartes, exemples JavaScript/traductions/Python, contrôles avec les moyens
+  de base, section professionnalisme.
+- JS bilingue (`nav.js`, `viewer.js`, `demo.js`, `photos.js`, `contact.js`).
+- CSS : composants `.bandeau-transparence`, `.lang-switch`, `.ia-*`, responsive
+  et impression ; `print.css` masque la bannière.
+- `sitemap.xml` (28 URL), `README.md`, `memory-bank/` mis à jour.
+- Validation : `node --check` OK (9 fichiers) ; `docs/verifier-jalon11.py` :
+  30 pages, 0 erreur HTML, 0 H1 multiple, 0 ID dupliqué, 0 lien cassé,
+  0 image sans `alt`/dimensions/`loading`, CSS équilibré.
+- Décision : pages NL statiques séparées (et non i18n JS) pour le SEO et la
+  robustesse ; pas de redirection automatique NL → FR pour préserver l'indexation.
+

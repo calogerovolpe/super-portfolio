@@ -4,6 +4,9 @@
 (function () {
   'use strict';
 
+  var NL = (document.documentElement.lang || '').toLowerCase().indexOf('nl') === 0;
+  function t(fr, nl) { return NL ? nl : fr; }
+
   var DOMICILE = { lat: 50.547375, lon: 3.366812 };
 
   /* --- Formulaire de contact : ouvre la messagerie avec le message prérempli --- */
@@ -19,14 +22,15 @@
       var profil = formulaire.elements.profil.value;
       var message = formulaire.elements.message.value.trim();
       if (!nom || !email || !profil || !message) {
-        if (note) { note.textContent = 'Merci de compléter tous les champs.'; }
+        if (note) { note.textContent = t('Merci de compléter tous les champs.', 'Vul alle velden in.'); }
         return;
       }
       var sujet = 'Contact — ' + profil + ' — ' + nom;
-      var corps = 'Nom : ' + nom + '\nE-mail : ' + email + '\nProfil : ' + profil + '\n\n' + message;
+      var corps = t('Nom : ', 'Naam: ') + nom + '\n' + t('E-mail : ', 'E-mail: ') + email +
+        '\n' + t('Profil : ', 'Profiel: ') + profil + '\n\n' + message;
       var lien = 'mailto:contact@calogero-volpe.eu?subject=' +
         encodeURIComponent(sujet) + '&body=' + encodeURIComponent(corps);
-      if (note) { note.textContent = 'Votre messagerie va s’ouvrir avec le message prérempli.'; }
+      if (note) { note.textContent = t('Votre messagerie va s’ouvrir avec le message prérempli.', 'Uw e-mailprogramma opent met het vooraf ingevulde bericht.'); }
       window.location.href = lien;
     });
   }
@@ -55,9 +59,9 @@
     formulaire.addEventListener('submit', function (evenement) {
       evenement.preventDefault();
       var adresse = champ ? champ.value.trim() : '';
-      if (!adresse) { afficher('Indiquez une adresse.'); return; }
+      if (!adresse) { afficher(t('Indiquez une adresse.', 'Geef een adres op.')); return; }
       if (lienSortie) { lienSortie.hidden = true; lienSortie.innerHTML = ''; }
-      afficher('Calcul en cours…');
+      afficher(t('Calcul en cours…', 'Berekening bezig…'));
       if (bouton) { bouton.disabled = true; }
 
       var geoUrl = 'https://photon.komoot.io/api/?limit=1&q=' + encodeURIComponent(adresse);
@@ -84,15 +88,18 @@
         var route = donnees.routes[0];
         var km = Math.round(route.distance / 1000);
         var duree = formaterDuree(route.duration);
-        afficher('≈ ' + km + ' km · ' + duree + ' en voiture jusqu’à Guignies (estimation OpenStreetMap).');
+        afficher(t('≈ ', '≈ ') + km + ' km · ' + duree +
+          t(' en voiture jusqu’à Guignies (estimation OpenStreetMap).', ' met de auto naar Guignies (schatting OpenStreetMap).'));
         if (lienSortie) {
           lienSortie.hidden = false;
           lienSortie.innerHTML = '<a href="https://www.google.com/maps/dir/?api=1&destination=' +
             encodeURIComponent('Place de Guignies, Belgique') + '&origin=' +
-            encodeURIComponent(adresse) + '" target="_blank" rel="noopener">Ouvrir l’itinéraire dans Google Maps →</a>';
+            encodeURIComponent(adresse) + '" target="_blank" rel="noopener">' +
+            t('Ouvrir l’itinéraire dans Google Maps →', 'Route openen in Google Maps →') + '</a>';
         }
       }).catch(function (erreur) {
-        afficher('Calcul impossible : ' + erreur.message + '. Vérifiez l’adresse ou réessayez.');
+        afficher(t('Calcul impossible : ', 'Berekening onmogelijk: ') + erreur.message +
+          t('. Vérifiez l’adresse ou réessayez.', '. Controleer het adres of probeer opnieuw.'));
       }).then(function () {
         if (bouton) { bouton.disabled = false; }
       });

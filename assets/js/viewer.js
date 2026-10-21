@@ -4,6 +4,9 @@
 (function () {
   'use strict';
 
+  var NL = (document.documentElement.lang || '').toLowerCase().indexOf('nl') === 0;
+  function t(fr, nl) { return NL ? nl : fr; }
+
   var boite = null;
   var contenu = null;
   var legende = null;
@@ -18,12 +21,12 @@
     boite.className = 'visionneuse';
     boite.setAttribute('role', 'dialog');
     boite.setAttribute('aria-modal', 'true');
-    boite.setAttribute('aria-label', "Aperçu du document");
+    boite.setAttribute('aria-label', t("Aperçu du document", 'Documentvoorbeeld'));
     boite.hidden = true;
     boite.innerHTML =
       '<div class="visionneuse-fond" data-fermer></div>' +
       '<div class="visionneuse-boite">' +
-        '<button type="button" class="visionneuse-fermer" aria-label="Fermer l\'aperçu">×</button>' +
+        '<button type="button" class="visionneuse-fermer" aria-label="' + t("Fermer l'aperçu", 'Voorbeeld sluiten') + '">×</button>' +
         '<div class="visionneuse-contenu"></div>' +
         '<p class="visionneuse-legende"></p>' +
         '<div class="visionneuse-actions" hidden></div>' +
@@ -54,13 +57,13 @@
     if (type === 'pdf') {
       var cadre = document.createElement('iframe');
       cadre.src = source;
-      cadre.title = texte || 'Document PDF';
+      cadre.title = texte || t('Document PDF', 'PDF-document');
       contenu.appendChild(cadre);
 
       var retour = document.createElement('button');
       retour.type = 'button';
       retour.className = 'visionneuse-retour';
-      retour.textContent = '← Retour vers le site';
+      retour.textContent = '← ' + t('Retour vers le site', 'Terug naar de site');
       retour.addEventListener('click', fermer);
 
       var secours = document.createElement('a');
@@ -69,7 +72,7 @@
       secours.setAttribute('download', '');
       secours.setAttribute('target', '_blank');
       secours.setAttribute('rel', 'noopener');
-      secours.textContent = 'Télécharger le PDF';
+      secours.textContent = t('Télécharger le PDF', 'Download de pdf');
 
       actions.appendChild(retour);
       actions.appendChild(secours);

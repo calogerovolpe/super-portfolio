@@ -4339,3 +4339,334 @@ body.visionneuse-ouverte {
   height: 1.2rem;
 }
 
+
+/* ============================================================
+   Jalon 11 — version NL, sélecteur de langue, transparence IA
+   ============================================================ */
+
+/* ---------- Sélecteur de langue ---------- */
+
+.lang-switch {
+  display: flex;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+.lang-switch a {
+  flex: 1 1 0;
+  display: grid;
+  place-items: center;
+  min-height: 2.4rem;
+  padding: 0.5rem 0.4rem;
+  border: 1px solid var(--filet);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.lang-switch a:hover {
+  background: var(--surface-forte);
+  border-color: var(--filet-fort);
+}
+
+.lang-switch a.is-actif {
+  background: var(--jaune);
+  border-color: var(--jaune);
+  color: var(--noir);
+}
+
+#nav-reduit:checked ~ .site-sidebar .lang-switch {
+  flex-direction: column;
+}
+
+/* ---------- Bandeau de transparence ---------- */
+
+.bandeau-transparence {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem 1rem;
+  flex-wrap: wrap;
+  padding: 0.7rem var(--gouttiere);
+  background: var(--jaune);
+  color: var(--noir);
+  border-bottom: 2px solid var(--noir);
+}
+
+.bandeau-transparence[hidden] {
+  display: none;
+}
+
+.bandeau-transparence-texte {
+  flex: 1 1 20rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.bandeau-transparence-texte strong {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.bandeau-transparence-lien {
+  flex: 0 0 auto;
+  padding: 0.45rem 0.7rem;
+  border: 2px solid var(--noir);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.bandeau-transparence-lien:hover {
+  background: var(--noir);
+  color: var(--jaune);
+}
+
+.bandeau-transparence-fermer {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  background: transparent;
+  border: 2px solid var(--noir);
+  color: var(--noir);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.bandeau-transparence-fermer:hover {
+  background: var(--noir);
+  color: var(--jaune);
+}
+
+/* ---------- Page méthode / transparence IA ---------- */
+
+.ia-intro {
+  max-width: 62ch;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.ia-section-intro {
+  max-width: 70ch;
+  margin-bottom: 1.2rem;
+  color: var(--texte-doux);
+}
+
+.ia-etapes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1px;
+  background: var(--filet);
+  border: 1px solid var(--filet);
+}
+
+.ia-etape {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.3rem;
+  background: var(--fond);
+}
+
+.ia-etape-num {
+  display: grid;
+  place-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: var(--jaune);
+  color: var(--noir);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.ia-etape-titre {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ia-etape-texte {
+  color: var(--texte-doux);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ia-etape-verif {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-texte);
+}
+
+.ia-exemples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.ia-exemple {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.2rem;
+  border: 1px solid var(--filet);
+  background: var(--surface);
+}
+
+.ia-exemple-tete {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.ia-exemple-titre {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 900;
+}
+
+.ia-exemple-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--texte-doux);
+}
+
+.ia-exemple-texte {
+  color: var(--texte-doux);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ia-code {
+  margin: 0;
+  padding: 0.9rem;
+  overflow-x: auto;
+  background: var(--noir);
+  color: var(--blanc);
+  border-left: 4px solid var(--jaune);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  line-height: 1.55;
+}
+
+.ia-code code {
+  font-family: inherit;
+}
+
+.ia-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.ia-liste li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--texte-doux);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.ia-liste li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--jaune);
+}
+
+.ia-liste strong {
+  color: var(--texte);
+}
+
+.ia-encadre {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 1.3rem;
+  background: var(--jaune);
+  color: var(--noir);
+}
+
+.ia-encadre-titre {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ia-encadre p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.ia-deux-colonnes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.ia-exemple-texte code,
+.ia-liste code {
+  padding: 0.05em 0.3em;
+  background: var(--surface-forte);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+@media (max-width: 959px) {
+  .lang-switch {
+    flex: 0 0 3.3rem;
+    width: 3.3rem;
+    flex-direction: column;
+    gap: 0;
+    border-left: 1px solid var(--filet);
+  }
+
+  .lang-switch a {
+    flex: 1 1 0;
+    min-height: calc(var(--barre-bas) / 2);
+    padding: 0.2rem;
+    border: 0;
+    font-size: 0.55rem;
+  }
+
+  .lang-switch a.is-actif {
+    border: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .bandeau-transparence {
+    gap: 0.5rem;
+  }
+
+  .bandeau-transparence-texte {
+    flex-basis: 100%;
+  }
+}
+

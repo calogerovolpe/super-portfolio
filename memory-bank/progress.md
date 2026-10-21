@@ -501,3 +501,20 @@
 - Note : la version NL (`nl/transparantie.html` + bandeau NL) reste inchangée et
   devra être réalignée dans un second temps.
 
+### 2026-10-21 — Refactorisation CSS en modules
+
+- Découpage de `assets/css/style.css` (4 742 lignes, 89,7 Ko) en 8 fichiers :
+  `style.css` (entrée `@import`), `tokens.css`, `base.css`, `layout.css`,
+  `composants.css`, `pages.css`, `demo.css`, `responsive.css`.
+- Fusion des 29 blocs `@media` en 9 (ordre décroissant de largeur), avec
+  vérification de la cascade sur les sélecteurs présents dans plusieurs
+  breakpoints (`.preuves`, `.chiffres`, `.galerie-photo`, `.galerie-doc`,
+  `.visionneuse-telecharger`, `.methode--metiers`).
+- Contrôle d'intégrité : 2 503 déclarations conservées, accolades équilibrées
+  sur chaque fichier, accents UTF-8 intacts, aucune page HTML modifiée.
+- Mise à jour de `.clinerules` (structure multi-fichiers + ordre d'import) et
+  de `README.md`.
+- Décision : chargement par `@import` dans `style.css` (zéro modification des
+  30 pages) plutôt que plusieurs balises `<link>` ; les fichiers restent dans
+  `assets/css/` et `print.css` est inchangé.
+

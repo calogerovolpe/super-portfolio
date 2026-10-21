@@ -359,3 +359,15 @@ surveillance du déploiement GitHub Pages.
   30 pages, 0 erreur HTML/H1/ID, 0 lien cassé, 0 image sans attribut,
   CSS équilibré (673 accolades).
 
+## Refactorisation CSS — découpage en modules (21 octobre 2026)
+
+- `assets/css/style.css` passe de 4 742 lignes à un point d'entrée de 15 lignes
+  composé de `@import` : `tokens.css`, `base.css`, `layout.css`,
+  `composants.css`, `pages.css`, `demo.css`, `responsive.css`.
+- Les 29 blocs `@media` dispersés sont fusionnés en 9 blocs dans `responsive.css`
+  (1100, 1040, 959, 820, 760, 640, 600, 460, `prefers-reduced-motion`).
+- Aucune règle CSS perdue : contrôle de 2 503 déclarations, accolades équilibrées
+  sur les 8 fichiers, accents UTF-8 préservés.
+- Aucune page HTML modifiée : toutes continuent de charger `style.css`.
+- `.clinerules` et `README.md` mis à jour (structure et ordre d'import).
+

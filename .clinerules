@@ -22,8 +22,12 @@
 - Site statique : HTML + CSS maison + JavaScript vanilla. Aucun framework,
   aucun build.
 - Pages HTML à plat à la racine du dépôt.
-- Une seule feuille de style principale : `assets/css/style.css`.
+- Feuille de style principale : `assets/css/style.css`, point d'entrée qui importe
+  (`@import`) les modules suivants de `assets/css/` : `tokens.css`, `base.css`,
+  `layout.css`, `composants.css`, `pages.css`, `demo.css`, `responsive.css`.
   Impression : `assets/css/print.css`.
+- Ordre d'import obligatoire : tokens → base → layout → composants → pages → demo →
+  responsive. Les media queries restent regroupées en dernier dans `responsive.css`.
 - JavaScript découpé par rôle dans `assets/js/` (`nav.js`, `viewer.js`, `home.js`…).
 - Tailwind CSS autorisé uniquement sur `html-css.html` (démonstration, CDN scopé).
 - Amélioration progressive : le site reste lisible et navigable sans JavaScript.

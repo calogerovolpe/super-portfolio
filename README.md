@@ -65,7 +65,14 @@ super-portfolio/
 ├── robots.txt               Directives d'indexation
 ├── sitemap.xml              Plan du site (28 URLs)
 ├── assets/
-│   ├── css/style.css        Feuille de style unique (tokens + composants)
+│   ├── css/style.css        Point d'entrée (@import des modules CSS)
+│   ├── css/tokens.css       Variables et thèmes clair/sombre
+│   ├── css/base.css         Reset, typographie, utilitaires
+│   ├── css/layout.css       Structure, sidebar, en-tête, pied de page
+│   ├── css/composants.css   Boutons, visionneuse, étiquettes
+│   ├── css/pages.css        Styles des pages (accueil, projets, etc.)
+│   ├── css/demo.css         Démonstrations (onglets, accordéon, don…)
+│   ├── css/responsive.css   Media queries fusionnées
 │   ├── css/print.css        Impression
 │   ├── js/                  Navigation, thème, lightbox, démos, photos, compétences, projets
 │   ├── img/                 Aperçus, image de partage et icône Apple

@@ -313,3 +313,17 @@ surveillance du déploiement GitHub Pages.
   recrutement.
 - **Doctrine** : le site vise un emploi (employeurs), pas une clientèle.
 
+## Mise à jour — candidature et langues (21 octobre 2026)
+
+- **CV & lettre** : dernières versions publiées depuis `docs/cv communication.pdf`
+  et `docs/lettre motivation communication.pdf` sous
+  `assets/fichiers/candidature/cv-volpe-calogero.pdf` (126 Ko) et
+  `lettre-motivation-volpe-calogero.pdf` (121 Ko) ; titres internes alignés
+  sur le nom du fichier, texte et rendu vérifiés.
+- **Langues** : bloc « Langues » dans la section « Qui suis-je » de
+  `parcours.html` — Français (langue maternelle), Néerlandais NL (niveau B2),
+  Italien (niveau B2). Styles `.langues*` dans `style.css` : grille 3 → 1
+  colonne, carré jaune devant le label, aucun arrondi.
+- **Cohérence** : libellés de taille à jour dans `parcours.html` et
+  `contact.html` (126 Ko / 121 Ko).
+

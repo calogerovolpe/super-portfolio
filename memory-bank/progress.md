@@ -425,3 +425,28 @@
 - Validation : `node --check` OK sur les 6 JS ; 0 id dupliqué ; liens
   locaux résolus ; sections équilibrées.
 
+### 2026-10-21 — Nouvelle version du CV et de la lettre + langues
+
+- Nouvelle version des deux PDF depuis `docs/cv communication.pdf` et
+  `docs/lettre motivation communication.pdf` (fichiers du 21 octobre 2026,
+  14:06), publiée sous `cv-volpe-calogero.pdf` (128 588 octets, 126 Ko) et
+  `lettre-motivation-volpe-calogero.pdf` (123 529 octets, 121 Ko).
+- Titres internes (`/Title` et XMP `dc:title`) alignés sur le nom exact du
+  fichier ; réécriture PyMuPDF contrôlée (texte et rendu 150 dpi identiques,
+  une page par document).
+- Libellés de taille actualisés dans `parcours.html` et `contact.html`
+  (`(PDF, 126 Ko)` / `(PDF, 121 Ko)`).
+- `parcours.html` : bloc **« Langues »** ajouté dans la section « Qui suis-je »
+  (01 — Portrait), entre le texte de profil et les statistiques :
+  **Français — langue maternelle**, **Néerlandais (NL) — niveau B2**,
+  **Italien — niveau B2**.
+- `assets/css/style.css` : styles `.langues`, `.langues-titre` (carré jaune),
+  `.langues-liste` (grille 3 colonnes → 1 sous 600 px), `.langue`,
+  `.langue-nom`, `.langue-niveau` ; aucune quatrième couleur ni arrondi.
+- Validation : `docs/verifier-jalon8.py` OK (14 pages, 593 liens locaux,
+  sitemap, accolades CSS) ; contrôle Playwright 1440 px / 390 px (3 → 1
+  colonne, `border-radius: 0`, console vide).
+- Note : le PDF du CV indique « FR - C2 · NL - B2 » et ne mentionne pas
+  l'italien ; les langues affichées sur le site suivent la demande
+  (français langue maternelle, NL B2, italien B2).
+

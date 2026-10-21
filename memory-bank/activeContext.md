@@ -1,5 +1,9 @@
 # Active context
 
+## Dernière modification (21 octobre 2026)
+
+**Transparence IA rééquilibrée vers le 100 % humain.** `methode-ia.html` s'ouvre désormais sur « Ce que je fais moi-même, à 100 % » (identité visuelle, couleurs, formes, dessins, polices, logos, retouches photo, tous les projets) ; « Ce que je délègue à l'IA » (code hors HTML/CSS + traduction) passe au second plan. Bandeau plus discret avec le texte « Transparence avec l'IA : quand je l'utilise ? » sur les 15 pages FR. Étiquette `.etiquette-humain` « Créé par humain » sur les 7 cartes projets de `portfolio.html` et mention globale en tête de `photographie.html`.
+
 ## Jalon en cours
 
 **Jalon 10 — Refonte des demandes client (photo de profil, tri des projets, démo, onglets compétences, parcours, contact).** Terminé et validé. Le projet compte quatorze pages (la page « À propos » a été supprimée).

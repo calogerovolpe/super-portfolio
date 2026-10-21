@@ -14,6 +14,8 @@
 | 8 | Page « Parcours » (savoir-faire & savoir-être) | ✅ Terminé |
 | 9 | Accueil : synthèses Parcours & Compétences, cartes-affiches | ✅ Terminé |
 | 10 | Refonte des demandes client (accueil, projets, démo, compétences, parcours, contact) | ✅ Terminé |
+| 11 | Version NL, sélecteur de langue et transparence IA | ✅ Terminé |
+| 12 | Transparence IA rééquilibrée vers le 100 % humain | ✅ Terminé |
 
 ## Journal
 
@@ -474,4 +476,28 @@
   récapitulatif du don NL — tout OK, console sans erreur.
 - Décision : pages NL statiques séparées (et non i18n JS) pour le SEO et la
   robustesse ; pas de redirection automatique NL → FR pour préserver l'indexation.
+
+### 2026-10-21 — Transparence IA rééquilibrée vers le 100 % humain
+
+- `methode-ia.html` réorganisée : hero « Le design est 100 % humain. Le code,
+  je l'assiste. » ; section 01 « Ce que je fais moi-même, à 100 % » (humain
+  irremplaçable ; couleurs, formes, dessins, polices, logos, éléments graphiques,
+  retouches photo, tous les projets) ; section 02 « Ce que je délègue à l'IA »
+  (JavaScript, Python, traduction FR → NL ; HTML/CSS et Tailwind écrits à la
+  main, l'IA seulement pour vérifier une solution, corriger une syntaxe ou
+  répéter une tâche).
+- Exemples ajoutés : correction de CSS (erreur de syntaxe) et répétition d'une
+  ligne dans les 15 pages ; exemples JavaScript, traduction et Python conservés.
+- Bandeau `.bandeau-transparence` : padding réduit (0,7 → 0,3 rem), texte court
+  « Transparence avec l'IA : quand je l'utilise ? » sur les 15 pages FR.
+- Nouvelle étiquette `.etiquette-humain` (carré jaune, Space Mono) « Créé par
+  humain » sur les 7 cartes projets de `portfolio.html` (sauf « Compétences »)
+  et mention globale en tête de `photographie.html`.
+- Correctif : grille `.ia-etapes` passée de cellules séparées à des cartes
+  bordées (suppression du bloc gris laissé par la 5e carte).
+- Validation : `docs/verifier-jalon11.py` (30 pages, 0 erreur, CSS 685 accolades),
+  contrôle Playwright desktop/mobile et thème clair (7 étiquettes, mention
+  présente, console vide).
+- Note : la version NL (`nl/transparantie.html` + bandeau NL) reste inchangée et
+  devra être réalignée dans un second temps.
 

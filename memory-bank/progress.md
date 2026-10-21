@@ -469,6 +469,9 @@
 - Validation : `node --check` OK (9 fichiers) ; `docs/verifier-jalon11.py` :
   30 pages, 0 erreur HTML, 0 H1 multiple, 0 ID dupliqué, 0 lien cassé,
   0 image sans `alt`/dimensions/`loading`, CSS équilibré.
+- Contrôle Playwright : bannière FR/NL, sélecteur FR↔NL, détection automatique
+  d'un navigateur néerlandais, rendu mobile, fermeture de la bannière et
+  récapitulatif du don NL — tout OK, console sans erreur.
 - Décision : pages NL statiques séparées (et non i18n JS) pour le SEO et la
   robustesse ; pas de redirection automatique NL → FR pour préserver l'indexation.
 

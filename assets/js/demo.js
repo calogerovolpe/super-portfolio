@@ -105,8 +105,8 @@
       var frequence = frequenceLibelle();
       if (recap) {
         recap.textContent = montant ?
-          t('Don ', 'Donatie ') + frequence + t(' de ', ' van ') + montant :
-          t('Don ', 'Donatie ') + frequence + t(' — montant libre à saisir', ' — vrij bedrag invullen');
+          t('Don ', 'Donatie: ') + frequence + t(' de ', ', ') + montant :
+          t('Don ', 'Donatie: ') + frequence + t(' — montant libre à saisir', ' — vrij bedrag invullen');
       }
       if (fiscal) {
         if (valeur) {
@@ -144,8 +144,8 @@
       var frequence = frequenceChoisie() === 'mensuel' ?
         t('mensuel', 'maandelijks') : t('ponctuel', 'eenmalig');
       recap.textContent = montant ?
-        t('Merci ! Don ', 'Bedankt! Donatie ') + frequence + t(' de ', ' van ') + montant + t(' (démonstration)', ' (demo)') :
-        t('Merci ! Don ', 'Bedankt! Donatie ') + frequence + t(' — montant libre à saisir', ' — vrij bedrag invullen');
+        t('Merci ! Don ', 'Bedankt! Donatie: ') + frequence + t(' de ', ', ') + montant + t(' (démonstration)', ' (demo)') :
+        t('Merci ! Don ', 'Bedankt! Donatie: ') + frequence + t(' — montant libre à saisir', ' — vrij bedrag invullen');
     });
 
     majChampLibre();

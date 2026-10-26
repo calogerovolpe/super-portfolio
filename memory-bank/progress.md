@@ -518,3 +518,35 @@
   30 pages) plutôt que plusieurs balises `<link>` ; les fichiers restent dans
   `assets/css/` et `print.css` est inchangé.
 
+
+### 2026-10-26 — Titre Graphiste multimédia (RNCP37064) et galerie de résultats
+
+- Nouveau document officiel : `docs/Résultats définitifs_Graphiste multimédia_RNCP37064_Session juin 2026..pdf`
+  (7 pages, STUDI). Décision du jury : « Admis(e) au Titre ». Bloc 1 validé
+  cette session ; blocs 2 et 3 validés sur une session antérieure.
+- Conversion des 7 pages en WebP 150 dpi (1241×1754) dans
+  `assets/img/diplome/resultats-page-01.webp` … `-07.webp` : aucun PDF publié,
+  consultation seule (pas de téléchargement).
+- `assets/js/viewer.js` : nouveau type `galerie` (`data-galerie="a|b|c"`). Image
+  pleine largeur défilable, navigation ← →, compteur « 1 / 7 », clavier ← →
+  et Échap. Le mode PDF existant (iframe + téléchargement) reste inchangé.
+- CSS (`pages.css`, `responsive.css`) : `.visionneuse-contenu--galerie`,
+  `.visionneuse-galerie-nav`, `.visionneuse-galerie-bouton`,
+  `.visionneuse-galerie-compteur`.
+- `competences.html` / `nl/competences.html` : nouvelle section
+  « 05 — Certification / Certificering » (Titre officiel) — couverture + bouton
+  « Consulter les résultats (7 pages) » + 3 blocs (B1, B2, B3) rédigés depuis le
+  PDF. Intro du hero mise à jour.
+- `parcours.html` / `nl/parcours.html` : entrée de frise « Bac+2 communication
+  web » remplacée par « Graphiste multimédia — Titre RNCP37064 » (STUDI, session
+  juin 2026, admis) + bouton de consultation ; hero, portrait et métier visé mis
+  à jour.
+- `index.html`, `contact.html` et versions NL : « Bac+2 communication web »
+  remplacé par le titre RNCP37064 ; note et lien vers les résultats sur l'accueil.
+- Correctif responsive préexistant : `.matrice-enveloppe { contain: layout; }`
+  supprime l'overflow horizontal de la matrice sur mobile (390 px), sans casser
+  son défilement interne.
+- Validation : `node --check` OK ; parseur HTML (8 pages modifiées) OK ;
+  Playwright desktop 1440 et mobile 390 : galerie 1/7 → 2/7 → 3/7, Échap, images
+  1241×1754 chargées, console sans erreur, `scrollWidth` 390/390.
+

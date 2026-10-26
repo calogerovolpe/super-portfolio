@@ -371,3 +371,23 @@ surveillance du déploiement GitHub Pages.
 - Aucune page HTML modifiée : toutes continuent de charger `style.css`.
 - `.clinerules` et `README.md` mis à jour (structure et ordre d'import).
 
+
+## Titre Graphiste multimédia & galerie de résultats (26 octobre 2026)
+
+- Document officiel STUDI (RNCP37064) : « Admis(e) au Titre », 3 blocs validés.
+  Source PDF dans `docs/` (non publié) ; 7 pages converties en WebP 150 dpi
+  (1241×1754) dans `assets/img/diplome/`.
+- Consultation seule : `viewer.js` gère un type `galerie` (`data-galerie="…|…"`),
+  image pleine largeur défilable, navigation ← →, compteur, clavier. Aucun bouton
+  de téléchargement pour la galerie ; le mode PDF existant reste inchangé.
+- Section « Titre officiel » sur `competences.html` / `nl/competences.html`
+  (blocs B1 étude & propositions, B2 réalisation graphique, B3 déclinaison
+  supports, bouton 7 pages) ; frise, hero, portrait et métiers visés de
+  `parcours.html` mis à jour ; accueil et contact alignés (FR + NL).
+- `.matrice-enveloppe` : `contain: layout` pour supprimer l'overflow horizontal
+  mobile préexistant, sans casser le défilement interne de la matrice.
+- Validation : `node --check`, parseur HTML (8 pages), Playwright desktop/mobile,
+  galerie 1/7 → 2/7 → 3/7, Échap, images chargées, console vide, 390/390 px.
+- Prochaine étape possible : affiner la lisibilité mobile (zoom) et contrôler le
+  rendu en mode clair.
+

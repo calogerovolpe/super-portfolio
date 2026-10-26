@@ -911,6 +911,70 @@
 }
 
 
+/* ---------- Lightbox : galerie d'images (consultation seule) ---------- */
+
+.visionneuse-contenu--galerie {
+  display: block;
+  overflow: auto;
+}
+
+.visionneuse-contenu--galerie img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+}
+
+.visionneuse-galerie-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.visionneuse-galerie-bouton {
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  background: var(--jaune);
+  color: var(--noir);
+  border: 2px solid var(--noir);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition), border-color var(--transition), opacity var(--transition);
+}
+
+.visionneuse-galerie-bouton:hover:not(:disabled),
+.visionneuse-galerie-bouton:focus-visible:not(:disabled) {
+  background: var(--noir);
+  color: var(--jaune);
+  border-color: var(--jaune);
+}
+
+.visionneuse-galerie-bouton:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.visionneuse-galerie-compteur {
+  min-width: 4.5rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--blanc);
+}
+
+
+
 /* ---------- Lightbox : actions PDF (retour + télécharger) ---------- */
 
 .visionneuse-actions {
@@ -1290,6 +1354,7 @@
 
 .matrice-enveloppe {
   overflow-x: auto;
+  contain: layout;
   border: 1px solid var(--filet);
 }
 

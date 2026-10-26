@@ -391,3 +391,26 @@ surveillance du déploiement GitHub Pages.
 - Prochaine étape possible : affiner la lisibilité mobile (zoom) et contrôler le
   rendu en mode clair.
 
+
+## Passe responsive & expérience mobile (26 octobre 2026)
+
+- Audit Playwright : 9 pages × 320/360/390/480/640/768/820/1024/1440, 0 débordement
+  horizontal (baseline déjà saine).
+- Lisibilité mobile (≤ 640 px) : `.nav-libelle` 8 → 10 px ; `.competence-role`,
+  `.demo-onglet`, `.doc-actions .btn` 9,9 → 11 px ; `.bandeau-transparence-texte`
+  10,9 → 12 px.
+- Cibles tactiles ≥ 44 px : `.doc-actions .btn`, `.demo-onglet`,
+  `.bandeau-transparence-fermer`, `.copy-email`, `.back-to-top`, `.footer-nav a`,
+  `.competence-liens a`, contrôles de la lightbox (`.visionneuse-galerie-bouton`,
+  `.visionneuse-fermer`). Menu bas : thème et FR/NL réduits à 2,7 rem sous 460 px
+  (items à 39/46/51 px à 320/360/390).
+- Galerie diplôme : bouton **1:1 / Ajuster** (`viewer.js`) — image à sa taille
+  native 1241 px, défilement complet (912 px mobile, 171 px desktop),
+  réinitialisé à la fermeture. Correctif de centrage : `justify-items: start` +
+  `margin-right: auto` sur l'image zoomée.
+- `touch-action: manipulation` sur les contrôles (`base.css`) ;
+  `overscroll-behavior: contain` sur la galerie.
+- Validation : `node --check` OK ; CSS équilibré (327/97/33 accolades) ;
+  Playwright mobile/desktop/NL : zoom OK, cibles 44 px, polices ≥ 10 px,
+  0 débordement, console vide.
+

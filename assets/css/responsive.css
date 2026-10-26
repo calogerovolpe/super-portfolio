@@ -357,6 +357,62 @@
   .chiffre {
     min-height: 9rem;
   }
+
+  /* Lisibilité et cibles tactiles sur petit écran */
+  .nav-libelle {
+    font-size: 0.625rem;
+    line-height: 1.2;
+  }
+
+  .competence-role,
+  .demo-onglet,
+  .doc-actions .btn {
+    font-size: 0.69rem;
+  }
+
+  .bandeau-transparence-texte {
+    font-size: 0.75rem;
+  }
+
+  .doc-actions .btn,
+  .demo-onglet {
+    min-height: 44px;
+  }
+
+  .bandeau-transparence-fermer {
+    width: 44px;
+    height: 44px;
+  }
+
+  .copy-email,
+  .manifeste-titre .copy-email {
+    width: 44px;
+    height: 44px;
+  }
+
+  .back-to-top {
+    min-width: 44px;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .footer-nav a,
+  .competence-liens a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .visionneuse-galerie-bouton,
+  .visionneuse-fermer {
+    width: 44px;
+    height: 44px;
+  }
+
+  .visionneuse-galerie-zoom {
+    width: auto;
+    min-width: 44px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -376,6 +432,12 @@
 @media (max-width: 460px) {
   .galerie-photo {
     grid-template-columns: 1fr;
+  }
+
+  .theme-toggle,
+  .lang-switch {
+    flex-basis: 2.7rem;
+    width: 2.7rem;
   }
 }
 

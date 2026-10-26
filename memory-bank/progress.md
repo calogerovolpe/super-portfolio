@@ -550,3 +550,26 @@
   Playwright desktop 1440 et mobile 390 : galerie 1/7 → 2/7 → 3/7, Échap, images
   1241×1754 chargées, console sans erreur, `scrollWidth` 390/390.
 
+
+### 2026-10-26 — Passe responsive & expérience visiteur
+
+- Audit Playwright 9 pages × 320/360/390/480/640/768/820/1024/1440 : 0 débordement
+  horizontal (le socle était déjà sain).
+- Lisibilité mobile (≤ 640 px) : `.nav-libelle` 8 → 10 px ; `.competence-role`,
+  `.demo-onglet`, `.doc-actions .btn` 9,9 → 11 px ; `.bandeau-transparence-texte`
+  10,9 → 12 px.
+- Cibles tactiles ≥ 44 px : `.doc-actions .btn`, `.demo-onglet`,
+  `.bandeau-transparence-fermer`, `.copy-email`, `.back-to-top`, `.footer-nav a`,
+  `.competence-liens a`, `.visionneuse-galerie-bouton`, `.visionneuse-fermer`.
+  Menu bas : `.theme-toggle` et `.lang-switch` à 2,7 rem sous 460 px (items
+  élargis à 39/46/51 px sur 320/360/390).
+- Galerie diplôme : nouveau bouton **1:1 / Ajuster** dans `viewer.js`. Image à sa
+  taille native (1241 px), défilement horizontal + vertical complet (max
+  scrollLeft 912 px mobile, 171 px desktop). Correctif de centrage :
+  `justify-items: start` + `margin-right: auto` sur l'image zoomée.
+- `touch-action: manipulation` ajouté aux contrôles (`base.css`) ;
+  `overscroll-behavior: contain` sur `.visionneuse-contenu--galerie`.
+- Validation : `node --check` OK ; CSS équilibré (327/97/33 accolades) ;
+  Playwright mobile/desktop/NL : zoom OK, cibles 44 px, polices ≥ 10 px,
+  0 débordement, console vide.
+

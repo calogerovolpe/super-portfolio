@@ -47,6 +47,16 @@ a {
   text-decoration: none;
 }
 
+a,
+button,
+input,
+select,
+textarea,
+summary,
+label[for] {
+  touch-action: manipulation;
+}
+
 h1,
 h2,
 h3,
